@@ -1,0 +1,18 @@
+# Objective-set definitions for layout experiment evaluation.
+
+main_structural:
+  objectives:
+    interior_storage: min
+    pick_faces: max
+    retrieval_penalty: min
+  diagnostics:
+    door_connected: required
+    aisle_connected: report
+    storage_total: report
+
+legacy_four_objective:
+  objectives:
+    storage_locked: min
+    pick_faces: max
+    RetrievalPenalty: min
+    door_conn: max

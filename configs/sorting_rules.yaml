@@ -1,0 +1,94 @@
+# Beam-search sorting-rule registry.
+# Metric names are cleaned from the legacy config:
+# storage_locked -> interior_storage
+# RetrievalPenalty -> retrieval_penalty
+
+PF:
+  - metric: pick_faces
+    direction: desc
+
+LS:
+  - metric: interior_storage
+    direction: asc
+
+SS:
+  - metric: scalar_score
+    direction: desc
+
+RP:
+  - metric: retrieval_penalty
+    direction: asc
+
+PF_LS:
+  - metric: pick_faces
+    direction: desc
+  - metric: interior_storage
+    direction: asc
+
+LS_PF:
+  - metric: interior_storage
+    direction: asc
+  - metric: pick_faces
+    direction: desc
+
+PF_SS:
+  - metric: pick_faces
+    direction: desc
+  - metric: scalar_score
+    direction: desc
+
+LS_SS:
+  - metric: interior_storage
+    direction: asc
+  - metric: scalar_score
+    direction: desc
+
+LS_RP:
+  - metric: interior_storage
+    direction: asc
+  - metric: retrieval_penalty
+    direction: asc
+
+PF_RP:
+  - metric: pick_faces
+    direction: desc
+  - metric: retrieval_penalty
+    direction: asc
+
+RP_LS:
+  - metric: retrieval_penalty
+    direction: asc
+  - metric: interior_storage
+    direction: asc
+
+SS_LS_PF:
+  - metric: scalar_score
+    direction: desc
+  - metric: interior_storage
+    direction: asc
+  - metric: pick_faces
+    direction: desc
+
+SS_PF_LS:
+  - metric: scalar_score
+    direction: desc
+  - metric: pick_faces
+    direction: desc
+  - metric: interior_storage
+    direction: asc
+
+PF_SS_RP:
+  - metric: pick_faces
+    direction: desc
+  - metric: scalar_score
+    direction: desc
+  - metric: retrieval_penalty
+    direction: asc
+
+PF_LS_RP:
+  - metric: pick_faces
+    direction: desc
+  - metric: interior_storage
+    direction: asc
+  - metric: retrieval_penalty
+    direction: asc

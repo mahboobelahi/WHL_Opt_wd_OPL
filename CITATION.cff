@@ -1,0 +1,10 @@
+﻿cff-version: 1.2.0
+title: "Warehouse Layout Optimization with Hybrid NSGA-II and Beam Search"
+message: "If you use this repository, please cite the associated manuscript once publication details are available."
+type: software
+authors:
+  - family-names: "Elahi"
+  -  given-names: "Mahboob"
+year: 2026
+version: "0.1.0"
+repository-code: "https://github.com/mahboobelahi/WHL_Opt_wd_OPL"

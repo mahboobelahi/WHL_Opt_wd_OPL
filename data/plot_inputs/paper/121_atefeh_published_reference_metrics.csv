@@ -1,0 +1,14 @@
+layout_id,filename,resolved_path,npz_name,rows,cols,storage_total,storage_capacity,pick_faces,interior_storage,retrieval_penalty
+15,AT_1.npz,data\instances\masks\AT_1.npz,AT_1,28,21,348,348,83,265,4324.0
+16,AT_2.npz,data\instances\masks\AT_2.npz,AT_2,28,21,282,282,112,170,888.0
+17,AT_3.npz,data\instances\masks\AT_3.npz,AT_3,28,21,300,300,110,190,1011.0
+18,AT_4.npz,data\instances\masks\AT_4.npz,AT_4,28,21,303,303,108,195,1394.0
+19,AT_5.npz,data\instances\masks\AT_5.npz,AT_5,28,21,279,279,119,160,765.0
+20,AT_6.npz,data\instances\masks\AT_6.npz,AT_6,28,21,240,240,130,110,441.0
+21,AT_7.npz,data\instances\masks\AT_7.npz,AT_7,28,21,258,258,128,130,585.0
+22,AT_8.npz,data\instances\masks\AT_8.npz,AT_8,28,21,153,153,109,44,111.0
+23,AT_9.npz,data\instances\masks\AT_9.npz,AT_9,28,21,312,312,102,210,2356.0
+24,AT_10.npz,data\instances\masks\AT_10.npz,AT_10,28,21,264,264,131,133,1762.0
+25,AT_11.npz,data\instances\masks\AT_11.npz,AT_11,28,21,246,246,146,100,837.0
+26,AT_12.npz,data\instances\masks\AT_12.npz,AT_12,28,21,183,183,155,28,129.0
+27,AT_13.npz,data\instances\masks\AT_13.npz,AT_13,28,21,186,186,152,34,85.0

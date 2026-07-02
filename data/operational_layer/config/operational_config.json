@@ -1,0 +1,325 @@
+{
+  "project_root": ".",
+  "campaign_root": "revision_30seed_final_clean_run",
+  "phase11_root": "revision_30seed_final_clean_run/p11",
+  "output_root": "revision_30seed_final_clean_run/op_layer",
+  "target_instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+  "target_method": "proposed_nsga2_bs",
+  "target_seeds": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130
+  ],
+  "target_archive_ranks": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "vertical_levels": 8,
+  "sku_profile": {
+    "total_skus": 100,
+    "class_A_count": 20,
+    "class_B_count": 30,
+    "class_C_count": 50,
+    "class_A_demand_share": 0.8,
+    "class_B_demand_share": 0.15,
+    "class_C_demand_share": 0.05
+  },
+  "regime_A": {
+    "lambda_depth": 1.0,
+    "lambda_level": 1.0
+  },
+  "regime_B": {
+    "lambda_depth": 0.1,
+    "lambda_level": 0.1
+  },
+  "notes": "Milestone 0 configuration only. No operational metrics computed yet.",
+  "sku_catalog": {
+    "sku_catalog_csv_path": "data/operational_layer/paper_inputs/sku_catalog.csv",
+    "sku_count_total": 100,
+    "sku_catalog_seed": 20260617,
+    "sku_classes": {
+      "A": {
+        "count": 20,
+        "demand_share": 0.8,
+        "pallets_per_sku": 7,
+        "demand_assignment": "deterministic_equal_within_class",
+        "preferred_representative_levels": [
+          0,
+          1
+        ],
+        "preferred_reserve_levels": [
+          0,
+          1,
+          2
+        ]
+      },
+      "B": {
+        "count": 30,
+        "demand_share": 0.15,
+        "pallets_per_sku": 15,
+        "demand_assignment": "deterministic_equal_within_class",
+        "preferred_representative_levels": [
+          0,
+          1,
+          2
+        ],
+        "preferred_reserve_levels": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "C": {
+        "count": 50,
+        "demand_share": 0.05,
+        "pallets_per_sku": 4,
+        "demand_assignment": "deterministic_equal_within_class",
+        "preferred_representative_levels": "any",
+        "preferred_reserve_levels": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      }
+    },
+    "within_class_demand_randomness": false,
+    "within_class_allocation_randomness": false,
+    "pallet_quantity_rule": "fixed_by_class",
+    "representative_access_pallets_per_sku": 1,
+    "reserve_pallets_rule": "pallets_per_sku_minus_one",
+    "order_generation_depends_on": "demand_weight_only",
+    "pallet_quantity_affects": "reserve_assignment_and_storage_utilization_only"
+  },
+  "selected_layouts": {
+    "selected_layouts_csv_path": "data/operational_layer/paper_inputs/selected_layouts.csv",
+    "layout_count": 4,
+    "layouts": [
+      {
+        "selection_label": "L1",
+        "selection_type": "accessibility-oriented",
+        "layout_signature": "1fa9344c00a95c630e382533991ef575b2f5e6b5",
+        "seed": 101,
+        "rank": 0,
+        "pallet_slot_capacity": 4480,
+        "archive_npz_path": "revision_30seed_final_clean_run/p11/nsga2/profile__p11__nsga2__KOV_WH_N_AW4__s101/runs/Gyorgy-KOVACS_WH_Narrow_AW_4/seed_101/final_ranked_layouts.npz",
+        "archive_key": "final_rank_00_layout_001"
+      },
+      {
+        "selection_label": "L2",
+        "selection_type": "deep-block / reserve-oriented",
+        "layout_signature": "76cdc821160b1fd8a5952575af463e70cb84ba4e",
+        "seed": 120,
+        "rank": 3,
+        "pallet_slot_capacity": 5056,
+        "archive_npz_path": "revision_30seed_final_clean_run/p11/nsga2/profile__p11__nsga2__KOV_WH_N_AW4__s120/runs/Gyorgy-KOVACS_WH_Narrow_AW_4/seed_120/final_ranked_layouts.npz",
+        "archive_key": "final_rank_03_layout_001"
+      },
+      {
+        "selection_label": "L3",
+        "selection_type": "high-capacity balanced",
+        "layout_signature": "fc4825140fa5e2560776b4b932f5ef46c1588f36",
+        "seed": 105,
+        "rank": 0,
+        "pallet_slot_capacity": 5440,
+        "archive_npz_path": "revision_30seed_final_clean_run/p11/nsga2/profile__p11__nsga2__KOV_WH_N_AW4__s105/runs/Gyorgy-KOVACS_WH_Narrow_AW_4/seed_105/final_ranked_layouts.npz",
+        "archive_key": "final_rank_00_layout_002"
+      },
+      {
+        "selection_label": "L4",
+        "selection_type": "intermediate accessibility-capacity compromise",
+        "layout_signature": "31618e0fa9e7ba38a349d70c4dff96d8a35cbd09",
+        "seed": 105,
+        "rank": 0,
+        "pallet_slot_capacity": 4800,
+        "archive_npz_path": "revision_30seed_final_clean_run/p11/nsga2/profile__p11__nsga2__KOV_WH_N_AW4__s105/runs/Gyorgy-KOVACS_WH_Narrow_AW_4/seed_105/final_ranked_layouts.npz",
+        "archive_key": "final_rank_00_layout_003"
+      }
+    ]
+  },
+  "m5_capacity_context": {
+    "inventory_total_pallets": 790,
+    "selected_layout_capacities": {
+      "L1": 4480,
+      "L2": 5056,
+      "L3": 5440,
+      "L4": 4800
+    },
+    "inventory_utilization_by_layout": {
+      "L1": 0.176339286,
+      "L2": 0.15625,
+      "L3": 0.145220588,
+      "L4": 0.164583333
+    },
+    "diagnostic_only": true
+  },
+  "milestones_completed": [
+    "M0",
+    "M1",
+    "M2",
+    "M3C",
+    "M4",
+    "M5",
+    "M6",
+    "M7",
+    "M8",
+    "M9",
+    "M10"
+  ],
+  "assignment": {
+    "assignment_rule": "hybrid_representative_access_plus_reserve_fill",
+    "assignment_randomness": false,
+    "representative_access_pallets_per_sku": 1,
+    "reserve_pallet_rule": "pallets_per_sku_minus_one",
+    "assignment_order": "A_then_B_then_C_sku_id_ascending",
+    "representative_assignment_output": "data/operational_layer/paper_inputs/representative_access_assignment.csv",
+    "reserve_assignment_output": "data/operational_layer/paper_inputs/reserve_pallet_assignment.csv",
+    "m6_summary_output": "data/operational_layer/paper_outputs/logs/m6_assignment_summary.json"
+  },
+  "regime_metrics": {
+    "regime_A": {
+      "lambda_depth": 1.0,
+      "lambda_level": 1.0,
+      "high_access_definition": {
+        "effective_depth_max": 1,
+        "level_max": 1,
+        "requires_finite_horizontal_distance": true,
+        "excludes_no_access": true
+      }
+    },
+    "regime_B": {
+      "lambda_depth": 0.1,
+      "lambda_level": 0.1,
+      "deep_threshold_effective_depth": 3,
+      "upper_level_threshold": 3,
+      "reserve_fragmentation_proxy": "mean_reserve_block_side_groups_per_sku"
+    },
+    "outputs": {
+      "regime_A_metrics_csv": "data/operational_layer/paper_inputs/regime_A_metrics.csv",
+      "regime_B_metrics_csv": "data/operational_layer/paper_inputs/regime_B_metrics.csv",
+      "reserve_fragmentation_summary_csv": "data/operational_layer/paper_inputs/reserve_fragmentation_summary.csv",
+      "m7_summary_json": "data/operational_layer/paper_outputs/logs/m7_regime_metrics_summary.json"
+    }
+  },
+  "synthetic_order_proxy": {
+    "number_of_orders_per_seed": 1000,
+    "workload_seed_count": 30,
+    "order_line_count_min": 1,
+    "order_line_count_max": 5,
+    "base_workload_seed": 20260617,
+    "sku_sampling_rule": "abc_demand_weighted_without_replacement_within_order",
+    "uses_representative_access_slots_only": true,
+    "uses_reserve_slots_for_order_effort": false,
+    "routing_optimization": false,
+    "picker_simulation": false,
+    "outputs": {
+      "synthetic_orders_csv": "data/operational_layer/paper_inputs/synthetic_orders.csv",
+      "order_effort_by_seed_csv": "data/operational_layer/paper_inputs/order_effort_by_seed.csv",
+      "order_effort_summary_csv": "data/operational_layer/paper_inputs/order_effort_summary.csv",
+      "m8_summary_json": "data/operational_layer/paper_outputs/logs/m8_order_proxy_summary.json"
+    }
+  },
+  "lambda_sensitivity": {
+    "supplement_only": true,
+    "regime_A_lambda_cases": [
+      [
+        1.0,
+        0.5
+      ],
+      [
+        1.0,
+        1.0
+      ],
+      [
+        0.5,
+        1.0
+      ],
+      [
+        2.0,
+        1.0
+      ],
+      [
+        1.0,
+        2.0
+      ]
+    ],
+    "regime_B_lambda_cases": [
+      [
+        0.1,
+        0.1
+      ],
+      [
+        0.25,
+        0.1
+      ],
+      [
+        0.1,
+        0.25
+      ],
+      [
+        0.25,
+        0.25
+      ]
+    ],
+    "uses_fixed_assignments": true,
+    "uses_fixed_synthetic_orders": true,
+    "does_not_modify_main_results": true,
+    "outputs": {
+      "lambda_sensitivity_summary_csv": "data/operational_layer/paper_inputs/sensitivity/lambda_sensitivity_summary.csv",
+      "lambda_sensitivity_by_seed_csv": "data/operational_layer/paper_inputs/sensitivity/lambda_sensitivity_by_seed.csv",
+      "m9_summary_json": "data/operational_layer/paper_outputs/logs/m9_lambda_sensitivity_summary.json"
+    }
+  },
+  "manuscript_outputs": {
+    "table_operational_diagnostic_csv": "data/operational_layer/paper_outputs/manuscript/table_operational_diagnostic.csv",
+    "table_operational_diagnostic_tex": "data/operational_layer/paper_outputs/manuscript/table_operational_diagnostic.tex",
+    "selected_layouts_panel_png": "data/operational_layer/layout_panel/selected_layouts_panel.png",
+    "regime_score_barplot_png": "data/operational_layer/layout_panel/regime_score_barplot.png",
+    "m10_report_md": "docs/099_operational_layer_results_report.md",
+    "m10_summary_json": "data/operational_layer/paper_outputs/logs/m10_manuscript_outputs_summary.json",
+    "main_manuscript_outputs": [
+      "selected layout panel",
+      "operational diagnostic table",
+      "short explanation paragraph",
+      "scope limitation paragraph"
+    ],
+    "supplement_outputs": [
+      "candidate screening table",
+      "SKU/order generation details",
+      "lambda sensitivity",
+      "order-seed summary",
+      "reserve assignment details"
+    ]
+  }
+}
