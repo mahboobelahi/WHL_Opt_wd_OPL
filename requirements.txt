@@ -6,3 +6,8 @@ pyyaml
 tqdm
 joblib
 pymoo
+openpyxl
+ruff
+black
+
+
