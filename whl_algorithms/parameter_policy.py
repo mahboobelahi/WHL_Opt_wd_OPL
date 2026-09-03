@@ -5,6 +5,22 @@ from __future__ import annotations
 import math
 
 
+BENCHMARK_PARAMETER_OVERRIDES = {
+    (56, 22): {
+        "population_size": 11,
+        "generations": 16,
+        "beam_width": 4,
+        "max_depth": 30,
+    },
+    (56, 26): {
+        "population_size": 12,
+        "generations": 18,
+        "beam_width": 3,
+        "max_depth": 30,
+    },
+}
+
+
 def adaptive_mutation_probability(
     generation: int,
     max_generations: int,
@@ -32,17 +48,30 @@ def min_fragment_size(aisle_width: int) -> int:
 
 
 def auto_hyperparams(rows: int, cols: int) -> dict[str, int | float]:
-    """Return size-based default search parameters for a warehouse grid."""
+    """Return search parameters for a warehouse grid.
+
+    The two Kovacs benchmark geometries use the fixed parameter tuples reported
+    for the paper experiments. Other grid sizes retain the generic size-based
+    policy.
+    """
     if rows <= 0:
         raise ValueError("rows must be positive.")
     if cols <= 0:
         raise ValueError("cols must be positive.")
 
-    area = rows * cols
-    population_size = max(10, min(40, area // 1000 + 10))
-    generations = int(1.5 * population_size)
-    beam_width = max(3, min(8, area // 1500 + 3))
-    max_depth = min(30, max(rows, cols))
+    override = BENCHMARK_PARAMETER_OVERRIDES.get((rows, cols))
+    if override is None:
+        area = rows * cols
+        population_size = max(10, min(40, area // 1000 + 10))
+        generations = int(1.5 * population_size)
+        beam_width = max(3, min(8, area // 1500 + 3))
+        max_depth = min(30, max(rows, cols))
+    else:
+        population_size = int(override["population_size"])
+        generations = int(override["generations"])
+        beam_width = int(override["beam_width"])
+        max_depth = int(override["max_depth"])
+
     crossover_prob = 1.0
     num_offspring = int(population_size * crossover_prob)
 
@@ -57,6 +86,7 @@ def auto_hyperparams(rows: int, cols: int) -> dict[str, int | float]:
 
 
 __all__ = [
+    "BENCHMARK_PARAMETER_OVERRIDES",
     "adaptive_mutation_probability",
     "auto_hyperparams",
     "min_fragment_size",
