@@ -17,13 +17,13 @@
 
 ## 1. Overview
 
-This repository contains code and data for warehouse layout optimization. The main method is NSGA-II + Beam Search, with BS-only and random-restart Beam Search baselines. The repository also includes layout editing, layout/archive rendering, paper-style Pareto plotting, and optional operational-layer diagnostics for the paper L1-L4 layouts.
+This repository contains code and data for warehouse layout optimization. The main method is NSGA-II + Beam Search, with BS-only and random-restart Beam Search baselines. The repository also includes the public 30-seed paper campaign wrapper, layout editing, layout/archive rendering, paper-style Pareto plotting, and optional operational-layer diagnostics for the paper L1-L4 layouts.
 
 ## 2. Repository contents
 
 - `whl_core/`: shared loading, grid, feasibility, and objective logic
 - `whl_algorithms/`: structural optimization logic
-- `whl_experiments/`: public runners and optional OPL helper scripts
+- `whl_experiments/`: public experiment runners, paper campaign orchestration, and optional OPL helper scripts
 - `whl_visualization/`: rendering and paper-style Pareto plotting
 - `apps/`: Tkinter layout editor
 - `configs/`: layout/configuration files
@@ -50,22 +50,22 @@ Tested with Python 3.10.x.
 Proposed NSGA-II + Beam Search:
 
 ```powershell
-python -m whl_experiments.run_experiment_manager --method proposed_nsga2_bs --instances Gyorgy-KOVACS_WH_Narrow_AW_4 --seeds 101 --population-size 8 --generations 5 --beam-width 3 --max-depth 8 --output-dir results\quick_nsga2_bs
+python -m whl_experiments.run_experiment_manager --method proposed_nsga2_bs --instances Gyorgy-KOVACS_WH_Narrow_AW_4 --seeds 101 --population-size 8 --generations 5 --beam-width 3 --max-depth 8 --no-figures --output-dir results\quick_nsga2_bs
 ```
 
 BS-only:
 
 ```powershell
-python -m whl_experiments.run_experiment_manager --method bs_only --instances Gyorgy-KOVACS_WH_Narrow_AW_4 --seeds 101 --beam-width 3 --max-depth 8 --output-dir results\quick_bs_only
+python -m whl_experiments.run_experiment_manager --method bs_only --instances Gyorgy-KOVACS_WH_Narrow_AW_4 --seeds 101 --beam-width 3 --max-depth 8 --no-figures --output-dir results\quick_bs_only
 ```
 
 Random-restart Beam Search:
 
 ```powershell
-python -m whl_experiments.run_experiment_manager --method random_restart_bs --instances Gyorgy-KOVACS_WH_Narrow_AW_4 --seeds 101 --beam-width 3 --max-depth 8 --decode-budget 10 --output-dir results\quick_rrbs
+python -m whl_experiments.run_experiment_manager --method random_restart_bs --instances Gyorgy-KOVACS_WH_Narrow_AW_4 --seeds 101 --beam-width 3 --max-depth 8 --decode-budget 10 --no-figures --output-dir results\quick_rrbs
 ```
 
-Detailed CLI usage and parameter explanations are in `docs/cli_commands.md`.
+Detailed CLI usage, paper campaign commands, and parameter explanations are in `docs/cli_commands.md`.
 
 ## 5. Layout editor
 
@@ -95,14 +95,24 @@ The operational layer is post-optimization only. It does not feed back into NSGA
 
 - Architecture: `docs/architecture.md`
 - Inputs and outputs: `docs/input_output.md`
-- CLI commands: `docs/cli_commands.md`
+- CLI commands and paper campaign examples: `docs/cli_commands.md`
 - Layout data: `docs/layout_data.md`
 - Benchmark sources: `docs/benchmark_sources.md`
 - Operational-layer diagnostics: `docs/operational_layer.md`
 
 ## 9. Reproducibility
 
-Fixed seeds are supported. Quick validation uses explicit small parameters. Default proposed runs can use `auto_from_instance` / `auto_hyperparams` and may take longer. Generated results are written under `results/` and ignored by Git.
+Fixed seeds are supported. Individual validation runs can use explicit small parameters, while paper-scale structural experiments should use `whl_experiments.run_revision_30seed_campaign`.
+
+The paper campaign wrapper uses `auto_from_instance`, saves both scientific layout archives, and disables optimization-time figure rendering. Its default structural campaign sets are:
+
+- Phase 11: Proposed, random-restart BS, and BS-only;
+- Phase 12B: ablations V1-V5 only;
+- Phase 12C: V6 and V7.
+
+Phase 12B V0 is not rerun: the Phase 11 `proposed_nsga2_bs` results for the same instances and seeds are reused as the full-proposed baseline. The V6b binding-depth check is a separate Phase 12C diagnostic.
+
+Generated experiment results are written under `results/` and ignored by Git. Curated reviewer-facing evidence is checked in under `data/` where documented.
 
 ## 10. Citation
 
