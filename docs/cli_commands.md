@@ -29,6 +29,7 @@ python -m apps.layout_editor.launch_editor
 | Runner | Recommended use | Purpose |
 |---|---|---|
 | `whl_experiments.run_experiment_manager` | **Main public CLI** | Runs the documented workflows for the proposed NSGA-II + Beam Search method, BS-only baseline, and random-restart Beam Search baseline with consistent output folders and options. |
+| `whl_experiments.run_revision_30seed_campaign` | **Paper campaign orchestration** | Runs Phase 11/12 campaign tasks in parallel by delegating each task to `run_experiment_manager`; supports resume, dry-run, predefined or explicit instance lists, and disables figures for campaign runs. |
 | `whl_experiments.render_saved_layouts` | **Public rendering utility** | Renders saved layout arrays or archive outputs after an optimization run. Use this for visual inspection of generated layouts. |
 | `whl_experiments.render_experiment_archives` | **Public rendering utility** | Renders layouts from experiment archive folders, including filtered archive/rank outputs if supported by the script. |
 | `whl_visualization.paper_pareto_plots` | **Paper-style plotting utility** | Regenerates manuscript-style Pareto plots from the prepared CSV inputs in `data/plot_inputs/paper/`. |
@@ -37,11 +38,13 @@ python -m apps.layout_editor.launch_editor
 
 ## 3. Recommended Public Entry Point
 
-`run_experiment_manager.py` is the recommended public CLI for:
+`run_experiment_manager.py` is the recommended public scientific runner for:
 
 - `proposed_nsga2_bs`
 - `bs_only`
 - `random_restart_bs`
+
+For replicated paper campaigns, use `run_revision_30seed_campaign.py`. It is an orchestration-only wrapper: each task calls `run_experiment_manager`, so it does not duplicate or replace optimization logic. Campaign runs automatically use `--budget-policy auto_from_instance`, `--archive-layouts both`, and `--no-figures`.
 
 ---
 
@@ -117,7 +120,70 @@ The original parameter tables were too wide. They are rewritten below as two-col
 | `--profile-light` | **Meaning:** write lightweight runtime profile CSVs.<br>**Type:** flag.<br>**Default:** false.<br>**Example:** `--profile-light` |
 | `--save-generation-objectives` | **Meaning:** write rank-0 objective rows per generation.<br>**Type:** flag.<br>**Default:** false.<br>**Example:** `--save-generation-objectives` |
 
-### 5.2 `render_saved_layouts`
+### 5.2 `run_revision_30seed_campaign`
+
+This runner is intended for replicated paper experiments and supplementary multi-instance checks. It delegates every task to `run_experiment_manager`.
+
+| Parameter | Details |
+|---|---|
+| `--campaign-root` | **Meaning:** root folder for campaign outputs, logs, and manifests.<br>**Type:** path.<br>**Default:** `results/revision_30seed_campaign`. |
+| `--phase` | **Meaning:** experiment phase.<br>**Accepted:** `phase11`, `phase12b`, `phase12c`.<br>**Required:** yes. |
+| `--seed-start` | **Meaning:** first inclusive seed.<br>**Type:** integer.<br>**Default:** `101`. |
+| `--seed-end` | **Meaning:** last inclusive seed.<br>**Type:** integer.<br>**Default:** `130`. |
+| `--instances` | **Meaning:** predefined instance group.<br>**Accepted:** `core`, `stress`, `all`.<br>**Default:** `core`.<br>Ignored when `--instance-list` is supplied. |
+| `--instance-list` | **Meaning:** explicit comma-separated repository mask names.<br>**Type:** string.<br>Optional `.npz` suffixes are accepted.<br>This overrides `--instances`. |
+| `--only-instance` | **Meaning:** restrict to one predefined instance.<br>Do not combine with `--instance-list`. |
+| `--only-variant` | **Meaning:** restrict to one Phase 11 method or Phase 12 variant. |
+| `--max-workers` | **Meaning:** maximum number of independent manager tasks executed concurrently.<br>**Type:** positive integer.<br>**Default:** `3`. |
+| `--resume` | **Meaning:** skip tasks whose existing `experiment_summary.csv` records `status=completed`.<br>**Type:** flag. |
+| `--dry-run` | **Meaning:** create the task manifest without executing optimization.<br>**Type:** flag. |
+| `--archive-rank-max` | **Meaning:** maximum archived rank forwarded to the manager.<br>**Type:** integer.<br>**Default:** `3`. |
+| `--profile-light` | **Meaning:** forward lightweight runtime profiling to each manager task.<br>**Type:** flag. |
+| `--save-generation-objectives` | **Meaning:** forward generation-objective capture to each manager task.<br>**Type:** flag. |
+
+Campaign tasks automatically forward:
+
+```text
+--budget-policy auto_from_instance
+--archive-layouts both
+--no-figures
+```
+
+#### Phase 11 replicated core campaign
+
+```powershell
+python -m whl_experiments.run_revision_30seed_campaign `
+  --campaign-root results/revision_final_30seed `
+  --phase phase11 `
+  --seed-start 101 `
+  --seed-end 130 `
+  --instances core `
+  --max-workers 5 `
+  --resume `
+  --profile-light `
+  --save-generation-objectives `
+  --archive-rank-max 3
+```
+
+#### Explicit supplementary instance list, one seed
+
+```powershell
+python -m whl_experiments.run_revision_30seed_campaign `
+  --campaign-root results/revision_final_supplementary `
+  --phase phase11 `
+  --seed-start 101 `
+  --seed-end 101 `
+  --instance-list Answer_Set_layout_AW_1,Answer_Set_layout_AW_2,Answer_Set_layout_AW_3,demo_layout_door_bottom_AW_2,demo_layout_door_bottom_AW_3,demo_layout_door_left_AW_2,demo_layout_door_left_AW_3,demo_layout_door_UB_AW_2,demo_layout_door_UB_AW_3,Gyorgy-KOVACS_MWH_Narrow_AW_4,Gyorgy-KOVACS_MWH_Wide_AW_5 `
+  --max-workers 5 `
+  --resume `
+  --profile-light `
+  --save-generation-objectives `
+  --archive-rank-max 3
+```
+
+For the supplementary example above, one seed gives `11 instances × 3 Phase-11 methods = 33` tasks. Use `--dry-run` first if you want to verify the task count before execution.
+
+### 5.3 `render_saved_layouts`
 
 | Parameter | Details |
 |---|---|
@@ -132,7 +198,7 @@ The original parameter tables were too wide. They are rewritten below as two-col
 | `--no-legend` | **Meaning:** hide legend.<br>**Type:** flag.<br>**Default:** false.<br>**Example:** `--no-legend` |
 | `--show-coords` | **Meaning:** show coordinate labels.<br>**Type:** flag.<br>**Default:** false.<br>**Example:** `--show-coords` |
 
-### 5.3 `render_experiment_archives`
+### 5.4 `render_experiment_archives`
 
 | Parameter | Details |
 |---|---|
@@ -314,6 +380,23 @@ python -m whl_experiments.run_experiment_manager --method bs_only --instances Gy
 
 ```powershell
 python -m whl_experiments.run_experiment_manager --method random_restart_bs --instances Gyorgy-KOVACS_WH_Narrow_AW_4 --seeds 101 --beam-width 3 --max-depth 8 --decode-budget 10 --output-dir results\quick_rrbs
+```
+
+### Phase 11 campaign dry-run
+
+```powershell
+python -m whl_experiments.run_revision_30seed_campaign `
+  --campaign-root results/revision_final_30seed `
+  --phase phase11 `
+  --seed-start 101 `
+  --seed-end 130 `
+  --instances core `
+  --max-workers 5 `
+  --resume `
+  --profile-light `
+  --save-generation-objectives `
+  --archive-rank-max 3 `
+  --dry-run
 ```
 
 ### Dry-run
