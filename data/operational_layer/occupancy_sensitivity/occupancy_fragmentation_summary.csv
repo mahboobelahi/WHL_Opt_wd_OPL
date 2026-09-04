@@ -1,0 +1,13 @@
+occupancy_label,inventory_total,selection_label,sku_count_weighted_mean_groups_per_sku
+low,790,L1,1.74
+low,790,L2,1.25
+low,790,L3,1.75
+low,790,L4,1.36
+medium,2240,L1,2.9
+medium,2240,L2,1.54
+medium,2240,L3,1.76
+medium,2240,L4,2.28
+high,3584,L1,3.86
+high,3584,L2,1.68
+high,3584,L3,1.92
+high,3584,L4,3.25
