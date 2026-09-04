@@ -17,77 +17,178 @@ Activate the virtual environment if your system Python does not already have the
 Experiment outputs are written under `results/` by default, or under the folder passed with `--output-dir`. The `results/` folder is ignored by Git.
 
 ---
-### Editor launch
-
-```powershell
-python -m apps.layout_editor.launch_editor
-```
-
 
 ## 2. Available Public Runners
 
 | Runner | Recommended use | Purpose |
 |---|---|---|
-| `whl_experiments.run_experiment_manager` | **Main public CLI** | Runs the documented workflows for the proposed NSGA-II + Beam Search method, BS-only baseline, and random-restart Beam Search baseline with consistent output folders and options. |
-| `whl_experiments.run_revision_30seed_campaign` | **Paper campaign orchestration** | Runs Phase 11/12 campaign tasks in parallel by delegating each task to `run_experiment_manager`; supports resume, dry-run, predefined or explicit instance lists, and disables figures for campaign runs. |
-| `whl_experiments.render_saved_layouts` | **Public rendering utility** | Renders saved layout arrays or archive outputs after an optimization run. Use this for visual inspection of generated layouts. |
-| `whl_experiments.render_experiment_archives` | **Public rendering utility** | Renders layouts from experiment archive folders, including filtered archive/rank outputs if supported by the script. |
-| `whl_visualization.paper_pareto_plots` | **Paper-style plotting utility** | Regenerates manuscript-style Pareto plots from the prepared CSV inputs in `data/plot_inputs/paper/`. |
+| `whl_experiments.run_experiment_manager` | **Individual/custom scientific experiments** | Runs the proposed NSGA-II + Beam Search method, BS-only baseline, or random-restart Beam Search baseline for explicitly selected instances, seeds, and parameters. |
+| `whl_experiments.run_revision_30seed_campaign` | **Paper campaign reproduction** | Orchestrates Phase 11/12 campaign tasks by repeatedly calling `run_experiment_manager`; supports parallel workers, resume, dry-run, predefined instance groups, and explicit instance lists. |
+| `whl_experiments.render_saved_layouts` | **Render one saved archive** | Renders layouts from a specified `.npz` archive and its JSON index after optimization. |
+| `whl_experiments.render_experiment_archives` | **Batch-render a completed experiment** | Discovers and renders saved layout archives under a completed experiment directory. |
+| `whl_visualization.paper_pareto_plots` | **Paper-style plotting** | Regenerates manuscript-style Pareto plots from the prepared CSV inputs in `data/plot_inputs/paper/`. |
+
+The experiment manager contains the scientific experiment workflow. The campaign runner is an orchestration layer around it; it does not implement a separate optimization method.
 
 ---
 
-## 3. Recommended Public Entry Point
+## 3. Recommended Public Entry Points and Figure Workflow
 
-`run_experiment_manager.py` is the recommended public scientific runner for:
+### 3.1 Individual or custom experiment
+
+Use `run_experiment_manager` when you want to run one method, one or more selected instances, or a custom parameter configuration.
+
+Supported methods are:
 
 - `proposed_nsga2_bs`
 - `bs_only`
 - `random_restart_bs`
 
-For replicated paper campaigns, use `run_revision_30seed_campaign.py`. It is an orchestration-only wrapper: each task calls `run_experiment_manager`, so it does not duplicate or replace optimization logic. Campaign runs automatically use `--budget-policy auto_from_instance`, `--archive-layouts both`, and `--no-figures`.
+### 3.2 Replicated paper campaign
 
-### Figure-control contract
+Use `run_revision_30seed_campaign` for the replicated Phase 11/12 experiments. Each campaign task delegates to `run_experiment_manager`, so the relationship is:
 
-`--no-figures` follows conventional flag semantics:
+```text
+run_revision_30seed_campaign
+        |
+        +--> run_experiment_manager  (method x instance x seed task)
+```
 
-- flag omitted -> selected-layout figures may be rendered;
-- `--no-figures` supplied -> layout figure rendering is disabled.
+Campaign runs automatically forward:
 
-The paper campaign wrapper always forwards `--no-figures` and validates this parser contract before any campaign task is launched. If the manager's flag semantics regress, the wrapper aborts instead of silently running an expensive campaign with figure rendering enabled.
+```text
+--budget-policy auto_from_instance
+--archive-layouts both
+--no-figures
+```
 
-Disabling figures does **not** disable scientific/evidence outputs such as `candidates.csv`, generation summaries/objectives, runtime-profile CSVs, or requested `.npz`/JSON archives. A `figures_dir` path may still be recorded in metadata; the path itself does not mean that PNG figures were rendered.
+The campaign wrapper also validates the manager's `--no-figures` parser contract before launching tasks. If that contract is inconsistent, the campaign aborts instead of silently spending time rendering figures.
+
+### 3.3 Run an individual experiment with figures
+
+For `run_experiment_manager`, figures are enabled when `--no-figures` is omitted. Example:
+
+```powershell
+python -m whl_experiments.run_experiment_manager `
+  --method proposed_nsga2_bs `
+  --instances Gyorgy-KOVACS_WH_Narrow_AW_4 `
+  --seeds 101 `
+  --population-size 8 `
+  --generations 5 `
+  --beam-width 3 `
+  --max-depth 8 `
+  --output-dir results\quick_nsga2_bs_with_figures
+```
+
+This allows selected-layout PNG figures to be rendered during the optimization run.
+
+### 3.4 Run the same experiment without figures
+
+Add `--no-figures`:
+
+```powershell
+python -m whl_experiments.run_experiment_manager `
+  --method proposed_nsga2_bs `
+  --instances Gyorgy-KOVACS_WH_Narrow_AW_4 `
+  --seeds 101 `
+  --population-size 8 `
+  --generations 5 `
+  --beam-width 3 `
+  --max-depth 8 `
+  --no-figures `
+  --output-dir results\quick_nsga2_bs_no_figures
+```
+
+`--no-figures` disables layout figure rendering only. It does **not** disable scientific/evidence outputs such as `candidates.csv`, generation summaries/objectives, runtime-profile CSVs, or requested `.npz`/JSON archives. A `figures_dir` path may still be recorded in metadata; the path itself does not mean that PNG figures were rendered.
+
+For replicated paper campaigns, figure rendering is always disabled during optimization. If figures are needed afterward, render them from the saved archives.
+
+### 3.5 Render one saved archive after optimization
+
+Use `render_saved_layouts` when you know the archive and index to render:
+
+```powershell
+python -m whl_experiments.render_saved_layouts `
+  --archive results\quick_nsga2_bs\proposed_nsga2_bs_YYYYMMDD_HHMMSS\runs\Gyorgy-KOVACS_WH_Narrow_AW_4\seed_101\final_ranked_layouts.npz `
+  --index results\quick_nsga2_bs\proposed_nsga2_bs_YYYYMMDD_HHMMSS\runs\Gyorgy-KOVACS_WH_Narrow_AW_4\seed_101\final_ranked_layouts_index.json `
+  --filter rank0_to_rank3
+```
+
+### 3.6 Batch-render a completed experiment
+
+Use `render_experiment_archives` when you want the renderer to discover archives under an experiment folder:
+
+```powershell
+python -m whl_experiments.render_experiment_archives `
+  --experiment-dir results\quick_nsga2_bs\proposed_nsga2_bs_YYYYMMDD_HHMMSS `
+  --archive-type final_ranked `
+  --filter rank0_to_rank3
+```
+
+The rendering commands are post-processing utilities; they do not rerun the optimization.
 
 ---
 
 ## 4. Method Commands
 
-These are bounded test commands, not full paper-scale experiments.
+These are bounded smoke-test commands, not full paper-scale experiments. They use small manual budgets and disable figure rendering to keep the tests quick. The replicated manuscript experiments are run through the campaign runner documented in Section 5.2.
 
 ### Proposed NSGA-II + Beam Search
 
 ```powershell
-python -m whl_experiments.run_experiment_manager --method proposed_nsga2_bs --instances Gyorgy-KOVACS_WH_Narrow_AW_4 --seeds 101 --population-size 8 --generations 5 --beam-width 3 --max-depth 8 --output-dir results\quick_nsga2_bs
+python -m whl_experiments.run_experiment_manager `
+  --method proposed_nsga2_bs `
+  --instances Gyorgy-KOVACS_WH_Narrow_AW_4 `
+  --seeds 101 `
+  --population-size 8 `
+  --generations 5 `
+  --beam-width 3 `
+  --max-depth 8 `
+  --no-figures `
+  --output-dir results\quick_nsga2_bs
 ```
 
 ### BS-only
 
 ```powershell
-python -m whl_experiments.run_experiment_manager --method bs_only --instances Gyorgy-KOVACS_WH_Narrow_AW_4 --seeds 101 --beam-width 3 --max-depth 8 --output-dir results\quick_bs_only
+python -m whl_experiments.run_experiment_manager `
+  --method bs_only `
+  --instances Gyorgy-KOVACS_WH_Narrow_AW_4 `
+  --seeds 101 `
+  --beam-width 3 `
+  --max-depth 8 `
+  --no-figures `
+  --output-dir results\quick_bs_only
 ```
 
 ### Random-restart Beam Search
 
 ```powershell
-python -m whl_experiments.run_experiment_manager --method random_restart_bs --instances Gyorgy-KOVACS_WH_Narrow_AW_4 --seeds 101 --beam-width 3 --max-depth 8 --decode-budget 10 --output-dir results\quick_rrbs
+python -m whl_experiments.run_experiment_manager `
+  --method random_restart_bs `
+  --instances Gyorgy-KOVACS_WH_Narrow_AW_4 `
+  --seeds 101 `
+  --beam-width 3 `
+  --max-depth 8 `
+  --decode-budget 10 `
+  --no-figures `
+  --output-dir results\quick_rrbs
 ```
 
 ### Default auto-budget proposed command
 
+If the manual budget options are omitted, the manager uses the default `auto_from_instance` budget policy and resolves the search parameters from `auto_hyperparams` for that geometry:
+
 ```powershell
-python -m whl_experiments.run_experiment_manager --method proposed_nsga2_bs --instances Gyorgy-KOVACS_WH_Narrow_AW_4 --seeds 101 --output-dir results\default_nsga2_bs
+python -m whl_experiments.run_experiment_manager `
+  --method proposed_nsga2_bs `
+  --instances Gyorgy-KOVACS_WH_Narrow_AW_4 `
+  --seeds 101 `
+  --no-figures `
+  --output-dir results\default_nsga2_bs
 ```
 
-Do not use the default auto-budget command as a quick validation command. It may take longer because the default budget policy is `auto_from_instance`, which uses `auto_hyperparams`.
+Do not use the default auto-budget command as a quick validation command. It may be substantially more expensive than the bounded examples above.
 
 ---
 
@@ -401,87 +502,7 @@ The editor is used to create, duplicate, edit, delete, and preview layout mask b
 
 ---
 
-## 11. Examples
-
-### Proposed NSGA-II + Beam Search quick validation
-
-```powershell
-python -m whl_experiments.run_experiment_manager --method proposed_nsga2_bs --instances Gyorgy-KOVACS_WH_Narrow_AW_4 --seeds 101 --population-size 8 --generations 5 --beam-width 3 --max-depth 8 --output-dir results\quick_nsga2_bs
-```
-
-### BS-only
-
-```powershell
-python -m whl_experiments.run_experiment_manager --method bs_only --instances Gyorgy-KOVACS_WH_Narrow_AW_4 --seeds 101 --beam-width 3 --max-depth 8 --output-dir results\quick_bs_only
-```
-
-### Random-restart Beam Search
-
-```powershell
-python -m whl_experiments.run_experiment_manager --method random_restart_bs --instances Gyorgy-KOVACS_WH_Narrow_AW_4 --seeds 101 --beam-width 3 --max-depth 8 --decode-budget 10 --output-dir results\quick_rrbs
-```
-
-### Verify `--no-figures` semantics
-
-```powershell
-python -c "from whl_experiments import run_experiment_manager as m; p=m.build_parser(); print(p.parse_args([]).no_figures, p.parse_args(['--no-figures']).no_figures)"
-```
-
-Expected:
-
-```text
-False True
-```
-
-### Phase 11 clean campaign dry-run
-
-```powershell
-python -m whl_experiments.run_revision_30seed_campaign `
-  --campaign-root results/revision_final_30seed_nofg `
-  --phase phase11 `
-  --seed-start 101 `
-  --seed-end 130 `
-  --instances core `
-  --max-workers 5 `
-  --profile-light `
-  --save-generation-objectives `
-  --archive-rank-max 3 `
-  --dry-run
-```
-
-### Dry-run
-
-```powershell
-python -m whl_experiments.run_experiment_manager --method proposed_nsga2_bs --instances Gyorgy-KOVACS_WH_Narrow_AW_4 --seeds 101 --dry-run
-```
-
-### Archive-saving
-
-```powershell
-python -m whl_experiments.run_experiment_manager --method proposed_nsga2_bs --instances Gyorgy-KOVACS_WH_Narrow_AW_4 --seeds 101 --population-size 8 --generations 5 --beam-width 3 --max-depth 8 --archive-layouts final_ranked --archive-rank-max 3 --output-dir results\quick_nsga2_bs
-```
-
-### Render after optimization
-
-```powershell
-python -m whl_experiments.render_experiment_archives --experiment-dir results\quick_nsga2_bs\proposed_nsga2_bs_YYYYMMDD_HHMMSS --archive-type final_ranked --filter rank0_to_rank3
-```
-
-### Rank-specific render
-
-```powershell
-python -m whl_experiments.render_experiment_archives --experiment-dir results\quick_nsga2_bs\proposed_nsga2_bs_YYYYMMDD_HHMMSS --archive-type final_ranked --filter rank0
-```
-
-### Paper Pareto plot
-
-```powershell
-python -m whl_visualization.paper_pareto_plots
-```
-
----
-
-## 12. Optional Operational-layer Diagnostics
+## 11. Optional Operational-layer Diagnostics
 
 Operational-layer diagnostics are optional post-optimization reproduction helpers for the paper's fixed L1-L4 representative layout panel. They are not part of NSGA-II fitness evaluation and do not feed back into the optimizer.
 
