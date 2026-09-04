@@ -2,14 +2,14 @@
 
 ## 1. Scope
 
-The operational layer (OPL) is a deterministic post-optimization diagnostic for the fixed L1-L4 layouts used in Section 7 of the paper. It is separate from structural optimization:
+The operational layer (OPL) is a deterministic post-optimization diagnostic for the fixed L1-L4 layouts used in Section 7 of the paper.
 
 - OPL is not an NSGA-II or Beam Search objective.
-- OPL does not alter or reselect the structural layouts.
+- OPL does not alter or reselect structural layouts.
 - OPL does not feed results back into the optimizer.
 - The diagnostics are static access/assignment proxies, not routed warehouse simulation or calibrated travel time.
 
-The locked pallet-slot capacities are:
+Locked pallet-slot capacities:
 
 | Layout | Capacity |
 |---|---:|
@@ -20,22 +20,19 @@ The locked pallet-slot capacities are:
 
 ## 2. Checked-in reviewer evidence
 
-The authoritative fixed-layout data are under `data/operational_layer/paper_inputs/`.
+Canonical fixed-layout evidence is under `data/operational_layer/paper_inputs/`:
 
-Key files are:
-
-- `selected_layouts.csv` — L1-L4 identities, structural provenance, and capacities.
-- `slot_metrics_by_layout.csv` — 19,776 slot rows with access distance, effective depth, vertical level, normalized descriptors, and slot cost.
+- `selected_layouts.csv` — L1-L4 identity, provenance, and capacity.
+- `slot_metrics_by_layout.csv` — all 19,776 pallet-slot rows with access distance, effective depth, vertical level, normalized descriptors, and slot cost.
 - `sku_catalog.csv` — deterministic 100-SKU ABC catalog and Low=790 inventory.
 - `representative_access_assignment.csv` — 400 representative assignments.
-- `reserve_pallet_assignment.csv` — 2,760 Low-load reserve assignments.
-- `regime_A_metrics.csv` — representative-access diagnostics.
-- `regime_B_metrics.csv` — Low-load reserve/capacity diagnostics.
-- `reserve_fragmentation_summary.csv` — class-specific reserve fragmentation.
-- `synthetic_orders.csv`, `order_effort_by_seed.csv`, `order_effort_summary.csv` — fixed synthetic workload evidence.
-- `sensitivity/lambda_sensitivity_summary.csv`, `sensitivity/lambda_sensitivity_by_seed.csv` — canonical weight-sensitivity evidence.
+- `reserve_pallet_assignment.csv` — 2,760 canonical Low reserve assignments.
+- `regime_A_metrics.csv` and `regime_B_metrics.csv`.
+- `reserve_fragmentation_summary.csv`.
+- `synthetic_orders.csv`, `order_effort_by_seed.csv`, `order_effort_summary.csv`.
+- `sensitivity/lambda_sensitivity_summary.csv`, `sensitivity/lambda_sensitivity_by_seed.csv`.
 
-Compact validated Low/Medium/High results are checked in under `data/operational_layer/occupancy_sensitivity/` for direct reviewer inspection and manuscript comparison.
+Audited Round-2 occupancy evidence is under `data/operational_layer/occupancy_sensitivity/`. See its `README.md` and `source_result_inventory.csv`.
 
 ## 3. Occupancy protocol
 
@@ -47,19 +44,19 @@ The same L1-L4 layouts, slot geometry, 100 SKUs, ABC demand weights, SKU order, 
 | Medium | 2,240 | 2,140 | 50.00% |
 | High | 3,584 | 3,484 | 80.00% |
 
-Inventory is scaled from the canonical 790-pallet vector by deterministic proportional largest remainder. Each SKU retains exactly one representative-access pallet. Equal remainders are resolved by ascending `global_sku_index`.
+Inventory is scaled from the canonical 790-pallet vector by deterministic proportional largest remainder. Each SKU retains one representative-access pallet. Equal remainders are resolved by ascending `global_sku_index`.
 
-Expected scaled quantities are:
+Exact scaled quantities:
 
 - Low: A `20 x 7`, B `30 x 15`, C `50 x 4`.
 - Medium: A `20 x 20`, B `30 x 43`, C `50 x 11`.
 - High: A `20 x 32`, B `30 x 68`, C `4 x 19` and `46 x 18`.
 
-Representative assignments and Scenario-A diagnostics must remain invariant across occupancy. Reserve placement, utilization, reserve access, and reserve fragmentation may change.
+Representative assignments and Scenario-A diagnostics are occupancy-invariant. Reserve placement, utilization, reserve access, and reserve fragmentation may change.
 
 ## 4. Generate validated occupancy cases
 
-Run from the repository root. The canonical source directory defaults to `data/operational_layer/paper_inputs`.
+Run from the repository root. The canonical source defaults to `data/operational_layer/paper_inputs`.
 
 ### Low reproduction gate
 
@@ -89,24 +86,9 @@ python -m whl_experiments.build_operational_occupancy_sensitivity `
   --inventory-total 3584
 ```
 
-Each case writes:
-
-```text
-data/
-  sku_catalog_scaled.csv
-  representative_access_assignment.csv
-  reserve_pallet_assignment.csv
-  regime_A_metrics.csv
-  regime_B_metrics.csv
-  reserve_fragmentation_summary.csv
-logs/
-  validation_summary.json
-  occupancy_manifest.json
-```
+Each generated case writes the scaled catalog, representative and reserve assignments, Scenario-A/B metrics, reserve fragmentation, validation summary, and occupancy manifest.
 
 ## 5. Cross-occupancy analysis
-
-After all three cases pass validation:
 
 ```powershell
 python -m whl_experiments.analyze_operational_occupancy_sensitivity `
@@ -116,7 +98,7 @@ python -m whl_experiments.analyze_operational_occupancy_sensitivity `
   --output-root results\section7_occupancy\summary
 ```
 
-The analysis checks representative and Scenario-A invariance, source hashes, and shortage-free assignments. It writes:
+Outputs:
 
 - `occupancy_summary.csv`
 - `occupancy_fragmentation_by_class.csv`
@@ -124,7 +106,7 @@ The analysis checks representative and Scenario-A invariance, source hashes, and
 - `occupancy_fragmentation_layout_summary.csv`
 - `summary_manifest.json`
 
-The reserve-access decomposition is:
+Reserve-access decomposition:
 
 ```text
 mean(normalized_distance)
@@ -132,7 +114,7 @@ mean(normalized_distance)
 + lambda_level * mean(normalized_level)
 ```
 
-with the baseline Scenario-B weights `(0.1, 0.1)`.
+with baseline Scenario-B weights `(0.1, 0.1)`.
 
 ## 6. Weight sensitivity by occupancy
 
@@ -144,9 +126,7 @@ python -m whl_experiments.analyze_operational_weight_sensitivity_by_occupancy `
   --output-root results\section7_occupancy\weight_sensitivity
 ```
 
-The canonical Scenario-A and Low Scenario-B sensitivity files are read from `data/operational_layer/paper_inputs/sensitivity/` by default.
-
-Scenario-B reserve weights are:
+The canonical sensitivity files default to `data/operational_layer/paper_inputs/sensitivity/`.
 
 | Case | depth weight | level weight |
 |---|---:|---:|
@@ -155,24 +135,32 @@ Scenario-B reserve weights are:
 | B3 | 0.10 | 0.25 |
 | B4 | 0.25 | 0.25 |
 
-Outputs are:
+The Low Scenario-B evidence must reproduce within absolute tolerance `1e-9` before Medium/High sensitivity is accepted.
 
-- `scenario_B_weight_sensitivity_by_occupancy.csv`
-- `scenario_B_weight_sensitivity_ranking.csv`
-- `scenario_A_existing_sensitivity_summary.csv`
-- `weight_sensitivity_manifest.json`
+## 7. Audited WHLR result transfer
 
-The analysis must reproduce the canonical Low Scenario-B evidence within absolute tolerance `1e-9` before accepting Medium/High weight-sensitivity results.
+The original WHLR `round2_section7_occupancy_sensitivity` result tree was audited before transfer. The source ZIP SHA-256 is:
 
-## 7. Checked-in compact occupancy results
+`b3479f28d0e5d50a4e81b3ed012cdbf0d846a83e5eadcf0b94bda692c47b80fc`
 
-`data/operational_layer/occupancy_sensitivity/` contains the compact validated evidence used for manuscript comparison:
+Reviewer-facing transferred evidence now includes:
 
-- `occupancy_summary.csv`
-- `occupancy_fragmentation_summary.csv`
-- `scenario_B_weight_sensitivity_summary.csv`
+```text
+data/operational_layer/occupancy_sensitivity/
+  README.md
+  scaled_inventory_summary.csv
+  source_result_inventory.csv
+  cases/
+    low_790/
+    medium_2240/
+    high_3584/
+  cross_occupancy/
+  weight_sensitivity/
+```
 
-Detailed generated case folders remain under `results/` and are intentionally not versioned. They can be regenerated with the commands above.
+The three case validation summaries expose capacities, utilization, assignment row counts, class quantities, all scientific invariants, and the Low canonical reproduction gate. The case folders also expose the exact Scenario-B and class-specific fragmentation CSVs from WHLR. Cross-occupancy and weight-sensitivity CSVs are transferred directly from the validated result tree.
+
+`source_result_inventory.csv` inventories all 33 original files with size, SHA-256, and CSV dimensions. Large occupancy-specific per-pallet assignment CSVs are not duplicated in the public data tree because they are deterministic generated outputs; their original hashes/row counts are recorded and the public wrapper regenerates them. Canonical Low raw assignments remain checked in under `paper_inputs/`.
 
 ## 8. Interpretation limits
 
