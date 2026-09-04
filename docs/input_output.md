@@ -58,7 +58,7 @@ See `docs/layout_data.md` for full layout details.
 
 ## 4. CLI Inputs
 
-Important CLI inputs include:
+Important individual-run inputs include:
 
 - `--method`
 - `--instances`
@@ -74,6 +74,17 @@ Important CLI inputs include:
 - `--archive-rank-max`
 - `--dry-run`
 
+Important paper-campaign inputs include:
+
+- `--phase`
+- `--campaign-root`
+- `--seed-start` / `--seed-end`
+- `--instances` or `--instance-list`
+- `--max-workers`
+- `--resume`
+- `--profile-light`
+- `--save-generation-objectives`
+
 See `docs/cli_commands.md` for accepted values and examples.
 
 ## 5. Optimization Outputs
@@ -87,7 +98,9 @@ Typical outputs include:
 - optional saved layout archives
 - rendered layout images if rendering is run
 
-Experiment-level outputs can include `experiment_metadata.json` and `experiment_summary.csv`. Run-level outputs can include run metadata, candidate rows, generation summaries, and optional archive files.
+Experiment-level outputs can include `experiment_metadata.json` and `experiment_summary.csv`. Run-level outputs can include run metadata, candidate rows, generation summaries, profiling files, generation-objective evidence, and optional archive files.
+
+The paper campaign wrapper additionally writes per-task logs and campaign manifests under its `--campaign-root`.
 
 ## 6. Archive Outputs
 
@@ -97,6 +110,8 @@ Layout archives are saved only when archive options are enabled through the expe
 - `--archive-rank-max`
 
 Archive files can include saved `.npz` layouts and matching JSON index files. Archive rank filtering is controlled when saving archives through manager options and when rendering archives through renderer filter options.
+
+Paper campaign tasks request both generation-elites and final-ranked archives.
 
 Rendered archive layouts can be generated later using the rendering utilities. See the rendering section of `docs/cli_commands.md`.
 
@@ -126,9 +141,15 @@ The script writes paper-style figure outputs and an audit report under `whl_visu
 
 ## 10. Reproducibility Notes
 
-Use fixed seeds for reproducible optimization runs. The quick validation commands use explicit small test parameters so they stay bounded.
+Use fixed seeds for reproducible optimization runs. Bounded validation commands use explicit small parameters; paper-scale structural experiments use the campaign wrapper with `auto_from_instance` budgets and figures disabled.
 
-The default proposed method uses `auto_from_instance` / `auto_hyperparams`, which derives the search budget from the selected instance. Full/default runs may take longer than quick validation commands.
+The default paper campaign sets are:
+
+- Phase 11: Proposed, random-restart BS, and BS-only;
+- Phase 12B: V1-V5 only;
+- Phase 12C: V6 and V7.
+
+Phase 12B V0 is not generated as a duplicate campaign. The Phase 11 `proposed_nsga2_bs` results for matching instances and seeds are the V0/full-proposed baseline used during Phase 12B analysis. V6b is run separately when the binding-depth diagnostic is required.
 
 ## 11. Files Not Committed
 
@@ -139,3 +160,5 @@ These files and folders are not meant to be committed:
 - `__pycache__/`
 - temporary logs
 - generated validation outputs
+
+Curated reviewer-facing CSV/JSON evidence stored under documented `data/` paths is intentionally versioned.
