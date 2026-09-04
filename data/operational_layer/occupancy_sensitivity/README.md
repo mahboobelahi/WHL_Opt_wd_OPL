@@ -30,11 +30,11 @@ L1-L4 capacities are 4,480, 5,056, 5,440, and 4,800 pallet slots.
 
 The Low reproduction gate passed against the canonical Round-1 OPL evidence. Medium and High passed all recorded assignment, accessibility, capacity, uniqueness, representative-invariance, Scenario-A-invariance, and source-integrity checks.
 
-`scaled_inventory_summary.csv` records the exact deterministic Low/Medium/High SKU quantities used by the validated runs.
+`scaled_inventory_summary.csv` records the deterministic Low/Medium/High SKU quantities used by the validated runs.
 
 ## Cross-occupancy evidence
 
-`cross_occupancy/` contains exact WHLR result CSVs:
+`cross_occupancy/` contains the scientific rows and values audited from the WHLR result CSVs:
 
 - `occupancy_summary.csv`
 - `occupancy_fragmentation_by_class.csv`
@@ -45,11 +45,13 @@ These expose utilization, reserve deep placement, reserve-access cost, horizonta
 
 ## Weight sensitivity
 
-`weight_sensitivity/` contains the exact validated Scenario-A and Scenario-B sensitivity result CSVs used for Appendix Table C1 support.
+`weight_sensitivity/` contains the validated Scenario-A and Scenario-B sensitivity rows and values used for Appendix Table C1 support.
 
 ## Source-result inventory
 
 `source_result_inventory.csv` records every one of the 33 original WHLR result files, including byte size, SHA-256, and CSV dimensions where applicable. This includes the original per-pallet representative/reserve assignment files and original manifests.
+
+The source hashes in that inventory refer to the original WHLR files. Reviewer-facing CSV copies in this repository may have normalized text line endings; their scientific rows and values are preserved.
 
 The large occupancy-specific per-pallet assignment CSVs are not duplicated here because the public wrapper regenerates them deterministically and the canonical Low assignment is already checked in under `../paper_inputs/`. Their original row counts and SHA-256 hashes remain recorded in `source_result_inventory.csv`.
 
