@@ -72,11 +72,19 @@ METHOD_OR_VARIANT_SLUGS = {
 }
 INSTANCE_SLUGS = {
     "AT_S_comercial_layout_AW_3": "AT_S_AW3",
+    "Answer_Set_layout_AW_1": "ANS_AW1",
+    "Answer_Set_layout_AW_2": "ANS_AW2",
+    "Answer_Set_layout_AW_3": "ANS_AW3",
+    "demo_layout_door_bottom_AW_2": "DEMO_B_AW2",
+    "demo_layout_door_bottom_AW_3": "DEMO_B_AW3",
     "demo_layout_door_left_AW_2": "DEMO_L_AW2",
+    "demo_layout_door_left_AW_3": "DEMO_L_AW3",
+    "demo_layout_door_UB_AW_2": "DEMO_UB_AW2",
+    "demo_layout_door_UB_AW_3": "DEMO_UB_AW3",
     "Gyorgy-KOVACS_WH_Narrow_AW_4": "KOV_WH_N_AW4",
     "Gyorgy-KOVACS_WH_Wide_AW_5": "KOV_WH_W_AW5",
     "Gyorgy-KOVACS_MWH_Narrow_AW_4": "KOV_MWH_N_AW4",
-    "Answer_Set_layout_AW_2": "ANS_AW2",
+    "Gyorgy-KOVACS_MWH_Wide_AW_5": "KOV_MWH_W_AW5",
 }
 
 MANIFEST_COLUMNS = [
@@ -119,6 +127,26 @@ def selected_instances(scope: str) -> tuple[str, ...]:
     if scope == "all":
         return CORE_INSTANCES + STRESS_INSTANCES
     raise ValueError(f"Unsupported instance scope: {scope}")
+
+
+def parse_instance_list(value: str | None) -> tuple[str, ...]:
+    """Return unique comma-separated repository instance names in input order."""
+    if not value:
+        return ()
+    instances: list[str] = []
+    seen: set[str] = set()
+    for raw_item in value.split(","):
+        item = raw_item.strip()
+        if not item:
+            continue
+        # The manager resolves repository masks by stem; accepting an optional
+        # .npz suffix here keeps the campaign CLI convenient without changing
+        # the underlying experiment-manager contract.
+        instance = Path(item).stem
+        if instance not in seen:
+            seen.add(instance)
+            instances.append(instance)
+    return tuple(instances)
 
 
 def phase_members(phase: str) -> tuple[str, ...]:
@@ -271,7 +299,8 @@ def build_tasks(args: argparse.Namespace) -> list[CampaignTask]:
         else:
             members = tuple(item for item in members if item == args.only_variant)
 
-    instances = selected_instances(args.instances)
+    explicit_instances = parse_instance_list(args.instance_list)
+    instances = explicit_instances or selected_instances(args.instances)
     if args.only_instance:
         instances = (args.only_instance,)
 
@@ -412,7 +441,13 @@ def append_row(path: Path, row: dict[str, Any]) -> None:
         writer.writerow(row)
 
 
-def execute(tasks: list[CampaignTask], *, max_workers: int, resume: bool, manifest_path: Path) -> None:
+def execute(
+    tasks: list[CampaignTask],
+    *,
+    max_workers: int,
+    resume: bool,
+    manifest_path: Path,
+) -> None:
     if max_workers <= 0:
         raise ValueError("--max-workers must be positive.")
     failed = False
@@ -435,9 +470,17 @@ def validate_args(args: argparse.Namespace, parser: argparse.ArgumentParser) -> 
         parser.error("--seed-end must be >= --seed-start.")
     if args.archive_rank_max < 0:
         parser.error("--archive-rank-max must be non-negative.")
+    if args.max_workers <= 0:
+        parser.error("--max-workers must be positive.")
+    if args.instance_list and not parse_instance_list(args.instance_list):
+        parser.error("--instance-list must contain at least one instance name.")
+    if args.instance_list and args.only_instance:
+        parser.error("Use either --instance-list or --only-instance, not both.")
     if args.only_variant == V6B_VARIANT:
         if args.phase != "phase12c":
             parser.error(f"{V6B_VARIANT} requires --phase phase12c.")
+        if args.instance_list:
+            parser.error(f"{V6B_VARIANT} requires --only-instance, not --instance-list.")
         if args.only_instance != "demo_layout_door_left_AW_2":
             parser.error(
                 f"{V6B_VARIANT} requires --only-instance demo_layout_door_left_AW_2."
@@ -463,6 +506,15 @@ def build_parser() -> argparse.ArgumentParser:
         "--instances",
         choices=("core", "stress", "all"),
         default="core",
+        help="Use a predefined instance group unless --instance-list is supplied.",
+    )
+    parser.add_argument(
+        "--instance-list",
+        type=str,
+        help=(
+            "Comma-separated repository mask names for an explicit campaign subset. "
+            "Optional .npz suffixes are accepted. This overrides --instances."
+        ),
     )
     parser.add_argument(
         "--only-variant",
@@ -487,7 +539,7 @@ def main() -> None:
     validate_args(args, parser)
     tasks = build_tasks(args)
     if not tasks:
-        parser.error("No tasks selected. Check --phase and --only-variant.")
+        parser.error("No tasks selected. Check --phase, --only-variant, and instance options.")
 
     campaign_root = Path(args.campaign_root)
     manifest_dir = campaign_root / "manifests"
