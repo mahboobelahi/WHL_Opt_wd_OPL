@@ -129,7 +129,7 @@ def scale_inventory(
         (deepcopy(dict(row)) for row in base_rows),
         key=lambda row: as_int(row, "global_sku_index"),
     )
-    if Counter(row["sku_class"] for row in ordered) != Counter(EXPECTED_CLASSES):
+    if dict(Counter(row["sku_class"] for row in ordered)) != EXPECTED_CLASSES:
         raise ValueError("SKU class counts do not match the locked 20/30/50 catalog")
     if sum(as_int(row, "pallets_per_sku") for row in ordered) != BASE_TOTAL:
         raise ValueError("base SKU catalog does not total 790 pallets")
@@ -204,7 +204,7 @@ def load_source(source_root: Path):
         raise ValueError(f"slot row counts do not match capacities: {slot_counts}")
     if len(skus) != EXPECTED_SKUS:
         raise ValueError("canonical SKU catalog must contain 100 rows")
-    if Counter(row["sku_class"] for row in skus) != Counter(EXPECTED_CLASSES):
+    if dict(Counter(row["sku_class"] for row in skus)) != EXPECTED_CLASSES:
         raise ValueError("canonical SKU class counts must be A20/B30/C50")
     if sum(as_int(row, "pallets_per_sku") for row in skus) != BASE_TOTAL:
         raise ValueError("canonical SKU catalog must total 790 pallets")
