@@ -33,11 +33,11 @@ The public release focuses on **structural layout optimization**. It also includ
 |---|---|---|---|
 | `apps/` | User-facing applications | Tkinter layout editor launcher and editor backends for creating, editing, and previewing mask files | application/editor layer |
 | `configs/` | Repository configuration | Layout registry/config files and experiment plan defaults | configuration/data layer |
-| `data/` | Repository data | Layout mask `.npz` files, plotting CSV inputs, and other non-generated public data | data layer |
+| `data/` | Repository data | Layout mask `.npz` files, plotting CSV inputs, OPL evidence, and other non-generated public data | data layer |
 | `docs/` | Public documentation | CLI, architecture, input/output, layout data, and benchmark source notes | documentation layer |
 | `whl_core/` | Shared core utilities | Mask loading/saving, grid conversion, scoring, feasibility, connectivity, blocks, paths, and registry helpers | core logic |
 | `whl_algorithms/` | Optimization primitives | Beam Search, chromosomes, mutation/crossover helpers, NSGA-II utilities, selection, sorting rules, and auto-parameter policy | core algorithm layer |
-| `whl_experiments/` | Public runners and experiment orchestration | Main experiment manager, method-specific implementation modules, archive saving, layout archive rendering helpers, and preview helpers | runner layer |
+| `whl_experiments/` | Public runners and experiment orchestration | Main experiment manager, 30-seed paper campaign wrapper, method-specific implementation modules, archive saving/rendering helpers, and OPL reproduction helpers | runner layer |
 | `whl_visualization/` | Visualization utilities | Layout plotting and paper-style Pareto/objective-space plotting from prepared CSV inputs | visualization layer |
 
 ## 4. Method Architecture
@@ -55,13 +55,21 @@ These baselines are structural optimization baselines. OPL is not part of the op
 
 ## 5. Public Command Architecture
 
-`whl_experiments/run_experiment_manager.py` is the main public runner. It is the recommended interface for:
+`whl_experiments/run_experiment_manager.py` is the main public scientific runner for:
 
 - `proposed_nsga2_bs`
 - `bs_only`
 - `random_restart_bs`
 
-Direct runner and implementation modules are kept for developer checks and internal reuse, but they are not the recommended public workflow for most users.
+`whl_experiments/run_revision_30seed_campaign.py` is the public paper-campaign orchestration layer. It does not contain optimization logic; each campaign task delegates to `run_experiment_manager` with the documented budget, archive, profiling, and no-figure settings.
+
+The campaign sets are defined explicitly:
+
+- Phase 11: Proposed, random-restart BS, and BS-only;
+- Phase 12B: V1-V5 ablations only;
+- Phase 12C: V6 and V7.
+
+Phase 12B V0 is the Phase 11 Proposed result for the same instances/seeds and is intentionally not rerun. V6b is a separate Phase 12C binding-depth diagnostic.
 
 Rendering and plotting are separate from optimization. Archive rendering operates on saved `.npz` layout archives and index JSON files. Paper-style Pareto plotting operates on prepared CSV inputs.
 
@@ -74,7 +82,8 @@ Optional operational-layer diagnostics are documented separately in `docs/operat
 ```mermaid
 flowchart TD
     A[Layout masks / configs] --> B[Core loading and grid conversion]
-    B --> C[Optimization runner]
+    B --> C[Experiment manager]
+    P[Paper campaign wrapper] --> C
     C --> D1[NSGA-II + Beam Search]
     C --> D2[BS-only baseline]
     C --> D3[Random-restart Beam Search]
