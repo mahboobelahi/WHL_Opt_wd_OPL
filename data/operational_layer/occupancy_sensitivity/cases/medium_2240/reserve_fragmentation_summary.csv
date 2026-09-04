@@ -1,0 +1,13 @@
+selection_label,selection_type,sku_class,sku_count,reserve_pallets_assigned,reserve_blocks_used,reserve_block_side_groups_used,mean_groups_per_sku,mean_blocks_per_sku,mean_slots_per_group,same_block_reserve_share,same_side_reserve_share,reserve_deep_pallet_share,reserve_upper_level_pallet_share,reserve_fragmentation_proxy,fragmentation_status,fragmentation_warning
+L1,accessibility-oriented,A,20,380,2,3,1.05,1.05,126.666666667,0.944736842105,0.455263157895,0,0.671052631579,1.05,ok,
+L1,accessibility-oriented,B,30,1260,9,16,5.63333333333,4.46666666667,78.75,0.0333333333333,0.67619047619,0.148412698413,0.427777777778,5.63333333333,ok,
+L1,accessibility-oriented,C,50,500,1,2,2,1,250,0.66,0.332,0.888,0.652,2,ok,
+L2,deep-block / reserve-oriented,A,20,380,4,6,1,1,63.3333333333,1,1,0.0789473684211,0.189473684211,1,ok,
+L2,deep-block / reserve-oriented,B,30,1260,7,12,1.23333333333,1.2,105,0.894444444444,0.886507936508,0.101587301587,0.563492063492,1.23333333333,ok,
+L2,deep-block / reserve-oriented,C,50,500,1,2,1.94,1,250,0.08,0.03,1,0.756,1.94,ok,
+L3,high-capacity balanced,A,20,380,1,1,1,1,380,1,1,0.205263157895,0.526315789474,1,ok,
+L3,high-capacity balanced,B,30,1260,5,6,1.9,1.86666666667,210,0.7,0.509523809524,0.284920634921,0.475396825397,1.9,ok,
+L3,high-capacity balanced,C,50,500,1,2,1.98,1,250,0.34,0.486,0.766,0.736,1.98,ok,
+L4,intermediate accessibility-capacity compromise,A,20,380,1,2,1.05,1,190,1,0.926315789474,0,0.657894736842,1.05,ok,
+L4,intermediate accessibility-capacity compromise,B,30,1260,6,7,3.56666666667,3.56666666667,180,0.181746031746,0.851587301587,0.165079365079,0.57380952381,3.56666666667,ok,
+L4,intermediate accessibility-capacity compromise,C,50,500,1,2,2,1,250,0.7,0.352,0.826,0.67,2,ok,

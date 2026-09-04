@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "source": {
+    "attached_result_bundle": "round2_section7_occupancy_sensitivity.zip",
+    "attached_result_bundle_sha256": "b3479f28d0e5d50a4e81b3ed012cdbf0d846a83e5eadcf0b94bda692c47b80fc",
+    "source_case_folder": "low_790_reproduction_m31",
+    "source_validation_summary_sha256": "1c80989abe7cc4cd98cb4968caccffa641e69dbea601243cb22b069e6f418f1c",
+    "source_occupancy_manifest_sha256": "8cdcdb898f3856d13c4c6a06fca03b407b40d49a6641c2f2608c8b01512e2601"
+  },
+  "status": "passed",
+  "target_inventory_total": 790,
+  "expected_representative_total_per_layout": 100,
+  "expected_reserve_total_per_layout": 690,
+  "expected_sku_class_counts": {"A": 20, "B": 30, "C": 50},
+  "representative_rows_total": 400,
+  "reserve_rows_total": 2760,
+  "representative_rows_by_layout": {"L1": 100, "L2": 100, "L3": 100, "L4": 100},
+  "reserve_rows_by_layout": {"L1": 690, "L2": 690, "L3": 690, "L4": 690},
+  "assignment_shortages": [],
+  "invariants": {
+    "sku_count_exactly_100": true,
+    "sku_class_counts_exactly_20_30_50": true,
+    "named_occupancy_quantity_vector_exact": true,
+    "one_representative_pallet_per_sku": true,
+    "scaled_catalog_representative_total_is_100": true,
+    "scaled_catalog_reserve_total_matches_target_minus_100": true,
+    "representative_total_per_layout_is_100": true,
+    "exactly_one_representative_row_per_sku_layout": true,
+    "reserve_total_per_layout_matches_target_minus_100": true,
+    "target_fits_all_layouts": true,
+    "no_duplicate_representative_slots": true,
+    "no_duplicate_reserve_slots": true,
+    "no_duplicate_assigned_slots": true,
+    "no_representative_reserve_overlap": true,
+    "no_inaccessible_representatives": true,
+    "no_inaccessible_reserves": true,
+    "no_assignment_shortage": true,
+    "representative_locations_inventory_invariant": true,
+    "scenario_A_inventory_invariant": true,
+    "deep_share_concepts_distinct_and_validated": true,
+    "source_input_hashes_unchanged_before_write": true
+  },
+  "failed_invariants": [],
+  "layout_capacities": {"L1": 4480, "L2": 5056, "L3": 5440, "L4": 4800},
+  "utilization_by_layout": {"L1": 0.17633928571428573, "L2": 0.15625, "L3": 0.14522058823529413, "L4": 0.16458333333333333},
+  "per_class_scaled_quantities": {"A": {"7": 20}, "B": {"15": 30}, "C": {"4": 50}},
+  "low_reproduction": {
+    "requested": true,
+    "status": "passed",
+    "failed_comparisons": [],
+    "comparisons": {
+      "sku_catalog": {"matched": true, "mismatch_count": 0, "generated_rows": 100, "canonical_rows": 100, "max_abs_difference_by_column": {}},
+      "representative_access_assignment": {"matched": true, "mismatch_count": 0, "generated_rows": 400, "canonical_rows": 400, "max_abs_difference_by_column": {}},
+      "reserve_pallet_assignment": {"matched": true, "mismatch_count": 0, "generated_rows": 2760, "canonical_rows": 2760, "max_abs_difference_by_column": {}},
+      "regime_A_metrics": {"matched": true, "mismatch_count": 0, "generated_rows": 4, "canonical_rows": 4, "max_abs_difference_by_column": {"demand_weighted_normalized_distance": 2.5359998823137886e-10, "demand_weighted_normalized_level": 1.639999941405179e-11, "weighted_access_cost": 2.7000002233990017e-10, "A_weighted_access_cost": 2.1819999973526905e-10, "B_weighted_access_cost": 5.190000165744557e-11, "C_weighted_access_cost": 3.999994779846361e-12}},
+      "regime_B_metrics": {"matched": true, "mismatch_count": 0, "generated_rows": 4, "canonical_rows": 4, "max_abs_difference_by_column": {"low_depth_level_weight_access_cost": 1.9099999359895037e-10}},
+      "reserve_fragmentation_summary": {"matched": true, "mismatch_count": 0, "generated_rows": 12, "canonical_rows": 12, "max_abs_difference_by_column": {}}
+    }
+  }
+}

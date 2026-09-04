@@ -1,0 +1,13 @@
+occupancy_label,inventory_total,weight_case_id,canonical_lambda_case_id,omega_depth,omega_level,ranking_lower_to_higher,best_layout,baseline_best_layout,baseline_preference_preserved,full_ranking_changed_vs_B1,occupancy_robustness_classification
+low,790,B1,B1_baseline,0.1,0.1,L3 < L2 < L4 < L1,L3,L3,true,false,ranking robust
+low,790,B2,B2_higher_depth_penalty,0.25,0.1,L3 < L2 < L4 < L1,L3,L3,true,false,ranking robust
+low,790,B3,B3_higher_level_penalty,0.1,0.25,L3 < L2 < L4 < L1,L3,L3,true,false,ranking robust
+low,790,B4,B4_higher_depth_and_level_penalty,0.25,0.25,L3 < L2 < L4 < L1,L3,L3,true,false,ranking robust
+medium,2240,B1,B1_baseline,0.1,0.1,L2 < L3 < L4 < L1,L2,L2,true,false,ranking robust
+medium,2240,B2,B2_higher_depth_penalty,0.25,0.1,L2 < L3 < L4 < L1,L2,L2,true,false,ranking robust
+medium,2240,B3,B3_higher_level_penalty,0.1,0.25,L2 < L3 < L4 < L1,L2,L2,true,false,ranking robust
+medium,2240,B4,B4_higher_depth_and_level_penalty,0.25,0.25,L2 < L3 < L4 < L1,L2,L2,true,false,ranking robust
+high,3584,B1,B1_baseline,0.1,0.1,L2 < L3 < L4 < L1,L2,L2,true,false,ranking robust
+high,3584,B2,B2_higher_depth_penalty,0.25,0.1,L2 < L3 < L4 < L1,L2,L2,true,false,ranking robust
+high,3584,B3,B3_higher_level_penalty,0.1,0.25,L2 < L3 < L4 < L1,L2,L2,true,false,ranking robust
+high,3584,B4,B4_higher_depth_and_level_penalty,0.25,0.25,L2 < L3 < L4 < L1,L2,L2,true,false,ranking robust

@@ -1,0 +1,11 @@
+occupancy_label,inventory_total,sku_class,sku_count,pallets_per_sku,reserve_pallets_per_sku
+low,790,A,20,7,6
+low,790,B,30,15,14
+low,790,C,50,4,3
+medium,2240,A,20,20,19
+medium,2240,B,30,43,42
+medium,2240,C,50,11,10
+high,3584,A,20,32,31
+high,3584,B,30,68,67
+high,3584,C,4,19,18
+high,3584,C,46,18,17

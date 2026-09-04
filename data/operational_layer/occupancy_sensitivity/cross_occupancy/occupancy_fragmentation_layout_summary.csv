@@ -1,0 +1,13 @@
+occupancy_label,inventory_total,selection_label,sku_count_total,reserve_pallets_assigned_total,sku_count_weighted_mean_groups_per_sku,sku_count_weighted_mean_blocks_per_sku,weighting_rule
+low,790,L1,100,690,1.739999999999,1.33,sum(class_sku_count*class_mean)/100
+low,790,L2,100,690,1.25,1,sum(class_sku_count*class_mean)/100
+low,790,L3,100,690,1.75,1.41,sum(class_sku_count*class_mean)/100
+low,790,L4,100,690,1.359999999999,1,sum(class_sku_count*class_mean)/100
+medium,2240,L1,100,2140,2.899999999999,2.050000000001,sum(class_sku_count*class_mean)/100
+medium,2240,L2,100,2140,1.539999999999,1.06,sum(class_sku_count*class_mean)/100
+medium,2240,L3,100,2140,1.76,1.260000000001,sum(class_sku_count*class_mean)/100
+medium,2240,L4,100,2140,2.280000000001,1.770000000001,sum(class_sku_count*class_mean)/100
+high,3584,L1,100,3484,3.86,2.56,sum(class_sku_count*class_mean)/100
+high,3584,L2,100,3484,1.680000000001,1.22,sum(class_sku_count*class_mean)/100
+high,3584,L3,100,3484,1.92,1.62,sum(class_sku_count*class_mean)/100
+high,3584,L4,100,3484,3.25,2.26,sum(class_sku_count*class_mean)/100
