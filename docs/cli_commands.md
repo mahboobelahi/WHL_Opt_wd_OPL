@@ -1,6 +1,6 @@
 # CLI Commands
 
-This document provides the public command-line entry points needed to run structural experiments, reproduce paper campaigns, save layout archives, and render results.
+This document lists the public command-line entry points for structural optimization, paper campaign reproduction, archive rendering, Pareto plotting, and the optional operational-layer diagnostics.
 
 ## 1. Setup
 
@@ -10,15 +10,15 @@ Run commands from the repository root:
 cd WHL_Opt_wd_OPL
 ```
 
-Activate the project environment if required:
+Activate the environment if required:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
-Experiment outputs are written under `results/` by default, or under an explicitly supplied output directory. The `results/` directory is ignored by Git.
+Generated experiment outputs are written under `results/` unless another output root is supplied. The `results/` directory is ignored by Git.
 
-For the authoritative option list of any runner, use `--help`, for example:
+For the authoritative option list:
 
 ```powershell
 python -m whl_experiments.run_experiment_manager --help
@@ -31,13 +31,13 @@ python -m whl_experiments.run_revision_30seed_campaign --help
 
 | Runner | Recommended use | Purpose |
 |---|---|---|
-| `whl_experiments.run_experiment_manager` | Individual or custom scientific experiments | Runs the proposed NSGA-II + Beam Search method, BS-only baseline, or random-restart Beam Search baseline. |
-| `whl_experiments.run_revision_30seed_campaign` | Paper campaign reproduction | Orchestrates Phase 11/12 tasks by repeatedly calling `run_experiment_manager`, with worker control, dry-run, resume, and instance selection. |
-| `whl_experiments.render_saved_layouts` | Render one saved archive | Renders layouts from one `.npz` archive and its JSON index. |
+| `whl_experiments.run_experiment_manager` | Individual/custom experiment | Runs Proposed NSGA-II + Beam Search, BS-only, or random-restart Beam Search. |
+| `whl_experiments.run_revision_30seed_campaign` | Paper campaign reproduction | Orchestrates Phase 11, Phase 12B, and Phase 12C tasks by calling `run_experiment_manager`. |
+| `whl_experiments.render_saved_layouts` | Render one saved archive | Renders layouts from one `.npz` archive and JSON index. |
 | `whl_experiments.render_experiment_archives` | Batch-render a completed experiment | Discovers and renders saved archives under a completed experiment directory. |
-| `whl_visualization.paper_pareto_plots` | Paper-style plotting | Regenerates manuscript-style Pareto plots from prepared CSV inputs. |
+| `whl_visualization.paper_pareto_plots` | Paper-style Pareto plotting | Regenerates manuscript-style plots from prepared CSV inputs. |
 
-`run_experiment_manager` contains the scientific experiment workflow. `run_revision_30seed_campaign` is an orchestration layer around that runner; it does not implement a separate optimization method.
+`run_revision_30seed_campaign` is an orchestration layer only. It does not implement a separate optimization algorithm.
 
 ---
 
@@ -49,7 +49,7 @@ Supported methods are:
 - `random_restart_bs`
 - `bs_only`
 
-The commands below are bounded smoke tests, not paper-scale experiments.
+The examples below are bounded smoke tests, not paper-scale experiments.
 
 ### 3.1 Proposed NSGA-II + Beam Search
 
@@ -95,7 +95,7 @@ python -m whl_experiments.run_experiment_manager `
 
 ### 3.4 Automatic instance-based budget
 
-If manual search-budget options are omitted, the default `auto_from_instance` policy resolves the search parameters from the instance geometry:
+If manual search-budget options are omitted, `auto_from_instance` resolves the search parameters from the instance geometry:
 
 ```powershell
 python -m whl_experiments.run_experiment_manager `
@@ -106,11 +106,11 @@ python -m whl_experiments.run_experiment_manager `
   --output-dir results\auto_budget_example
 ```
 
-This command can be substantially more expensive than the bounded smoke tests above.
+This can be substantially more expensive than the bounded smoke tests.
 
 ### 3.5 Figure control
 
-For individual manager runs, figure rendering is enabled when `--no-figures` is omitted.
+Omit `--no-figures` to allow layout PNG rendering. Supply it to disable layout rendering.
 
 **With figures:**
 
@@ -141,13 +141,13 @@ python -m whl_experiments.run_experiment_manager `
   --output-dir results\quick_without_figures
 ```
 
-`--no-figures` suppresses layout PNG rendering only. It does not disable CSV outputs, profiling outputs, generation objectives, or requested `.npz`/JSON archives.
+`--no-figures` suppresses layout PNG rendering only. CSV outputs, profiling files, generation-objective files, and requested archives are unaffected.
 
 ---
 
 ## 4. Paper Campaign Runner
 
-Use `run_revision_30seed_campaign` for the replicated structural campaigns. Each task is one manager invocation for a selected method or variant, instance, and seed.
+Use `run_revision_30seed_campaign` for the replicated structural experiments. Each task is one `run_experiment_manager` invocation for one method/variant, instance, and seed.
 
 Campaign tasks automatically forward:
 
@@ -157,79 +157,39 @@ Campaign tasks automatically forward:
 --no-figures
 ```
 
-Therefore, paper campaigns save scientific archives and evidence files without rendering layout figures during optimization. Figures can be generated afterward from the saved archives.
+The campaign runner also supports `--dry-run`, `--resume`, worker control, predefined instance scopes, and explicit instance lists.
 
-### 4.1 Phase 11 core campaign
+### 4.1 Phase definitions
 
-The core Phase 11 design contains 4 instances, 30 seeds (`101`-`130`), and 3 methods, giving 360 tasks.
+| Phase | Runner members | Core task count |
+|---|---|---:|
+| Phase 11 | Proposed, random-restart BS, BS-only | 360 |
+| Phase 12B | V1 fixed sorting, V2 fixed weights, V3 uniform mutation, V4 no symmetry breaking, V5 random feasible-start spacing | 600 |
+| Phase 12C | V6 depth 15, V7 beam width +1 | 240 |
 
-Dry-run:
+**Phase 12B does not execute V0.** The V0/full-proposed baseline is the Phase 11 `proposed_nsga2_bs` result for the same core instances and seeds. Post-processing should label/reuse that Phase 11 result as V0 when constructing the Phase 12B comparison.
 
-```powershell
-python -m whl_experiments.run_revision_30seed_campaign `
-  --campaign-root results/revision_final_30seed `
-  --phase phase11 `
-  --seed-start 101 `
-  --seed-end 130 `
-  --instances core `
-  --max-workers 5 `
-  --profile-light `
-  --save-generation-objectives `
-  --archive-rank-max 3 `
-  --dry-run
-```
+`V6b_binding_depth10` is a separate Phase 12C diagnostic restricted to `demo_layout_door_left_AW_2`; it is not part of the default Phase 12C task set.
 
-Expected:
+### 4.2 Instance scopes
 
-```text
-dry_run_tasks=360
-```
-
-Execution:
-
-```powershell
-python -m whl_experiments.run_revision_30seed_campaign `
-  --campaign-root results/revision_final_30seed `
-  --phase phase11 `
-  --seed-start 101 `
-  --seed-end 130 `
-  --instances core `
-  --max-workers 5 `
-  --profile-light `
-  --save-generation-objectives `
-  --archive-rank-max 3
-```
-
-For a fresh reproduction, use a new campaign root or remove the previous campaign output first. If the same campaign is interrupted, rerun the same command with `--resume` to skip tasks already recorded as completed.
-
-### 4.2 Explicit supplementary instance list
-
-An explicit comma-separated list can be supplied with `--instance-list`. The following example uses one seed over 11 layouts and all three Phase 11 methods, giving 33 tasks:
-
-```powershell
-python -m whl_experiments.run_revision_30seed_campaign `
-  --campaign-root results/revision_final_supplementary `
-  --phase phase11 `
-  --seed-start 101 `
-  --seed-end 101 `
-  --instance-list Answer_Set_layout_AW_1,Answer_Set_layout_AW_2,Answer_Set_layout_AW_3,demo_layout_door_bottom_AW_2,demo_layout_door_bottom_AW_3,demo_layout_door_left_AW_2,demo_layout_door_left_AW_3,demo_layout_door_UB_AW_2,demo_layout_door_UB_AW_3,Gyorgy-KOVACS_MWH_Narrow_AW_4,Gyorgy-KOVACS_MWH_Wide_AW_5 `
-  --max-workers 5 `
-  --profile-light `
-  --save-generation-objectives `
-  --archive-rank-max 3
-```
-
-Add `--dry-run` first when only task enumeration is required.
-
-### 4.3 Predefined instance scopes
-
-The campaign runner accepts:
-
-- `core`: the four replicated inferential instances;
-- `stress`: the predefined supplementary stress subset;
+- `core`: four replicated inferential instances;
+- `stress`: predefined supplementary stress subset;
 - `all`: `core + stress` presets.
 
-`all` refers to all predefined campaign presets, not every mask stored in the repository. Use `--instance-list` for arbitrary repository masks.
+`all` means all predefined campaign presets, not every repository mask. Use `--instance-list` for an arbitrary set of repository masks.
+
+### 4.3 Fresh run and resume
+
+For a fresh campaign, use a new/empty campaign root and do not add `--resume`.
+
+If the same campaign is interrupted, rerun the identical command with:
+
+```text
+--resume
+```
+
+Only tasks with an existing completed `experiment_summary.csv` are skipped.
 
 ---
 
@@ -242,12 +202,12 @@ The campaign runner accepts:
 | Option | Meaning |
 |---|---|
 | `--config PATH` | Experiment configuration file. Default: `configs/experiment_plan.yaml`. |
-| `--instances ...` | One or more instance names or paths; comma-separated lists are also accepted. |
+| `--instances ...` | One or more instance names or paths; comma-separated lists are accepted. |
 | `--seeds SEEDS` | Comma-separated random seeds. |
 | `--method METHOD` | `proposed_nsga2_bs`, `random_restart_bs`, or `bs_only`. |
-| `--experiment-id ID` | Explicit experiment folder identifier; otherwise a timestamped ID is created. |
+| `--experiment-id ID` | Explicit experiment folder identifier. |
 | `--output-dir PATH` | Experiment output root. Default: `results/experiments`. |
-| `--dry-run` | Build and print the experiment plan without running optimization. |
+| `--dry-run` | Build the experiment plan without running optimization. |
 
 #### Search budget
 
@@ -256,7 +216,7 @@ The campaign runner accepts:
 | `--budget-policy {fixed,auto_from_instance}` | Search-budget source. Default: `auto_from_instance`. |
 | `--population-size N` | Population size or RRBS population-equivalent value. |
 | `--generations N` | Generation count or RRBS generation-equivalent value. |
-| `--decode-budget N` | Total random restarts for `random_restart_bs`; otherwise derived from population size × generations. |
+| `--decode-budget N` | Total RRBS restarts; otherwise derived from population size × generations. |
 | `--beam-width N` | Beam Search width. |
 | `--max-depth N` | Beam Search maximum depth. |
 | `--beam-width-delta N` | Additive increase to the automatically resolved beam width. |
@@ -299,10 +259,10 @@ The campaign runner accepts:
 | `--instances {core,stress,all}` | Predefined instance scope. Default: `core`. |
 | `--instance-list LIST` | Explicit comma-separated mask names; overrides `--instances`. Optional `.npz` suffixes are accepted. |
 | `--only-instance NAME` | Restrict execution to one predefined instance. Do not combine with `--instance-list`. |
-| `--only-variant NAME` | Restrict execution to one Phase 11 method or Phase 12 variant. |
-| `--max-workers N` | Maximum number of manager tasks executed concurrently. Default: `3`. |
+| `--only-variant NAME` | Restrict execution to one Phase 11 method or runnable Phase 12 variant. Phase 12B V0 is not runnable because it is reused from Phase 11 Proposed. |
+| `--max-workers N` | Maximum concurrent manager tasks. Default: `3`. |
 | `--dry-run` | Write the task manifest without executing optimization. |
-| `--resume` | Skip tasks with an existing completed `experiment_summary.csv`. Use only when continuing the same campaign configuration. |
+| `--resume` | Skip tasks with an existing completed `experiment_summary.csv`. |
 | `--archive-rank-max N` | Maximum archived rank forwarded to the manager. Default: `3`. |
 | `--profile-light` | Enable lightweight runtime profiling for each task. |
 | `--save-generation-objectives` | Save generation-level objective evidence for each task. |
@@ -317,7 +277,7 @@ A manager run writes per-run outputs under:
 <output-dir>\<experiment-id>\runs\<instance>\seed_<seed>\
 ```
 
-Common per-run outputs include:
+Common outputs include:
 
 - `candidates.csv`
 - `generation_summary.csv`
@@ -328,14 +288,14 @@ Common per-run outputs include:
 
 Experiment-level outputs include `experiment_metadata.json` and `experiment_summary.csv`.
 
-Archive modes are controlled by `--archive-layouts`:
+Archive modes:
 
 | Mode | Saved layout set |
 |---|---|
 | `none` | No layout archive. |
-| `generation_elites` | Eligible generation-level layouts, filtered by `--archive-rank-max`. |
-| `final_ranked` | Unique feasible layouts re-ranked for final archival, filtered by `--archive-rank-max`. |
-| `both` | Both `generation_elites` and `final_ranked`. |
+| `generation_elites` | Eligible generation-level layouts filtered by `--archive-rank-max`. |
+| `final_ranked` | Unique feasible final layouts filtered by `--archive-rank-max`. |
+| `both` | Both generation-elites and final-ranked archives. |
 | `all_debug` | Unique feasible evaluated layouts for debugging. |
 | `all_candidates_debug` | Unique evaluated layouts, including infeasible candidates, for debugging. |
 
@@ -358,104 +318,206 @@ Rendering is post-processing and does not rerun optimization.
 
 ### 7.1 Render one archive
 
-Use `render_saved_layouts` when the archive and JSON index are known:
-
 ```powershell
 python -m whl_experiments.render_saved_layouts `
-  --archive results\quick_nsga2_bs\proposed_nsga2_bs_YYYYMMDD_HHMMSS\runs\Gyorgy-KOVACS_WH_Narrow_AW_4\seed_101\final_ranked_layouts.npz `
-  --index results\quick_nsga2_bs\proposed_nsga2_bs_YYYYMMDD_HHMMSS\runs\Gyorgy-KOVACS_WH_Narrow_AW_4\seed_101\final_ranked_layouts_index.json `
+  --archive results\quick_nsga2_bs\<experiment-id>\runs\Gyorgy-KOVACS_WH_Narrow_AW_4\seed_101\final_ranked_layouts.npz `
+  --index results\quick_nsga2_bs\<experiment-id>\runs\Gyorgy-KOVACS_WH_Narrow_AW_4\seed_101\final_ranked_layouts_index.json `
   --filter rank0_to_rank3
 ```
 
-Important options:
+Important options include `--filter`, `--output-dir`, `--max-layouts`, `--dpi`, `--title-fields`, `--title-format`, `--no-legend`, and `--show-coords`.
 
-| Option | Meaning |
-|---|---|
-| `--archive PATH` | Archive `.npz` file. Required. |
-| `--index PATH` | Archive JSON index. Required. |
-| `--filter FILTER` | `all`, `rank0`, `rank0_to_rank3`, `rank0_to_rank4`, or `selected`. Default: `all`. |
-| `--output-dir PATH` | PNG output directory. |
-| `--max-layouts N` | Maximum number of layouts to render. |
-| `--dpi N` | Output resolution. Default: `150`. |
-| `--title-fields FIELDS` | Comma-separated metadata fields included in titles. |
-| `--title-format {fields,metrics_trace}` | Figure-title format. |
-| `--no-legend` | Hide the legend. |
-| `--show-coords` | Show coordinate labels. |
-
-### 7.2 Batch-render an experiment
-
-Use `render_experiment_archives` to discover archives under a completed experiment directory:
+### 7.2 Batch-render a completed experiment
 
 ```powershell
 python -m whl_experiments.render_experiment_archives `
-  --experiment-dir results\quick_nsga2_bs\proposed_nsga2_bs_YYYYMMDD_HHMMSS `
+  --experiment-dir results\quick_nsga2_bs\<experiment-id> `
   --archive-type final_ranked `
   --filter rank0_to_rank3
 ```
 
-Important options:
-
-| Option | Meaning |
-|---|---|
-| `--experiment-dir PATH` | Completed experiment directory. Required. |
-| `--archive-type TYPE` | `final_ranked`, `generation_elites`, `all_debug`, or `all_candidates_debug`. Default: `final_ranked`. |
-| `--filter FILTER` | `all`, `rank0`, `rank0_to_rank3`, `rank0_to_rank4`, or `selected`. Default: `rank0_to_rank3`. |
-| `--output-dir PATH` | Root PNG output directory. |
-| `--max-layouts N` | Maximum layouts rendered per discovered archive. |
-| `--dpi N` | Output resolution. Default: `150`. |
-| `--title-fields FIELDS` | Comma-separated metadata fields included in titles. |
-| `--title-format {fields,metrics_trace}` | Figure-title format. |
-| `--no-legend` | Hide the legend. |
-| `--show-coords` | Show coordinate labels. |
-| `--dry-run` | Discover render jobs without writing PNGs. |
-| `--overwrite` | Allow replacement of existing rendered outputs. |
+Use `--dry-run` to inspect discovered archives without rendering. Use `--overwrite` only when existing rendered outputs should be replaced.
 
 ---
 
-## 8. Paper-Style Pareto Plots
-
-Pareto plotting is separate from warehouse-layout rendering.
+## 8. Paper-Style Pareto Plotting
 
 ```powershell
 python -m whl_visualization.paper_pareto_plots
 ```
 
-The script reads prepared inputs from:
-
-```text
-data/plot_inputs/paper/
-```
-
-The documented paper inputs are:
-
-```text
-121_atefeh_published_reference_metrics.csv
-121_atefeh_rank03_points.csv
-121_kov1ow4_rank03_points.csv
-```
+Paper plotting inputs are stored under `data/plot_inputs/paper/`. This command is separate from optimization and layout archive rendering.
 
 ---
 
 ## 9. Layout Editor and Instance Rules
 
-Launch the layout editor with:
+Launch the Tkinter editor with:
 
 ```powershell
 python -m apps.layout_editor.launch_editor
 ```
 
-The editor is used to create, duplicate, edit, delete, and preview layout mask bundles. Saved masks are stored under `data/instances/masks/` and registered through the layout registry.
-
-Instance-use rules relevant to reproduction:
-
-- `AT_1.npz` through `AT_13.npz` are reference/comparison-only layouts and must not be used as optimization instances.
-- `AT_S_comercial_layout_AW_3.npz` is an optimization instance.
-- Demo and literature/test masks may be supplied to the experiment manager where appropriate.
+`AT_1.npz` through `AT_13.npz` are reference/comparison layouts and should not be used as optimization instances. `AT_S_comercial_layout_AW_3.npz` is an optimization instance. See `docs/layout_data.md` for the complete classification.
 
 ---
 
 ## 10. Operational-Layer Diagnostics
 
-Operational-layer diagnostics are post-optimization reproduction helpers for the fixed L1-L4 representative layout panel. They are not part of NSGA-II fitness evaluation and do not feed back into structural optimization.
+The operational layer is an optional post-optimization diagnostic for the fixed paper layouts L1-L4. It does not contribute to NSGA-II/Beam Search fitness and does not feed back into structural optimization.
 
-See `docs/operational_layer.md` for the supported operational-layer scripts, inputs, outputs, and limitations.
+See:
+
+```text
+docs/operational_layer.md
+```
+
+for the checked-in reviewer evidence, occupancy workflow, and reproduction commands.
+
+---
+
+## 11. Example Commands
+
+The following commands reproduce the structural campaigns used for the paper. Run the dry-run variant first when verifying task enumeration. Do not use `--resume` for a new/empty campaign root.
+
+### 11.1 Phase 11 — three-method core campaign
+
+Dry-run:
+
+```powershell
+python -m whl_experiments.run_revision_30seed_campaign `
+  --campaign-root results/revision_final_30seed_nofg `
+  --phase phase11 `
+  --seed-start 101 `
+  --seed-end 130 `
+  --instances core `
+  --max-workers 5 `
+  --profile-light `
+  --save-generation-objectives `
+  --archive-rank-max 3 `
+  --dry-run
+```
+
+Expected: `360` tasks.
+
+Execution:
+
+```powershell
+python -m whl_experiments.run_revision_30seed_campaign `
+  --campaign-root results/revision_final_30seed_nofg `
+  --phase phase11 `
+  --seed-start 101 `
+  --seed-end 130 `
+  --instances core `
+  --max-workers 5 `
+  --profile-light `
+  --save-generation-objectives `
+  --archive-rank-max 3
+```
+
+### 11.2 Phase 12B — V1 to V5 ablations
+
+Phase 12B automatically runs V1-V5 only. It does **not** run V0. The Phase 11 Proposed results are reused as V0 during analysis.
+
+Dry-run:
+
+```powershell
+python -m whl_experiments.run_revision_30seed_campaign `
+  --campaign-root results/revision_final_30seed_nofg `
+  --phase phase12b `
+  --seed-start 101 `
+  --seed-end 130 `
+  --instances core `
+  --max-workers 5 `
+  --profile-light `
+  --save-generation-objectives `
+  --archive-rank-max 3 `
+  --dry-run
+```
+
+Expected: `600` tasks.
+
+Execution:
+
+```powershell
+python -m whl_experiments.run_revision_30seed_campaign `
+  --campaign-root results/revision_final_30seed_nofg `
+  --phase phase12b `
+  --seed-start 101 `
+  --seed-end 130 `
+  --instances core `
+  --max-workers 5 `
+  --profile-light `
+  --save-generation-objectives `
+  --archive-rank-max 3
+```
+
+### 11.3 Phase 12C — V6 and V7 sensitivity
+
+Dry-run:
+
+```powershell
+python -m whl_experiments.run_revision_30seed_campaign `
+  --campaign-root results/revision_final_30seed_nofg `
+  --phase phase12c `
+  --seed-start 101 `
+  --seed-end 130 `
+  --instances core `
+  --max-workers 5 `
+  --profile-light `
+  --save-generation-objectives `
+  --archive-rank-max 3 `
+  --dry-run
+```
+
+Expected: `240` tasks.
+
+Execution:
+
+```powershell
+python -m whl_experiments.run_revision_30seed_campaign `
+  --campaign-root results/revision_final_30seed_nofg `
+  --phase phase12c `
+  --seed-start 101 `
+  --seed-end 130 `
+  --instances core `
+  --max-workers 5 `
+  --profile-light `
+  --save-generation-objectives `
+  --archive-rank-max 3
+```
+
+### 11.4 Phase 12C V6b — binding-depth diagnostic
+
+```powershell
+python -m whl_experiments.run_revision_30seed_campaign `
+  --campaign-root results/revision_final_30seed_nofg `
+  --phase phase12c `
+  --seed-start 101 `
+  --seed-end 130 `
+  --only-variant V6b_binding_depth10 `
+  --only-instance demo_layout_door_left_AW_2 `
+  --max-workers 5 `
+  --profile-light `
+  --save-generation-objectives `
+  --archive-rank-max 3
+```
+
+Expected: `30` tasks.
+
+### 11.5 Supplementary one-seed structural check
+
+```powershell
+python -m whl_experiments.run_revision_30seed_campaign `
+  --campaign-root results/revision_final_supplementary `
+  --phase phase11 `
+  --seed-start 101 `
+  --seed-end 101 `
+  --instance-list Answer_Set_layout_AW_1,Answer_Set_layout_AW_2,Answer_Set_layout_AW_3,demo_layout_door_bottom_AW_2,demo_layout_door_bottom_AW_3,demo_layout_door_left_AW_2,demo_layout_door_left_AW_3,demo_layout_door_UB_AW_2,demo_layout_door_UB_AW_3,Gyorgy-KOVACS_MWH_Narrow_AW_4,Gyorgy-KOVACS_MWH_Wide_AW_5 `
+  --max-workers 5 `
+  --profile-light `
+  --save-generation-objectives `
+  --archive-rank-max 3
+```
+
+Expected: `33` tasks.
