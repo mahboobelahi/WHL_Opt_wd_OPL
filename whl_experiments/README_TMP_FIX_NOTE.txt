@@ -1,1 +1,0 @@
-manager CLI fix in progress
