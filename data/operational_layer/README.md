@@ -21,15 +21,18 @@ The locked capacities are L1=4,480, L2=5,056, L3=5,440, and L4=4,800 pallet slot
 
 ## Occupancy-sensitivity evidence
 
-`occupancy_sensitivity/` contains compact validated results retained for direct reviewer inspection and manuscript comparison:
+`occupancy_sensitivity/` now contains the audited Round-2 Section-7 evidence transferred from the original WHLR result tree. It includes:
 
-- `occupancy_summary.csv`: Low/Medium/High x L1-L4 capacity, utilization, reserve deep-share, and reserve-access cost (12 rows).
-- `occupancy_fragmentation_summary.csv`: layout-level SKU-count-weighted mean reserve groups per SKU (12 rows).
-- `scenario_B_weight_sensitivity_summary.csv`: B1-B4 reserve-access costs and rankings at Low/Medium/High occupancy (12 rows).
+- compact manuscript-facing summaries at the directory root;
+- `cases/low_790`, `cases/medium_2240`, and `cases/high_3584` with validated Scenario-B and fragmentation outputs plus path-sanitized validation summaries;
+- `cross_occupancy/` with utilization, reserve-placement, fragmentation, and reserve-component decomposition outputs;
+- `weight_sensitivity/` with Scenario-A and Scenario-B sensitivity evidence;
+- `scaled_inventory_summary.csv` with the exact deterministic Low/Medium/High inventory vectors;
+- `source_result_inventory.csv` with row counts, sizes, and SHA-256 hashes for all 33 files in the audited WHLR source result bundle.
 
 The occupancy totals are Low=790, Medium=2,240, and High=3,584 pallets. Each case retains one representative pallet per SKU; reserve totals are 690, 2,140, and 3,484 respectively.
 
-The compact CSVs reproduce the validated revision evidence used for the manuscript. Detailed Low/Medium/High case directories can be regenerated with the public occupancy scripts; generated case folders remain under `results/` and are not versioned.
+Large occupancy-specific per-pallet assignment CSVs are not duplicated because the public wrapper regenerates them deterministically; their source row counts and SHA-256 hashes are retained in `source_result_inventory.csv`. The canonical Low assignment remains checked in under `paper_inputs/`.
 
 ## Public reproduction modules
 
