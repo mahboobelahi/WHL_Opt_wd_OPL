@@ -18,6 +18,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from whl_experiments import run_experiment_manager as experiment_manager
+
 
 DEFAULT_CAMPAIGN_ROOT = Path("results/revision_30seed_campaign")
 
@@ -254,6 +256,21 @@ def task_identifier(phase: str, method_or_variant: str, instance: str, seed: int
         f"{METHOD_OR_VARIANT_SLUGS.get(method_or_variant, compact_slug(method_or_variant))}__"
         f"{INSTANCE_SLUGS.get(instance, compact_slug(instance))}__s{int(seed)}"
     )
+
+
+def validate_no_figures_cli_contract() -> None:
+    """Fail fast if the manager's public ``--no-figures`` semantics regress."""
+    parser = experiment_manager.build_parser()
+    default_args = parser.parse_args([])
+    disabled_args = parser.parse_args(["--no-figures"])
+    if bool(default_args.no_figures):
+        raise RuntimeError(
+            "run_experiment_manager CLI contract invalid: default no_figures must be False."
+        )
+    if not bool(disabled_args.no_figures):
+        raise RuntimeError(
+            "run_experiment_manager CLI contract invalid: --no-figures must set no_figures=True."
+        )
 
 
 def build_command(
@@ -537,6 +554,7 @@ def main() -> None:
     parser = build_parser()
     args = parser.parse_args()
     validate_args(args, parser)
+    validate_no_figures_cli_contract()
     tasks = build_tasks(args)
     if not tasks:
         parser.error("No tasks selected. Check --phase, --only-variant, and instance options.")
