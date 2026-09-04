@@ -1,8 +1,11 @@
-"""Reviewer-friendly orchestration for the paper's structural experiment campaign.
+"""Reviewer-facing orchestration for the paper's structural campaigns.
 
-This module contains no optimization logic. Each task delegates to
-``whl_experiments.run_experiment_manager`` with the documented public options.
-Figures are disabled for campaign runs to reduce unnecessary I/O.
+Each task delegates to ``whl_experiments.run_experiment_manager``. Campaign
+runs use automatic instance budgets, save both layout archives, and disable
+optimization-time figure rendering.
+
+Phase 12B runs V1--V5 only. The V0/full-proposed baseline is the matching
+Phase 11 ``proposed_nsga2_bs`` result and is intentionally not rerun.
 """
 
 from __future__ import annotations
@@ -19,7 +22,6 @@ from pathlib import Path
 from typing import Any
 
 from whl_experiments import run_experiment_manager as experiment_manager
-
 
 DEFAULT_CAMPAIGN_ROOT = Path("results/revision_30seed_campaign")
 
@@ -40,7 +42,6 @@ PHASE11_METHODS = (
     "bs_only",
 )
 PHASE12B_VARIANTS = (
-    "V0_full_proposed",
     "V1_fixed_sorting",
     "V2_fixed_weights",
     "V3_uniform_mutation",
@@ -53,16 +54,11 @@ PHASE12C_VARIANTS = (
 )
 V6B_VARIANT = "V6b_binding_depth10"
 
-PHASE_SLUGS = {
-    "phase11": "p11",
-    "phase12b": "p12b",
-    "phase12c": "p12c",
-}
+PHASE_SLUGS = {"phase11": "p11", "phase12b": "p12b", "phase12c": "p12c"}
 METHOD_OR_VARIANT_SLUGS = {
     "proposed_nsga2_bs": "nsga2",
     "random_restart_bs": "rrbs",
     "bs_only": "bsonly",
-    "V0_full_proposed": "V0",
     "V1_fixed_sorting": "V1_fixsort",
     "V2_fixed_weights": "V2_fixw",
     "V3_uniform_mutation": "V3_um",
@@ -90,19 +86,9 @@ INSTANCE_SLUGS = {
 }
 
 MANIFEST_COLUMNS = [
-    "phase",
-    "method_or_variant",
-    "instance",
-    "seed",
-    "command",
-    "status",
-    "started_at",
-    "finished_at",
-    "runtime_seconds",
-    "return_code",
-    "output_dir",
-    "log_path",
-    "error_message",
+    "phase", "method_or_variant", "instance", "seed", "command", "status",
+    "started_at", "finished_at", "runtime_seconds", "return_code",
+    "output_dir", "log_path", "error_message",
 ]
 
 
@@ -132,23 +118,16 @@ def selected_instances(scope: str) -> tuple[str, ...]:
 
 
 def parse_instance_list(value: str | None) -> tuple[str, ...]:
-    """Return unique comma-separated repository instance names in input order."""
     if not value:
         return ()
-    instances: list[str] = []
+    result: list[str] = []
     seen: set[str] = set()
-    for raw_item in value.split(","):
-        item = raw_item.strip()
-        if not item:
-            continue
-        # The manager resolves repository masks by stem; accepting an optional
-        # .npz suffix here keeps the campaign CLI convenient without changing
-        # the underlying experiment-manager contract.
-        instance = Path(item).stem
-        if instance not in seen:
-            seen.add(instance)
-            instances.append(instance)
-    return tuple(instances)
+    for raw in value.split(","):
+        item = Path(raw.strip()).stem
+        if item and item not in seen:
+            seen.add(item)
+            result.append(item)
+    return tuple(result)
 
 
 def phase_members(phase: str) -> tuple[str, ...]:
@@ -161,32 +140,19 @@ def phase_members(phase: str) -> tuple[str, ...]:
     raise ValueError(f"Unsupported phase: {phase}")
 
 
-def method_for_task(phase: str, method_or_variant: str) -> str:
-    if phase == "phase11":
-        return method_or_variant
-    return "proposed_nsga2_bs"
-
-
-def phase_specific_flags(phase: str, method_or_variant: str) -> list[str]:
-    if phase == "phase11":
-        return []
-    if phase == "phase12b":
-        return phase12b_flags(method_or_variant)
-    if phase == "phase12c":
-        return phase12c_flags(method_or_variant)
-    raise ValueError(f"Unsupported phase: {phase}")
+def method_for_task(phase: str, member: str) -> str:
+    return member if phase == "phase11" else "proposed_nsga2_bs"
 
 
 def phase12b_flags(variant: str) -> list[str]:
-    label = variant if variant != "V1_fixed_sorting" else "V1_fixed_sorting_PF_LS_RP"
+    label = "V1_fixed_sorting_PF_LS_RP" if variant == "V1_fixed_sorting" else variant
     base = ["--ablation-variant", label]
-    if variant == "V0_full_proposed":
-        return base + [
-            "--sorting-rule-mode", "sampled_pool",
-            "--adaptive-weight-mode", "adaptive",
-            "--mutation-mode", "weighted",
-            "--initialization-spacing-mode", "feasible_start_adaptive_spacing",
-        ]
+    common = [
+        "--sorting-rule-mode", "sampled_pool",
+        "--adaptive-weight-mode", "adaptive",
+        "--mutation-mode", "weighted",
+        "--initialization-spacing-mode", "feasible_start_adaptive_spacing",
+    ]
     if variant == "V1_fixed_sorting":
         return base + [
             "--sorting-rule-mode", "fixed",
@@ -206,26 +172,19 @@ def phase12b_flags(variant: str) -> list[str]:
             "--initialization-spacing-mode", "feasible_start_adaptive_spacing",
         ]
     if variant == "V3_uniform_mutation":
-        return base + [
-            "--sorting-rule-mode", "sampled_pool",
-            "--adaptive-weight-mode", "adaptive",
-            "--mutation-mode", "uniform",
-            "--initialization-spacing-mode", "feasible_start_adaptive_spacing",
-        ]
+        flags = list(common)
+        flags[flags.index("weighted")] = "uniform"
+        return base + flags
     if variant == "V4_no_symmetry_breaking":
-        return base + [
-            "--sorting-rule-mode", "sampled_pool",
-            "--adaptive-weight-mode", "adaptive",
-            "--mutation-mode", "weighted_no_symmetry_breaking",
-            "--initialization-spacing-mode", "feasible_start_adaptive_spacing",
-        ]
+        flags = list(common)
+        flags[flags.index("weighted")] = "weighted_no_symmetry_breaking"
+        return base + flags
     if variant == "V5_random_feasible_start_spacing":
-        return base + [
-            "--sorting-rule-mode", "sampled_pool",
-            "--adaptive-weight-mode", "adaptive",
-            "--mutation-mode", "weighted",
-            "--initialization-spacing-mode", "random_feasible_start_no_adaptive_spacing",
-        ]
+        flags = list(common)
+        flags[flags.index("feasible_start_adaptive_spacing")] = (
+            "random_feasible_start_no_adaptive_spacing"
+        )
+        return base + flags
     raise ValueError(f"Unsupported Phase 12B variant: {variant}")
 
 
@@ -246,110 +205,97 @@ def phase12c_flags(variant: str) -> list[str]:
     raise ValueError(f"Unsupported Phase 12C variant: {variant}")
 
 
+def phase_specific_flags(phase: str, member: str) -> list[str]:
+    if phase == "phase11":
+        return []
+    if phase == "phase12b":
+        return phase12b_flags(member)
+    if phase == "phase12c":
+        return phase12c_flags(member)
+    raise ValueError(f"Unsupported phase: {phase}")
+
+
 def compact_slug(value: str) -> str:
-    return "".join(char if char.isalnum() else "_" for char in value).strip("_")[:24]
+    return "".join(c if c.isalnum() else "_" for c in value).strip("_")[:24]
 
 
-def task_identifier(phase: str, method_or_variant: str, instance: str, seed: int) -> str:
+def task_identifier(phase: str, member: str, instance: str, seed: int) -> str:
     return (
         f"{PHASE_SLUGS[phase]}__"
-        f"{METHOD_OR_VARIANT_SLUGS.get(method_or_variant, compact_slug(method_or_variant))}__"
-        f"{INSTANCE_SLUGS.get(instance, compact_slug(instance))}__s{int(seed)}"
+        f"{METHOD_OR_VARIANT_SLUGS.get(member, compact_slug(member))}__"
+        f"{INSTANCE_SLUGS.get(instance, compact_slug(instance))}__s{seed}"
     )
 
 
 def validate_no_figures_cli_contract() -> None:
-    """Fail fast if the manager's public ``--no-figures`` semantics regress."""
     parser = experiment_manager.build_parser()
-    default_args = parser.parse_args([])
-    disabled_args = parser.parse_args(["--no-figures"])
-    if bool(default_args.no_figures):
-        raise RuntimeError(
-            "run_experiment_manager CLI contract invalid: default no_figures must be False."
-        )
-    if not bool(disabled_args.no_figures):
-        raise RuntimeError(
-            "run_experiment_manager CLI contract invalid: --no-figures must set no_figures=True."
-        )
+    if bool(parser.parse_args([]).no_figures):
+        raise RuntimeError("Default no_figures must be False.")
+    if not bool(parser.parse_args(["--no-figures"]).no_figures):
+        raise RuntimeError("--no-figures must set no_figures=True.")
 
 
 def build_command(
-    *,
-    phase: str,
-    method_or_variant: str,
-    instance: str,
-    seed: int,
-    output_base: Path,
-    experiment_id: str,
-    profile_light: bool,
-    save_generation_objectives: bool,
-    archive_rank_max: int,
+    *, phase: str, member: str, instance: str, seed: int,
+    output_base: Path, experiment_id: str, profile_light: bool,
+    save_generation_objectives: bool, archive_rank_max: int,
 ) -> list[str]:
     command = [
-        sys.executable,
-        "-m",
-        "whl_experiments.run_experiment_manager",
+        sys.executable, "-m", "whl_experiments.run_experiment_manager",
         "--instances", instance,
         "--seeds", str(seed),
-        "--method", method_for_task(phase, method_or_variant),
+        "--method", method_for_task(phase, member),
         "--experiment-id", experiment_id,
         "--output-dir", str(output_base),
         "--budget-policy", "auto_from_instance",
         "--archive-layouts", "both",
-        "--archive-rank-max", str(int(archive_rank_max)),
+        "--archive-rank-max", str(archive_rank_max),
         "--no-figures",
     ]
     if profile_light:
         command.append("--profile-light")
     if save_generation_objectives:
         command.append("--save-generation-objectives")
-    command.extend(phase_specific_flags(phase, method_or_variant))
+    command.extend(phase_specific_flags(phase, member))
     return command
 
 
 def build_tasks(args: argparse.Namespace) -> list[CampaignTask]:
-    campaign_root = Path(args.campaign_root)
     members = phase_members(args.phase)
     if args.only_variant:
-        if args.only_variant == V6B_VARIANT:
-            members = (V6B_VARIANT,)
-        else:
-            members = tuple(item for item in members if item == args.only_variant)
-
-    explicit_instances = parse_instance_list(args.instance_list)
-    instances = explicit_instances or selected_instances(args.instances)
+        members = (V6B_VARIANT,) if args.only_variant == V6B_VARIANT else tuple(
+            item for item in members if item == args.only_variant
+        )
+    instances = parse_instance_list(args.instance_list) or selected_instances(args.instances)
     if args.only_instance:
         instances = (args.only_instance,)
 
+    phase_dir = Path(args.campaign_root) / PHASE_SLUGS[args.phase]
+    log_dir = Path(args.campaign_root) / "logs"
     tasks: list[CampaignTask] = []
-    phase_dir = campaign_root / PHASE_SLUGS[args.phase]
-    log_dir = campaign_root / "logs"
     for member in members:
         member_dir = phase_dir / METHOD_OR_VARIANT_SLUGS[member]
         for instance in instances:
-            for seed in range(int(args.seed_start), int(args.seed_end) + 1):
+            for seed in range(args.seed_start, args.seed_end + 1):
                 task_id = task_identifier(args.phase, member, instance, seed)
-                output_dir = member_dir / task_id
                 tasks.append(
                     CampaignTask(
                         phase=args.phase,
                         method_or_variant=member,
                         instance=instance,
                         seed=seed,
-                        command=tuple(
-                            build_command(
-                                phase=args.phase,
-                                method_or_variant=member,
-                                instance=instance,
-                                seed=seed,
-                                output_base=member_dir,
-                                experiment_id=task_id,
-                                profile_light=args.profile_light,
-                                save_generation_objectives=args.save_generation_objectives,
-                                archive_rank_max=args.archive_rank_max,
-                            )
-                        ),
-                        output_dir=output_dir,
+                        command=tuple(build_command(
+                            phase=args.phase,
+                            member=member,
+                            instance=instance,
+                            seed=seed,
+                            output_base=member_dir,
+                            experiment_id=task_id,
+                            profile_light=args.profile_light,
+                            save_generation_objectives=args.save_generation_objectives,
+                            archive_rank_max=args.archive_rank_max,
+                        )),
+                        output_dir=member_dir / task_id,
                         log_path=log_dir / f"{task_id}.log",
                     )
                 )
@@ -357,11 +303,11 @@ def build_tasks(args: argparse.Namespace) -> list[CampaignTask]:
 
 
 def completed_successfully(task: CampaignTask) -> bool:
-    summary_path = task.output_dir / "experiment_summary.csv"
-    if not summary_path.exists():
+    path = task.output_dir / "experiment_summary.csv"
+    if not path.exists():
         return False
     try:
-        with summary_path.open("r", newline="", encoding="utf-8") as file:
+        with path.open("r", newline="", encoding="utf-8") as file:
             rows = list(csv.DictReader(file))
     except OSError:
         return False
@@ -375,43 +321,31 @@ def completed_successfully(task: CampaignTask) -> bool:
     )
 
 
-def manifest_row(
-    task: CampaignTask,
-    *,
-    status: str,
-    started_at: str = "",
-    finished_at: str = "",
-    runtime_seconds: float | str = "",
-    return_code: int | str = "",
-    error_message: str = "",
-) -> dict[str, Any]:
-    return {
+def manifest_row(task: CampaignTask, **values: Any) -> dict[str, Any]:
+    row = {
         "phase": task.phase,
         "method_or_variant": task.method_or_variant,
         "instance": task.instance,
         "seed": task.seed,
         "command": subprocess.list2cmdline(task.command),
-        "status": status,
-        "started_at": started_at,
-        "finished_at": finished_at,
-        "runtime_seconds": runtime_seconds,
-        "return_code": return_code,
+        "status": values.get("status", ""),
+        "started_at": values.get("started_at", ""),
+        "finished_at": values.get("finished_at", ""),
+        "runtime_seconds": values.get("runtime_seconds", ""),
+        "return_code": values.get("return_code", ""),
         "output_dir": str(task.output_dir),
         "log_path": str(task.log_path),
-        "error_message": error_message,
+        "error_message": values.get("error_message", ""),
     }
+    return row
 
 
 def run_task(task: CampaignTask, resume: bool) -> dict[str, Any]:
-    started_at = utc_now()
+    started = utc_now()
     if resume and completed_successfully(task):
         return manifest_row(
-            task,
-            status="skipped_resume",
-            started_at=started_at,
-            finished_at=utc_now(),
-            runtime_seconds=0.0,
-            return_code=0,
+            task, status="skipped_resume", started_at=started, finished_at=utc_now(),
+            runtime_seconds=0.0, return_code=0,
             error_message="existing completed experiment_summary.csv",
         )
 
@@ -421,20 +355,15 @@ def run_task(task: CampaignTask, resume: bool) -> dict[str, Any]:
         log_file.write(f"command: {subprocess.list2cmdline(task.command)}\n\n")
         log_file.flush()
         result = subprocess.run(
-            list(task.command),
-            cwd=Path.cwd(),
-            stdout=log_file,
-            stderr=subprocess.STDOUT,
-            text=True,
-            check=False,
+            list(task.command), cwd=Path.cwd(), stdout=log_file,
+            stderr=subprocess.STDOUT, text=True, check=False,
         )
-    elapsed = time.perf_counter() - start
     return manifest_row(
         task,
         status="completed" if result.returncode == 0 else "failed",
-        started_at=started_at,
+        started_at=started,
         finished_at=utc_now(),
-        runtime_seconds=elapsed,
+        runtime_seconds=time.perf_counter() - start,
         return_code=result.returncode,
         error_message="" if result.returncode == 0 else "see log",
     )
@@ -458,15 +387,7 @@ def append_row(path: Path, row: dict[str, Any]) -> None:
         writer.writerow(row)
 
 
-def execute(
-    tasks: list[CampaignTask],
-    *,
-    max_workers: int,
-    resume: bool,
-    manifest_path: Path,
-) -> None:
-    if max_workers <= 0:
-        raise ValueError("--max-workers must be positive.")
+def execute(tasks: list[CampaignTask], *, max_workers: int, resume: bool, manifest_path: Path) -> None:
     failed = False
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = [executor.submit(run_task, task, resume) for task in tasks]
@@ -506,42 +427,28 @@ def validate_args(args: argparse.Namespace, parser: argparse.ArgumentParser) -> 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "--phase",
-        choices=("phase11", "phase12b", "phase12c"),
-        required=True,
-    )
+    parser.add_argument("--phase", choices=("phase11", "phase12b", "phase12c"), required=True)
     parser.add_argument("--seed-start", type=int, default=101)
     parser.add_argument("--seed-end", type=int, default=130)
     parser.add_argument("--max-workers", type=int, default=3)
+    parser.add_argument("--campaign-root", type=Path, default=DEFAULT_CAMPAIGN_ROOT)
     parser.add_argument(
-        "--campaign-root",
-        type=Path,
-        default=DEFAULT_CAMPAIGN_ROOT,
-    )
-    parser.add_argument(
-        "--instances",
-        choices=("core", "stress", "all"),
-        default="core",
+        "--instances", choices=("core", "stress", "all"), default="core",
         help="Use a predefined instance group unless --instance-list is supplied.",
     )
     parser.add_argument(
-        "--instance-list",
-        type=str,
-        help=(
-            "Comma-separated repository mask names for an explicit campaign subset. "
-            "Optional .npz suffixes are accepted. This overrides --instances."
-        ),
+        "--instance-list", type=str,
+        help="Comma-separated repository mask names; overrides --instances.",
     )
     parser.add_argument(
         "--only-variant",
         choices=PHASE11_METHODS + PHASE12B_VARIANTS + PHASE12C_VARIANTS + (V6B_VARIANT,),
-        help="Restrict execution to one Phase 11 method or Phase 12 variant.",
+        help=(
+            "Restrict execution to one Phase 11 method or runnable Phase 12 variant. "
+            "Phase 12B V0 is the Phase 11 Proposed baseline and is not rerun."
+        ),
     )
-    parser.add_argument(
-        "--only-instance",
-        choices=CORE_INSTANCES + STRESS_INSTANCES,
-    )
+    parser.add_argument("--only-instance", choices=CORE_INSTANCES + STRESS_INSTANCES)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--archive-rank-max", type=int, default=3)
@@ -559,8 +466,7 @@ def main() -> None:
     if not tasks:
         parser.error("No tasks selected. Check --phase, --only-variant, and instance options.")
 
-    campaign_root = Path(args.campaign_root)
-    manifest_dir = campaign_root / "manifests"
+    manifest_dir = Path(args.campaign_root) / "manifests"
     if args.dry_run:
         path = manifest_dir / f"dry_run_{args.phase}.csv"
         rows = [manifest_row(task, status="dry_run") for task in tasks]
@@ -569,12 +475,11 @@ def main() -> None:
         print(f"dry_run_task_list={path}")
         return
 
-    manifest_path = manifest_dir / "batch_manifest.csv"
     execute(
         tasks,
-        max_workers=int(args.max_workers),
-        resume=bool(args.resume),
-        manifest_path=manifest_path,
+        max_workers=args.max_workers,
+        resume=args.resume,
+        manifest_path=manifest_dir / "batch_manifest.csv",
     )
 
 
