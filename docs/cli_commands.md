@@ -46,6 +46,17 @@ python -m apps.layout_editor.launch_editor
 
 For replicated paper campaigns, use `run_revision_30seed_campaign.py`. It is an orchestration-only wrapper: each task calls `run_experiment_manager`, so it does not duplicate or replace optimization logic. Campaign runs automatically use `--budget-policy auto_from_instance`, `--archive-layouts both`, and `--no-figures`.
 
+### Figure-control contract
+
+`--no-figures` follows conventional flag semantics:
+
+- flag omitted -> selected-layout figures may be rendered;
+- `--no-figures` supplied -> layout figure rendering is disabled.
+
+The paper campaign wrapper always forwards `--no-figures` and validates this parser contract before any campaign task is launched. If the manager's flag semantics regress, the wrapper aborts instead of silently running an expensive campaign with figure rendering enabled.
+
+Disabling figures does **not** disable scientific/evidence outputs such as `candidates.csv`, generation summaries/objectives, runtime-profile CSVs, or requested `.npz`/JSON archives. A `figures_dir` path may still be recorded in metadata; the path itself does not mean that PNG figures were rendered.
+
 ---
 
 ## 4. Method Commands
@@ -100,7 +111,7 @@ The original parameter tables were too wide. They are rewritten below as two-col
 | `--max-depth` | **Meaning:** Beam Search maximum depth.<br>**Type:** integer.<br>**Default:** method/config/auto value.<br>**Example:** `--max-depth 8` |
 | `--beam-width-delta` | **Meaning:** additive increase to auto beam width.<br>**Type:** integer.<br>**Default:** `0`.<br>**Example:** `--beam-width-delta 1` |
 | `--output-dir` | **Meaning:** experiment output root.<br>**Type:** path.<br>**Default:** `results/experiments`.<br>**Example:** `--output-dir results\quick_nsga2_bs` |
-| `--no-figures` | **Meaning:** disable selected layout figures.<br>**Type:** flag.<br>**Default:** false.<br>**Example:** `--no-figures` |
+| `--no-figures` | **Meaning:** disable selected-layout figure rendering.<br>**Type:** flag.<br>**Default when omitted:** figures enabled.<br>**When supplied:** figures disabled.<br>**Example:** `--no-figures` |
 | `--dry-run` | **Meaning:** plan runs without executing optimization.<br>**Type:** flag.<br>**Default:** false.<br>**Example:** `--dry-run` |
 | `--budget-policy` | **Meaning:** budget source policy.<br>**Accepted:** `fixed`, `auto_from_instance`.<br>**Default:** `auto_from_instance`.<br>**Example:** `--budget-policy fixed` |
 | `--sorting-rule-mode` | **Meaning:** Beam sorting rule selection mode.<br>**Accepted:** `sampled_pool`, `fixed`.<br>**Default:** `sampled_pool`.<br>**Example:** `--sorting-rule-mode fixed` |
@@ -135,7 +146,7 @@ This runner is intended for replicated paper experiments and supplementary multi
 | `--only-instance` | **Meaning:** restrict to one predefined instance.<br>Do not combine with `--instance-list`. |
 | `--only-variant` | **Meaning:** restrict to one Phase 11 method or Phase 12 variant. |
 | `--max-workers` | **Meaning:** maximum number of independent manager tasks executed concurrently.<br>**Type:** positive integer.<br>**Default:** `3`. |
-| `--resume` | **Meaning:** skip tasks whose existing `experiment_summary.csv` records `status=completed`.<br>**Type:** flag. |
+| `--resume` | **Meaning:** skip tasks whose existing `experiment_summary.csv` records `status=completed`.<br>**Type:** flag.<br>Use only when resuming the same campaign configuration. Do not use it when intentionally rerunning previously completed tasks under changed timing/I/O conditions. |
 | `--dry-run` | **Meaning:** create the task manifest without executing optimization.<br>**Type:** flag. |
 | `--archive-rank-max` | **Meaning:** maximum archived rank forwarded to the manager.<br>**Type:** integer.<br>**Default:** `3`. |
 | `--profile-light` | **Meaning:** forward lightweight runtime profiling to each manager task.<br>**Type:** flag. |
@@ -149,21 +160,50 @@ Campaign tasks automatically forward:
 --no-figures
 ```
 
-#### Phase 11 replicated core campaign
+Before task execution, the wrapper verifies that the manager interprets `--no-figures` as `no_figures=True`. This is a fail-fast guard against accidental figure-rendering overhead in replicated campaigns.
+
+#### Phase 11 replicated core campaign — clean rerun
+
+Use a fresh campaign root for a deliberate clean rerun. Do not add `--resume` on the first run, because `--resume` is designed to retain already-completed tasks.
+
+Dry-run:
 
 ```powershell
 python -m whl_experiments.run_revision_30seed_campaign `
-  --campaign-root results/revision_final_30seed `
+  --campaign-root results/revision_final_30seed_nofg `
   --phase phase11 `
   --seed-start 101 `
   --seed-end 130 `
   --instances core `
   --max-workers 5 `
-  --resume `
+  --profile-light `
+  --save-generation-objectives `
+  --archive-rank-max 3 `
+  --dry-run
+```
+
+Expected task count:
+
+```text
+360
+```
+
+Actual clean run:
+
+```powershell
+python -m whl_experiments.run_revision_30seed_campaign `
+  --campaign-root results/revision_final_30seed_nofg `
+  --phase phase11 `
+  --seed-start 101 `
+  --seed-end 130 `
+  --instances core `
+  --max-workers 5 `
   --profile-light `
   --save-generation-objectives `
   --archive-rank-max 3
 ```
+
+If this clean campaign is interrupted, rerun the same command with `--resume` to skip tasks already completed in this new campaign root.
 
 #### Explicit supplementary instance list, one seed
 
@@ -228,7 +268,7 @@ Optimization runs write per-run CSV and JSON outputs under:
 Common outputs include:
 
 - `run_metadata.json`
-- `candidate_rows.csv`
+- `candidates.csv`
 - `generation_summary.csv`
 - `experiment_metadata.json` at experiment root
 - `experiment_summary.csv` at experiment root
@@ -332,7 +372,6 @@ data/plot_inputs/paper/
 
 Required CSV inputs:
 
-
 - `121_atefeh_published_reference_metrics.csv`
 - `121_atefeh_rank03_points.csv`
 - `121_kov1ow4_rank03_points.csv`
@@ -382,17 +421,28 @@ python -m whl_experiments.run_experiment_manager --method bs_only --instances Gy
 python -m whl_experiments.run_experiment_manager --method random_restart_bs --instances Gyorgy-KOVACS_WH_Narrow_AW_4 --seeds 101 --beam-width 3 --max-depth 8 --decode-budget 10 --output-dir results\quick_rrbs
 ```
 
-### Phase 11 campaign dry-run
+### Verify `--no-figures` semantics
+
+```powershell
+python -c "from whl_experiments import run_experiment_manager as m; p=m.build_parser(); print(p.parse_args([]).no_figures, p.parse_args(['--no-figures']).no_figures)"
+```
+
+Expected:
+
+```text
+False True
+```
+
+### Phase 11 clean campaign dry-run
 
 ```powershell
 python -m whl_experiments.run_revision_30seed_campaign `
-  --campaign-root results/revision_final_30seed `
+  --campaign-root results/revision_final_30seed_nofg `
   --phase phase11 `
   --seed-start 101 `
   --seed-end 130 `
   --instances core `
   --max-workers 5 `
-  --resume `
   --profile-light `
   --save-generation-objectives `
   --archive-rank-max 3 `
