@@ -1,0 +1,2 @@
+run_id,method,method_or_variant,instance,seed,generation,generation_runtime_seconds,population_size,candidate_count,decoded_count,feasible_count,infeasible_count,selected_count,rank0_count,unique_layout_signature_count,nsga_operator_time_seconds,beam_decode_time_seconds,beam_expansion_time_seconds,feasibility_filter_time_seconds,objective_evaluation_time_seconds,ranking_archive_time_seconds,io_time_seconds
+bs_only_demo_layout_door_left_AW_2_seed_106,bs_only,bs_only,demo_layout_door_left_AW_2,106,0,111.73548289999962,0,11,6522,10,1,2,2,11,0.0,0.0,0.0,0.0,0.0,0.0,0.0

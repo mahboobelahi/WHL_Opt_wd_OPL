@@ -1,0 +1,5818 @@
+[
+  {
+    "action": "BV:19",
+    "aisle_mask_count": 712,
+    "archive_key": "final_rank_02_layout_001",
+    "block_count": 5,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          18
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          23,
+          26
+        ],
+        "height": 26,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          56,
+          31,
+          33
+        ],
+        "height": 56,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 56,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          18
+        ],
+        "height": 26,
+        "id": 4,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          23,
+          26
+        ],
+        "height": 26,
+        "id": 5,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      }
+    ],
+    "candidate_id": 1,
+    "chromosome_h_active_count": 4,
+    "chromosome_signature": "H[15,27,39,49]|V[19,20,22,27]",
+    "chromosome_v_active_count": 4,
+    "crowding_distance": 0.8574967824967825,
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 0,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.9953703703703703,
+      "chromosome_index": 1,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "15,39,49",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 1,
+      "rho": 0.004629629629629629,
+      "sorting_rule": "PF_LS_RP",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "20,22,27",
+      "within_batch_index": 1
+    },
+    "depth": 4,
+    "feature_keys": {
+      "aisle_mask": "final_rank_02_layout_001__aisle_mask",
+      "pick_face_mask": "final_rank_02_layout_001__pick_face_mask",
+      "storage_mask": "final_rank_02_layout_001__storage_mask"
+    },
+    "generation": 0,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_02_layout_001",
+    "layout_signature": "9baad5a6d6d08df213ec54891109e23b1069a9a5",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 424,
+      "pick_faces": 260,
+      "retrieval_penalty": 484.0,
+      "single_aisle_component": true,
+      "storage_total": 684,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 2,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 684,
+    "stored_pick_face_count": 260,
+    "trace": "root > V:27 > BH:27 > BV:19 > BV:19"
+  },
+  {
+    "action": "BV:19",
+    "aisle_mask_count": 712,
+    "archive_key": "final_rank_02_layout_002",
+    "block_count": 5,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          18
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          23,
+          26
+        ],
+        "height": 26,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          56,
+          31,
+          33
+        ],
+        "height": 56,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 56,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          16
+        ],
+        "height": 26,
+        "id": 4,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          21,
+          26
+        ],
+        "height": 26,
+        "id": 5,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 6
+      }
+    ],
+    "candidate_id": 2,
+    "chromosome_h_active_count": 4,
+    "chromosome_signature": "H[15,27,39,49]|V[17,19,20,22,27]",
+    "chromosome_v_active_count": 5,
+    "crowding_distance": 0.0,
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 0,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.9953703703703703,
+      "chromosome_index": 1,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "15,39,49",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 1,
+      "rho": 0.004629629629629629,
+      "sorting_rule": "PF_LS_RP",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "20,22,27",
+      "within_batch_index": 1
+    },
+    "depth": 4,
+    "feature_keys": {
+      "aisle_mask": "final_rank_02_layout_002__aisle_mask",
+      "pick_face_mask": "final_rank_02_layout_002__pick_face_mask",
+      "storage_mask": "final_rank_02_layout_002__storage_mask"
+    },
+    "generation": 0,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_02_layout_002",
+    "layout_signature": "7ea492661f4a7d780540a41c5bfc758906148e19",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 424,
+      "pick_faces": 260,
+      "retrieval_penalty": 484.0,
+      "single_aisle_component": true,
+      "storage_total": 684,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 2,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 684,
+    "stored_pick_face_count": 260,
+    "trace": "root > V:27 > BH:27 > BV:17 > BV:19"
+  },
+  {
+    "action": "BV:17",
+    "aisle_mask_count": 712,
+    "archive_key": "final_rank_02_layout_003",
+    "block_count": 5,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          16
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          21,
+          26
+        ],
+        "height": 26,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          56,
+          31,
+          33
+        ],
+        "height": 56,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 56,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          18
+        ],
+        "height": 26,
+        "id": 4,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          23,
+          26
+        ],
+        "height": 26,
+        "id": 5,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      }
+    ],
+    "candidate_id": 3,
+    "chromosome_h_active_count": 4,
+    "chromosome_signature": "H[15,27,39,49]|V[17,19,20,22,27]",
+    "chromosome_v_active_count": 5,
+    "crowding_distance": 0.0,
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 0,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.9953703703703703,
+      "chromosome_index": 1,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "15,39,49",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 1,
+      "rho": 0.004629629629629629,
+      "sorting_rule": "PF_LS_RP",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "20,22,27",
+      "within_batch_index": 1
+    },
+    "depth": 4,
+    "feature_keys": {
+      "aisle_mask": "final_rank_02_layout_003__aisle_mask",
+      "pick_face_mask": "final_rank_02_layout_003__pick_face_mask",
+      "storage_mask": "final_rank_02_layout_003__storage_mask"
+    },
+    "generation": 0,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_02_layout_003",
+    "layout_signature": "59c55a28d53f47701301421f850890ad1de7d63b",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 424,
+      "pick_faces": 260,
+      "retrieval_penalty": 484.0,
+      "single_aisle_component": true,
+      "storage_total": 684,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 2,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 684,
+    "stored_pick_face_count": 260,
+    "trace": "root > V:27 > BH:27 > BV:19 > BV:17"
+  },
+  {
+    "action": "BV:17",
+    "aisle_mask_count": 712,
+    "archive_key": "final_rank_02_layout_004",
+    "block_count": 5,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          16
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          21,
+          26
+        ],
+        "height": 26,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          56,
+          31,
+          33
+        ],
+        "height": 56,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 56,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          16
+        ],
+        "height": 26,
+        "id": 4,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          21,
+          26
+        ],
+        "height": 26,
+        "id": 5,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 6
+      }
+    ],
+    "candidate_id": 4,
+    "chromosome_h_active_count": 4,
+    "chromosome_signature": "H[15,27,39,49]|V[17,20,22,27]",
+    "chromosome_v_active_count": 4,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 0,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.9953703703703703,
+      "chromosome_index": 1,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "15,39,49",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 1,
+      "rho": 0.004629629629629629,
+      "sorting_rule": "PF_LS_RP",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "20,22,27",
+      "within_batch_index": 1
+    },
+    "depth": 4,
+    "feature_keys": {
+      "aisle_mask": "final_rank_02_layout_004__aisle_mask",
+      "pick_face_mask": "final_rank_02_layout_004__pick_face_mask",
+      "storage_mask": "final_rank_02_layout_004__storage_mask"
+    },
+    "generation": 0,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_02_layout_004",
+    "layout_signature": "6732d5258a9313035bead181283e041def90bbb2",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 424,
+      "pick_faces": 260,
+      "retrieval_penalty": 484.0,
+      "single_aisle_component": true,
+      "storage_total": 684,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 2,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 684,
+    "stored_pick_face_count": 260,
+    "trace": "root > V:27 > BH:27 > BV:17 > BV:17"
+  },
+  {
+    "action": "BV:27",
+    "aisle_mask_count": 756,
+    "archive_key": "final_rank_03_layout_001",
+    "block_count": 9,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          16
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          8,
+          21,
+          26
+        ],
+        "height": 8,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 16,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          8,
+          31,
+          33
+        ],
+        "height": 8,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 8,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          16,
+          21,
+          33
+        ],
+        "height": 4,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 26,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 13
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          28,
+          21,
+          33
+        ],
+        "height": 8,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 26,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 13
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          16
+        ],
+        "height": 26,
+        "id": 6,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          33,
+          38,
+          21,
+          33
+        ],
+        "height": 6,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 26,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 13
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          43,
+          48,
+          21,
+          33
+        ],
+        "height": 6,
+        "id": 8,
+        "orientation": "H",
+        "pick_face_count": 26,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 13
+      },
+      {
+        "access_side_names": [
+          "top"
+        ],
+        "bbox": [
+          53,
+          56,
+          21,
+          33
+        ],
+        "height": 4,
+        "id": 9,
+        "orientation": "H",
+        "pick_face_count": 13,
+        "pick_face_side_names": [
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 13
+      }
+    ],
+    "candidate_id": 6,
+    "chromosome_h_active_count": 9,
+    "chromosome_signature": "H[9,17,27,29,39,44,46,49,53]|V[17,19,20,27]",
+    "chromosome_v_active_count": 4,
+    "crowding_distance": 1.1216325100718163,
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 0,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.9907407407407407,
+      "chromosome_index": 2,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "44,46,53",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 2,
+      "rho": 0.009259259259259259,
+      "sorting_rule": "LS",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "17,19,20",
+      "within_batch_index": 2
+    },
+    "depth": 8,
+    "feature_keys": {
+      "aisle_mask": "final_rank_03_layout_001__aisle_mask",
+      "pick_face_mask": "final_rank_03_layout_001__pick_face_mask",
+      "storage_mask": "final_rank_03_layout_001__storage_mask"
+    },
+    "generation": 0,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_03_layout_001",
+    "layout_signature": "c31e5af53b1ab973249c91c35b02a53fe27d43b5",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 397,
+      "pick_faces": 243,
+      "retrieval_penalty": 467.0,
+      "single_aisle_component": true,
+      "storage_total": 640,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 3,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 640,
+    "stored_pick_face_count": 243,
+    "trace": "root > V:17 > BH:27 > BH:49 > BH:39 > BH:29 > BH:17 > BH:9 > BV:27"
+  },
+  {
+    "action": "BV:21",
+    "aisle_mask_count": 716,
+    "archive_key": "final_rank_03_layout_002",
+    "block_count": 5,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          20
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 8
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          25,
+          27
+        ],
+        "height": 26,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 52,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          56,
+          32,
+          33
+        ],
+        "height": 56,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 56,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          20
+        ],
+        "height": 26,
+        "id": 4,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 8
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          25,
+          27
+        ],
+        "height": 26,
+        "id": 5,
+        "orientation": "V",
+        "pick_face_count": 52,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      }
+    ],
+    "candidate_id": 9,
+    "chromosome_h_active_count": 4,
+    "chromosome_signature": "H[1,27,39,52]|V[15,19,21,28]",
+    "chromosome_v_active_count": 4,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 0,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.9861111111111112,
+      "chromosome_index": 3,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "1,39,52",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 3,
+      "rho": 0.013888888888888888,
+      "sorting_rule": "LS",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "15,19,28",
+      "within_batch_index": 3
+    },
+    "depth": 4,
+    "feature_keys": {
+      "aisle_mask": "final_rank_03_layout_002__aisle_mask",
+      "pick_face_mask": "final_rank_03_layout_002__pick_face_mask",
+      "storage_mask": "final_rank_03_layout_002__storage_mask"
+    },
+    "generation": 0,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_03_layout_002",
+    "layout_signature": "67a6f4f8f954f77d80a9f7aeff15d9041dc361bd",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 418,
+      "pick_faces": 262,
+      "retrieval_penalty": 576.0,
+      "single_aisle_component": true,
+      "storage_total": 680,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 3,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 680,
+    "stored_pick_face_count": 262,
+    "trace": "root > V:28 > BH:27 > BV:21 > BV:21"
+  },
+  {
+    "action": "BV:21",
+    "aisle_mask_count": 716,
+    "archive_key": "final_rank_02_layout_005",
+    "block_count": 5,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          20
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 8
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          25,
+          27
+        ],
+        "height": 26,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 52,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          56,
+          32,
+          33
+        ],
+        "height": 56,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 56,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          18
+        ],
+        "height": 26,
+        "id": 4,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          23,
+          27
+        ],
+        "height": 26,
+        "id": 5,
+        "orientation": "V",
+        "pick_face_count": 52,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 5
+      }
+    ],
+    "candidate_id": 10,
+    "chromosome_h_active_count": 4,
+    "chromosome_signature": "H[1,27,39,52]|V[15,19,21,28]",
+    "chromosome_v_active_count": 4,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 0,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.9861111111111112,
+      "chromosome_index": 3,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "1,39,52",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 3,
+      "rho": 0.013888888888888888,
+      "sorting_rule": "LS",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "15,19,28",
+      "within_batch_index": 3
+    },
+    "depth": 4,
+    "feature_keys": {
+      "aisle_mask": "final_rank_02_layout_005__aisle_mask",
+      "pick_face_mask": "final_rank_02_layout_005__pick_face_mask",
+      "storage_mask": "final_rank_02_layout_005__storage_mask"
+    },
+    "generation": 0,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_02_layout_005",
+    "layout_signature": "334779b46d5c288ee3031362a71af20db7b63dd5",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 418,
+      "pick_faces": 262,
+      "retrieval_penalty": 524.0,
+      "single_aisle_component": true,
+      "storage_total": 680,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 2,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 680,
+    "stored_pick_face_count": 262,
+    "trace": "root > V:28 > BH:27 > BV:19 > BV:21"
+  },
+  {
+    "action": "BV:21",
+    "aisle_mask_count": 716,
+    "archive_key": "final_rank_03_layout_003",
+    "block_count": 5,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          20
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 8
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          25,
+          27
+        ],
+        "height": 26,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 52,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          56,
+          32,
+          33
+        ],
+        "height": 56,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 56,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          16
+        ],
+        "height": 26,
+        "id": 4,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          21,
+          27
+        ],
+        "height": 26,
+        "id": 5,
+        "orientation": "V",
+        "pick_face_count": 52,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 7
+      }
+    ],
+    "candidate_id": 11,
+    "chromosome_h_active_count": 4,
+    "chromosome_signature": "H[1,27,39,52]|V[15,17,19,21,28]",
+    "chromosome_v_active_count": 5,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 0,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.9861111111111112,
+      "chromosome_index": 3,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "1,39,52",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 3,
+      "rho": 0.013888888888888888,
+      "sorting_rule": "LS",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "15,19,28",
+      "within_batch_index": 3
+    },
+    "depth": 4,
+    "feature_keys": {
+      "aisle_mask": "final_rank_03_layout_003__aisle_mask",
+      "pick_face_mask": "final_rank_03_layout_003__pick_face_mask",
+      "storage_mask": "final_rank_03_layout_003__storage_mask"
+    },
+    "generation": 0,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_03_layout_003",
+    "layout_signature": "0cf129bcce89e5f8a26de7d155210a53886c00dc",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 418,
+      "pick_faces": 262,
+      "retrieval_penalty": 576.0,
+      "single_aisle_component": true,
+      "storage_total": 680,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 3,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 680,
+    "stored_pick_face_count": 262,
+    "trace": "root > V:28 > BH:27 > BV:17 > BV:21"
+  },
+  {
+    "action": "BV:19",
+    "aisle_mask_count": 716,
+    "archive_key": "final_rank_02_layout_006",
+    "block_count": 5,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          18
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          23,
+          27
+        ],
+        "height": 26,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 52,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          56,
+          32,
+          33
+        ],
+        "height": 56,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 56,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          20
+        ],
+        "height": 26,
+        "id": 4,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 8
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          25,
+          27
+        ],
+        "height": 26,
+        "id": 5,
+        "orientation": "V",
+        "pick_face_count": 52,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      }
+    ],
+    "candidate_id": 12,
+    "chromosome_h_active_count": 4,
+    "chromosome_signature": "H[1,27,39,52]|V[15,19,21,28]",
+    "chromosome_v_active_count": 4,
+    "crowding_distance": 0.0,
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 0,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.9861111111111112,
+      "chromosome_index": 3,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "1,39,52",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 3,
+      "rho": 0.013888888888888888,
+      "sorting_rule": "LS",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "15,19,28",
+      "within_batch_index": 3
+    },
+    "depth": 4,
+    "feature_keys": {
+      "aisle_mask": "final_rank_02_layout_006__aisle_mask",
+      "pick_face_mask": "final_rank_02_layout_006__pick_face_mask",
+      "storage_mask": "final_rank_02_layout_006__storage_mask"
+    },
+    "generation": 0,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_02_layout_006",
+    "layout_signature": "8f2926ac3d427dac9f2e22e7dbb4782d03fe71f9",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 418,
+      "pick_faces": 262,
+      "retrieval_penalty": 524.0,
+      "single_aisle_component": true,
+      "storage_total": 680,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 2,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 680,
+    "stored_pick_face_count": 262,
+    "trace": "root > V:28 > BH:27 > BV:21 > BV:19"
+  },
+  {
+    "action": "BV:19",
+    "aisle_mask_count": 716,
+    "archive_key": "final_rank_01_layout_001",
+    "block_count": 5,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          18
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          23,
+          27
+        ],
+        "height": 26,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 52,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          56,
+          32,
+          33
+        ],
+        "height": 56,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 56,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          18
+        ],
+        "height": 26,
+        "id": 4,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          23,
+          27
+        ],
+        "height": 26,
+        "id": 5,
+        "orientation": "V",
+        "pick_face_count": 52,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 5
+      }
+    ],
+    "candidate_id": 25,
+    "chromosome_h_active_count": 4,
+    "chromosome_signature": "H[14,27,39,51]|V[19,22,28,30]",
+    "chromosome_v_active_count": 4,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 0,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.9444444444444444,
+      "chromosome_index": 12,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "14,39,51",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 12,
+      "rho": 0.05555555555555555,
+      "sorting_rule": "SS_LS_PF",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": true,
+      "v_active_starts": "22,28,30",
+      "within_batch_index": 12
+    },
+    "depth": 4,
+    "feature_keys": {
+      "aisle_mask": "final_rank_01_layout_001__aisle_mask",
+      "pick_face_mask": "final_rank_01_layout_001__pick_face_mask",
+      "storage_mask": "final_rank_01_layout_001__storage_mask"
+    },
+    "generation": 0,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_01_layout_001",
+    "layout_signature": "fc4825140fa5e2560776b4b932f5ef46c1588f36",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 418,
+      "pick_faces": 262,
+      "retrieval_penalty": 472.0,
+      "single_aisle_component": true,
+      "storage_total": 680,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 1,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 680,
+    "stored_pick_face_count": 262,
+    "trace": "root > V:28 > BH:27 > BV:19 > BV:19"
+  },
+  {
+    "action": "BV:17",
+    "aisle_mask_count": 716,
+    "archive_key": "final_rank_02_layout_007",
+    "block_count": 5,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          18
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          23,
+          27
+        ],
+        "height": 26,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 52,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          56,
+          32,
+          33
+        ],
+        "height": 56,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 56,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          16
+        ],
+        "height": 26,
+        "id": 4,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          21,
+          27
+        ],
+        "height": 26,
+        "id": 5,
+        "orientation": "V",
+        "pick_face_count": 52,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 7
+      }
+    ],
+    "candidate_id": 26,
+    "chromosome_h_active_count": 4,
+    "chromosome_signature": "H[14,27,39,51]|V[17,19,22,28,30]",
+    "chromosome_v_active_count": 5,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 0,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.9444444444444444,
+      "chromosome_index": 12,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "14,39,51",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 12,
+      "rho": 0.05555555555555555,
+      "sorting_rule": "SS_LS_PF",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": true,
+      "v_active_starts": "22,28,30",
+      "within_batch_index": 12
+    },
+    "depth": 4,
+    "feature_keys": {
+      "aisle_mask": "final_rank_02_layout_007__aisle_mask",
+      "pick_face_mask": "final_rank_02_layout_007__pick_face_mask",
+      "storage_mask": "final_rank_02_layout_007__storage_mask"
+    },
+    "generation": 0,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_02_layout_007",
+    "layout_signature": "c3a8d798cccc0ae6137f5d1801f12286f82d75a7",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 418,
+      "pick_faces": 262,
+      "retrieval_penalty": 524.0,
+      "single_aisle_component": true,
+      "storage_total": 680,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 2,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 680,
+    "stored_pick_face_count": 262,
+    "trace": "root > V:28 > BH:27 > BV:19 > BV:17"
+  },
+  {
+    "action": "BV:26",
+    "aisle_mask_count": 764,
+    "archive_key": "final_rank_03_layout_004",
+    "block_count": 10,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          17
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          8,
+          22,
+          25
+        ],
+        "height": 8,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 16,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          8,
+          30,
+          33
+        ],
+        "height": 8,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 8,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          16,
+          22,
+          33
+        ],
+        "height": 4,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 12
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          28,
+          22,
+          33
+        ],
+        "height": 8,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 12
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          17
+        ],
+        "height": 26,
+        "id": 6,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          33,
+          38,
+          22,
+          33
+        ],
+        "height": 6,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 12
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          43,
+          46,
+          22,
+          33
+        ],
+        "height": 4,
+        "id": 8,
+        "orientation": "H",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 12
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          51,
+          56,
+          22,
+          25
+        ],
+        "height": 6,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          51,
+          56,
+          30,
+          33
+        ],
+        "height": 6,
+        "id": 10,
+        "orientation": "V",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 4
+      }
+    ],
+    "candidate_id": 42,
+    "chromosome_h_active_count": 9,
+    "chromosome_signature": "H[9,11,17,27,29,37,39,47,50]|V[18,26,29,30]",
+    "chromosome_v_active_count": 4,
+    "crowding_distance": 1.132737782448765,
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 2,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.8703703703703703,
+      "chromosome_index": 28,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "11,37,50",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 28,
+      "rho": 0.12962962962962962,
+      "sorting_rule": "PF",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "18,29,30",
+      "within_batch_index": 4
+    },
+    "depth": 9,
+    "feature_keys": {
+      "aisle_mask": "final_rank_03_layout_004__aisle_mask",
+      "pick_face_mask": "final_rank_03_layout_004__pick_face_mask",
+      "storage_mask": "final_rank_03_layout_004__storage_mask"
+    },
+    "generation": 2,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_03_layout_004",
+    "layout_signature": "0d0c52af56d0b61c6bade993b1ea97511c22cb5f",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 392,
+      "pick_faces": 240,
+      "retrieval_penalty": 528.0,
+      "single_aisle_component": true,
+      "storage_total": 632,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 3,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 632,
+    "stored_pick_face_count": 240,
+    "trace": "root > V:18 > BH:27 > BH:47 > BH:39 > BH:29 > BH:17 > BH:9 > BV:26 > BV:26"
+  },
+  {
+    "action": "BV:26",
+    "aisle_mask_count": 796,
+    "archive_key": "final_rank_01_layout_002",
+    "block_count": 10,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          15
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          8,
+          20,
+          25
+        ],
+        "height": 8,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 16,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          8,
+          30,
+          33
+        ],
+        "height": 8,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 8,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          16,
+          20,
+          33
+        ],
+        "height": 4,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 28,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 14
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          28,
+          20,
+          33
+        ],
+        "height": 8,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 28,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 14
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          15
+        ],
+        "height": 26,
+        "id": 6,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          33,
+          38,
+          20,
+          33
+        ],
+        "height": 6,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 28,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 14
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          43,
+          46,
+          20,
+          33
+        ],
+        "height": 4,
+        "id": 8,
+        "orientation": "H",
+        "pick_face_count": 28,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 14
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          51,
+          56,
+          20,
+          25
+        ],
+        "height": 6,
+        "id": 9,
+        "orientation": "S",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          51,
+          56,
+          30,
+          33
+        ],
+        "height": 6,
+        "id": 10,
+        "orientation": "V",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 4
+      }
+    ],
+    "candidate_id": 62,
+    "chromosome_h_active_count": 8,
+    "chromosome_signature": "H[9,13,15,17,27,29,39,47]|V[16,20,26,29]",
+    "chromosome_v_active_count": 4,
+    "crowding_distance": 2.265363209672029,
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 3,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.20619104624705903,
+      "beam_w2": 0.8009259259259259,
+      "chromosome_index": 43,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "13,15,27",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 43,
+      "rho": 0.19907407407407407,
+      "sorting_rule": "PF_LS",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "16,20,29",
+      "within_batch_index": 7
+    },
+    "depth": 9,
+    "feature_keys": {
+      "aisle_mask": "final_rank_01_layout_002__aisle_mask",
+      "pick_face_mask": "final_rank_01_layout_002__pick_face_mask",
+      "storage_mask": "final_rank_01_layout_002__storage_mask"
+    },
+    "generation": 3,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_01_layout_002",
+    "layout_signature": "31618e0fa9e7ba38a349d70c4dff96d8a35cbd09",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 344,
+      "pick_faces": 256,
+      "retrieval_penalty": 444.0,
+      "single_aisle_component": true,
+      "storage_total": 600,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 1,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 600,
+    "stored_pick_face_count": 256,
+    "trace": "root > V:16 > BH:27 > BH:47 > BH:39 > BH:29 > BH:17 > BH:9 > BV:26 > BV:26"
+  },
+  {
+    "action": "BV:24",
+    "aisle_mask_count": 796,
+    "archive_key": "final_rank_02_layout_008",
+    "block_count": 10,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          15
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          8,
+          20,
+          25
+        ],
+        "height": 8,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 16,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          8,
+          30,
+          33
+        ],
+        "height": 8,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 8,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          16,
+          20,
+          33
+        ],
+        "height": 4,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 28,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 14
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          28,
+          20,
+          33
+        ],
+        "height": 8,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 28,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 14
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          15
+        ],
+        "height": 26,
+        "id": 6,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          33,
+          38,
+          20,
+          33
+        ],
+        "height": 6,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 28,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 14
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          43,
+          46,
+          20,
+          33
+        ],
+        "height": 4,
+        "id": 8,
+        "orientation": "H",
+        "pick_face_count": 28,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 14
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          51,
+          56,
+          20,
+          23
+        ],
+        "height": 6,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "top"
+        ],
+        "bbox": [
+          51,
+          56,
+          28,
+          33
+        ],
+        "height": 6,
+        "id": 10,
+        "orientation": "S",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 6
+      }
+    ],
+    "candidate_id": 63,
+    "chromosome_h_active_count": 8,
+    "chromosome_signature": "H[9,13,15,17,27,29,39,47]|V[16,20,24,26,29]",
+    "chromosome_v_active_count": 5,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 3,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.20619104624705903,
+      "beam_w2": 0.8009259259259259,
+      "chromosome_index": 43,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "13,15,27",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 43,
+      "rho": 0.19907407407407407,
+      "sorting_rule": "PF_LS",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "16,20,29",
+      "within_batch_index": 7
+    },
+    "depth": 9,
+    "feature_keys": {
+      "aisle_mask": "final_rank_02_layout_008__aisle_mask",
+      "pick_face_mask": "final_rank_02_layout_008__pick_face_mask",
+      "storage_mask": "final_rank_02_layout_008__storage_mask"
+    },
+    "generation": 3,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_02_layout_008",
+    "layout_signature": "fa8b3ae6d34a080b7f0477f81e4f7a7c987ebe2e",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 344,
+      "pick_faces": 256,
+      "retrieval_penalty": 522.0,
+      "single_aisle_component": true,
+      "storage_total": 600,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 2,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 600,
+    "stored_pick_face_count": 256,
+    "trace": "root > V:16 > BH:27 > BH:47 > BH:39 > BH:29 > BH:17 > BH:9 > BV:26 > BV:24"
+  },
+  {
+    "action": "BV:30",
+    "aisle_mask_count": 796,
+    "archive_key": "final_rank_03_layout_005",
+    "block_count": 9,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          15
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          8,
+          20,
+          25
+        ],
+        "height": 8,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 16,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          8,
+          30,
+          33
+        ],
+        "height": 8,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 8,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          16,
+          20,
+          33
+        ],
+        "height": 4,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 28,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 14
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          28,
+          20,
+          33
+        ],
+        "height": 8,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 28,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 14
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          15
+        ],
+        "height": 26,
+        "id": 6,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          33,
+          38,
+          20,
+          33
+        ],
+        "height": 6,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 28,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 14
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          43,
+          46,
+          20,
+          33
+        ],
+        "height": 4,
+        "id": 8,
+        "orientation": "H",
+        "pick_face_count": 28,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 14
+      },
+      {
+        "access_side_names": [
+          "top"
+        ],
+        "bbox": [
+          51,
+          56,
+          20,
+          29
+        ],
+        "height": 6,
+        "id": 9,
+        "orientation": "H",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 10
+      }
+    ],
+    "candidate_id": 64,
+    "chromosome_h_active_count": 8,
+    "chromosome_signature": "H[9,13,15,17,27,29,39,47]|V[16,20,26,29,30]",
+    "chromosome_v_active_count": 5,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 3,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.20619104624705903,
+      "beam_w2": 0.8009259259259259,
+      "chromosome_index": 43,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "13,15,27",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 43,
+      "rho": 0.19907407407407407,
+      "sorting_rule": "PF_LS",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "16,20,29",
+      "within_batch_index": 7
+    },
+    "depth": 9,
+    "feature_keys": {
+      "aisle_mask": "final_rank_03_layout_005__aisle_mask",
+      "pick_face_mask": "final_rank_03_layout_005__pick_face_mask",
+      "storage_mask": "final_rank_03_layout_005__storage_mask"
+    },
+    "generation": 3,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_03_layout_005",
+    "layout_signature": "1806574f87db50fbd619950bace22c101eef624b",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 352,
+      "pick_faces": 248,
+      "retrieval_penalty": 616.0,
+      "single_aisle_component": true,
+      "storage_total": 600,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 3,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 600,
+    "stored_pick_face_count": 248,
+    "trace": "root > V:16 > BH:27 > BH:47 > BH:39 > BH:29 > BH:17 > BH:9 > BV:26 > BV:30"
+  },
+  {
+    "action": "BV:30",
+    "aisle_mask_count": 804,
+    "archive_key": "final_rank_01_layout_003",
+    "block_count": 9,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          14
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "bottom"
+        ],
+        "bbox": [
+          1,
+          4,
+          19,
+          33
+        ],
+        "height": 4,
+        "id": 2,
+        "orientation": "H",
+        "pick_face_count": 15,
+        "pick_face_side_names": [
+          "bottom"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 15
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          9,
+          14,
+          19,
+          33
+        ],
+        "height": 6,
+        "id": 3,
+        "orientation": "H",
+        "pick_face_count": 30,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 15
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          19,
+          24,
+          19,
+          33
+        ],
+        "height": 6,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 30,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 15
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          29,
+          36,
+          19,
+          33
+        ],
+        "height": 8,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 30,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 15
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          14
+        ],
+        "height": 26,
+        "id": 6,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          41,
+          46,
+          19,
+          33
+        ],
+        "height": 6,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 30,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 15
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          51,
+          56,
+          19,
+          22
+        ],
+        "height": 6,
+        "id": 8,
+        "orientation": "V",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          51,
+          56,
+          27,
+          29
+        ],
+        "height": 6,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      }
+    ],
+    "candidate_id": 65,
+    "chromosome_h_active_count": 8,
+    "chromosome_signature": "H[2,5,11,15,25,27,37,47]|V[15,18,20,23,30]",
+    "chromosome_v_active_count": 5,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 3,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.19465395850489092,
+      "beam_w2": 0.7916666666666666,
+      "chromosome_index": 45,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "2,11,27",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 45,
+      "rho": 0.20833333333333334,
+      "sorting_rule": "PF_LS_RP",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "15,18,20",
+      "within_batch_index": 9
+    },
+    "depth": 9,
+    "feature_keys": {
+      "aisle_mask": "final_rank_01_layout_003__aisle_mask",
+      "pick_face_mask": "final_rank_01_layout_003__pick_face_mask",
+      "storage_mask": "final_rank_01_layout_003__storage_mask"
+    },
+    "generation": 3,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_01_layout_003",
+    "layout_signature": "9ee2190bb5e677e5dd6004d3c767bf39ff3449fb",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 331,
+      "pick_faces": 261,
+      "retrieval_penalty": 462.0,
+      "single_aisle_component": true,
+      "storage_total": 592,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 1,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 592,
+    "stored_pick_face_count": 261,
+    "trace": "root > V:15 > BH:27 > BH:5 > BH:15 > BH:25 > BH:37 > BH:47 > BV:23 > BV:30"
+  },
+  {
+    "action": "BV:30",
+    "aisle_mask_count": 804,
+    "archive_key": "final_rank_01_layout_004",
+    "block_count": 9,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          14
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          6,
+          19,
+          22
+        ],
+        "height": 6,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          6,
+          27,
+          29
+        ],
+        "height": 6,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          11,
+          16,
+          19,
+          33
+        ],
+        "height": 6,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 30,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 15
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          28,
+          19,
+          33
+        ],
+        "height": 8,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 30,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 15
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          14
+        ],
+        "height": 26,
+        "id": 6,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          33,
+          38,
+          19,
+          33
+        ],
+        "height": 6,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 30,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 15
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          43,
+          48,
+          19,
+          33
+        ],
+        "height": 6,
+        "id": 8,
+        "orientation": "H",
+        "pick_face_count": 30,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 15
+      },
+      {
+        "access_side_names": [
+          "top"
+        ],
+        "bbox": [
+          53,
+          56,
+          19,
+          33
+        ],
+        "height": 4,
+        "id": 9,
+        "orientation": "H",
+        "pick_face_count": 15,
+        "pick_face_side_names": [
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 15
+      }
+    ],
+    "candidate_id": 66,
+    "chromosome_h_active_count": 8,
+    "chromosome_signature": "H[2,7,11,17,27,29,39,49]|V[15,18,20,23,30]",
+    "chromosome_v_active_count": 5,
+    "crowding_distance": 0.5950637197204179,
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 3,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.19465395850489092,
+      "beam_w2": 0.7916666666666666,
+      "chromosome_index": 45,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "2,11,27",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 45,
+      "rho": 0.20833333333333334,
+      "sorting_rule": "PF_LS_RP",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "15,18,20",
+      "within_batch_index": 9
+    },
+    "depth": 9,
+    "feature_keys": {
+      "aisle_mask": "final_rank_01_layout_004__aisle_mask",
+      "pick_face_mask": "final_rank_01_layout_004__pick_face_mask",
+      "storage_mask": "final_rank_01_layout_004__storage_mask"
+    },
+    "generation": 3,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_01_layout_004",
+    "layout_signature": "eef866e48d563b788dc6683537da31dffdbde584",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 331,
+      "pick_faces": 261,
+      "retrieval_penalty": 462.0,
+      "single_aisle_component": true,
+      "storage_total": 592,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 1,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 592,
+    "stored_pick_face_count": 261,
+    "trace": "root > V:15 > BH:27 > BH:49 > BH:39 > BH:29 > BH:17 > BH:7 > BV:23 > BV:30"
+  },
+  {
+    "action": "BV:30",
+    "aisle_mask_count": 836,
+    "archive_key": "final_rank_00_layout_001",
+    "block_count": 10,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          14
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          8,
+          19,
+          26
+        ],
+        "height": 8,
+        "id": 2,
+        "orientation": "S",
+        "pick_face_count": 16,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 8
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          8,
+          31,
+          33
+        ],
+        "height": 8,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 8,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          16,
+          19,
+          33
+        ],
+        "height": 4,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 30,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 15
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          28,
+          19,
+          33
+        ],
+        "height": 8,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 30,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 15
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          14
+        ],
+        "height": 26,
+        "id": 6,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          33,
+          38,
+          19,
+          33
+        ],
+        "height": 6,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 30,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 15
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          43,
+          46,
+          19,
+          33
+        ],
+        "height": 4,
+        "id": 8,
+        "orientation": "H",
+        "pick_face_count": 30,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 15
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          51,
+          56,
+          19,
+          22
+        ],
+        "height": 6,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          51,
+          56,
+          27,
+          29
+        ],
+        "height": 6,
+        "id": 10,
+        "orientation": "V",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      }
+    ],
+    "candidate_id": 67,
+    "chromosome_h_active_count": 9,
+    "chromosome_signature": "H[7,9,17,27,29,39,46,47,50]|V[15,21,23,27,30]",
+    "chromosome_v_active_count": 5,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 3,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.2676345061745309,
+      "beam_w2": 0.787037037037037,
+      "chromosome_index": 46,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "7,46,50",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 46,
+      "rho": 0.21296296296296297,
+      "sorting_rule": "PF_LS",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "15,21,30",
+      "within_batch_index": 10
+    },
+    "depth": 10,
+    "feature_keys": {
+      "aisle_mask": "final_rank_00_layout_001__aisle_mask",
+      "pick_face_mask": "final_rank_00_layout_001__pick_face_mask",
+      "storage_mask": "final_rank_00_layout_001__storage_mask"
+    },
+    "generation": 3,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_00_layout_001",
+    "layout_signature": "1fa9344c00a95c630e382533991ef575b2f5e6b5",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 290,
+      "pick_faces": 270,
+      "retrieval_penalty": 341.0,
+      "single_aisle_component": true,
+      "storage_total": 560,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 0,
+    "seed": 102,
+    "selected": true,
+    "storage_mask_count": 560,
+    "stored_pick_face_count": 270,
+    "trace": "root > V:15 > BH:27 > BH:47 > BH:39 > BH:29 > BH:17 > BH:9 > BV:27 > BV:23 > BV:30"
+  },
+  {
+    "action": "BV:26",
+    "aisle_mask_count": 772,
+    "archive_key": "final_rank_03_layout_006",
+    "block_count": 9,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          15
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          8,
+          20,
+          25
+        ],
+        "height": 8,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 16,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          8,
+          30,
+          33
+        ],
+        "height": 8,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 8,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          16,
+          20,
+          33
+        ],
+        "height": 4,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 28,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 14
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          28,
+          20,
+          33
+        ],
+        "height": 8,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 28,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 14
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          15
+        ],
+        "height": 26,
+        "id": 6,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          33,
+          38,
+          20,
+          33
+        ],
+        "height": 6,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 28,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 14
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          43,
+          48,
+          20,
+          33
+        ],
+        "height": 6,
+        "id": 8,
+        "orientation": "H",
+        "pick_face_count": 28,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 14
+      },
+      {
+        "access_side_names": [
+          "top"
+        ],
+        "bbox": [
+          53,
+          56,
+          20,
+          33
+        ],
+        "height": 4,
+        "id": 9,
+        "orientation": "H",
+        "pick_face_count": 14,
+        "pick_face_side_names": [
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 14
+      }
+    ],
+    "candidate_id": 74,
+    "chromosome_h_active_count": 8,
+    "chromosome_signature": "H[4,9,15,17,27,29,39,49]|V[16,18,26,29]",
+    "chromosome_v_active_count": 4,
+    "crowding_distance": 1.3501839201261165,
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 4,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.2160787208723683,
+      "beam_w2": 0.7222222222222222,
+      "chromosome_index": 60,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "4,15,39",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 60,
+      "rho": 0.2777777777777778,
+      "sorting_rule": "PF_LS",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "16,18,29",
+      "within_batch_index": 12
+    },
+    "depth": 8,
+    "feature_keys": {
+      "aisle_mask": "final_rank_03_layout_006__aisle_mask",
+      "pick_face_mask": "final_rank_03_layout_006__pick_face_mask",
+      "storage_mask": "final_rank_03_layout_006__storage_mask"
+    },
+    "generation": 4,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_03_layout_006",
+    "layout_signature": "04b9835ae17dcf7a9c8af907330db39e1d2fb2b9",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 372,
+      "pick_faces": 252,
+      "retrieval_penalty": 534.0,
+      "single_aisle_component": true,
+      "storage_total": 624,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 3,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 624,
+    "stored_pick_face_count": 252,
+    "trace": "root > V:16 > BH:27 > BH:49 > BH:39 > BH:29 > BH:17 > BH:9 > BV:26"
+  },
+  {
+    "action": "BV:27",
+    "aisle_mask_count": 748,
+    "archive_key": "final_rank_03_layout_007",
+    "block_count": 10,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          18
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          8,
+          23,
+          26
+        ],
+        "height": 8,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 16,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          8,
+          31,
+          33
+        ],
+        "height": 8,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 8,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          16,
+          23,
+          33
+        ],
+        "height": 4,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 22,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 11
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          28,
+          23,
+          33
+        ],
+        "height": 8,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 22,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 11
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          18
+        ],
+        "height": 26,
+        "id": 6,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          33,
+          38,
+          23,
+          33
+        ],
+        "height": 6,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 22,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 11
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          43,
+          46,
+          23,
+          33
+        ],
+        "height": 4,
+        "id": 8,
+        "orientation": "H",
+        "pick_face_count": 22,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 11
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          51,
+          56,
+          23,
+          26
+        ],
+        "height": 6,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          51,
+          56,
+          31,
+          33
+        ],
+        "height": 6,
+        "id": 10,
+        "orientation": "V",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 3
+      }
+    ],
+    "candidate_id": 96,
+    "chromosome_h_active_count": 7,
+    "chromosome_signature": "H[9,12,17,27,29,39,47]|V[9,19,22,27]",
+    "chromosome_v_active_count": 4,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 7,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.4272891802775869,
+      "beam_w2": 0.5787037037037037,
+      "chromosome_index": 91,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "12,27,47",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 91,
+      "rho": 0.4212962962962963,
+      "sorting_rule": "LS",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "9,19,22",
+      "within_batch_index": 7
+    },
+    "depth": 9,
+    "feature_keys": {
+      "aisle_mask": "final_rank_03_layout_007__aisle_mask",
+      "pick_face_mask": "final_rank_03_layout_007__pick_face_mask",
+      "storage_mask": "final_rank_03_layout_007__storage_mask"
+    },
+    "generation": 7,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_03_layout_007",
+    "layout_signature": "0a34358c5c0e9deafcc5aa5bce9593a6a002f13b",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 416,
+      "pick_faces": 232,
+      "retrieval_penalty": 443.0,
+      "single_aisle_component": true,
+      "storage_total": 648,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 3,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 648,
+    "stored_pick_face_count": 232,
+    "trace": "root > V:19 > BH:27 > BH:47 > BH:39 > BH:29 > BH:17 > BH:9 > BV:27 > BV:27"
+  },
+  {
+    "action": "BV:27",
+    "aisle_mask_count": 780,
+    "archive_key": "final_rank_01_layout_005",
+    "block_count": 10,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          16
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          8,
+          21,
+          26
+        ],
+        "height": 8,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 16,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          8,
+          31,
+          33
+        ],
+        "height": 8,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 8,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          16,
+          21,
+          33
+        ],
+        "height": 4,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 26,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 13
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          28,
+          21,
+          33
+        ],
+        "height": 8,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 26,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 13
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          16
+        ],
+        "height": 26,
+        "id": 6,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          33,
+          38,
+          21,
+          33
+        ],
+        "height": 6,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 26,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 13
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          43,
+          46,
+          21,
+          33
+        ],
+        "height": 4,
+        "id": 8,
+        "orientation": "H",
+        "pick_face_count": 26,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 13
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          51,
+          56,
+          21,
+          26
+        ],
+        "height": 6,
+        "id": 9,
+        "orientation": "S",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          51,
+          56,
+          31,
+          33
+        ],
+        "height": 6,
+        "id": 10,
+        "orientation": "V",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 3
+      }
+    ],
+    "candidate_id": 110,
+    "chromosome_h_active_count": 8,
+    "chromosome_signature": "H[9,17,18,27,29,39,47,48]|V[17,27,29,30]",
+    "chromosome_v_active_count": 4,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 11,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.6839525815690252,
+      "beam_w2": 0.37962962962962965,
+      "chromosome_index": 134,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "18,27,48",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 134,
+      "rho": 0.6203703703703703,
+      "sorting_rule": "PF",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "17,29,30",
+      "within_batch_index": 2
+    },
+    "depth": 9,
+    "feature_keys": {
+      "aisle_mask": "final_rank_01_layout_005__aisle_mask",
+      "pick_face_mask": "final_rank_01_layout_005__pick_face_mask",
+      "storage_mask": "final_rank_01_layout_005__storage_mask"
+    },
+    "generation": 11,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_01_layout_005",
+    "layout_signature": "fea701f0583835df4b444390b8a258baa8ff22f2",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 368,
+      "pick_faces": 248,
+      "retrieval_penalty": 359.0,
+      "single_aisle_component": true,
+      "storage_total": 616,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 1,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 616,
+    "stored_pick_face_count": 248,
+    "trace": "root > V:17 > BH:27 > BH:47 > BH:39 > BH:29 > BH:17 > BH:9 > BV:27 > BV:27"
+  },
+  {
+    "action": "BV:25",
+    "aisle_mask_count": 780,
+    "archive_key": "final_rank_02_layout_009",
+    "block_count": 10,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          26,
+          13,
+          16
+        ],
+        "height": 26,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          8,
+          21,
+          26
+        ],
+        "height": 8,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 16,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          8,
+          31,
+          33
+        ],
+        "height": 8,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 8,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          16,
+          21,
+          33
+        ],
+        "height": 4,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 26,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 13
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          28,
+          21,
+          33
+        ],
+        "height": 8,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 26,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 13
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          31,
+          56,
+          13,
+          16
+        ],
+        "height": 26,
+        "id": 6,
+        "orientation": "V",
+        "pick_face_count": 51,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          33,
+          38,
+          21,
+          33
+        ],
+        "height": 6,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 26,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 13
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          43,
+          46,
+          21,
+          33
+        ],
+        "height": 4,
+        "id": 8,
+        "orientation": "H",
+        "pick_face_count": 26,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 13
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          51,
+          56,
+          21,
+          24
+        ],
+        "height": 6,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          51,
+          56,
+          29,
+          33
+        ],
+        "height": 6,
+        "id": 10,
+        "orientation": "V",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 5
+      }
+    ],
+    "candidate_id": 111,
+    "chromosome_h_active_count": 8,
+    "chromosome_signature": "H[9,17,18,27,29,39,47,48]|V[17,25,27,29,30]",
+    "chromosome_v_active_count": 5,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "adaptive_spacing_used": true,
+      "adaptive_weight_mode": "adaptive",
+      "batch_index": 11,
+      "beam_lambda": 0.1,
+      "beam_w1": 0.6839525815690252,
+      "beam_w2": 0.37962962962962965,
+      "chromosome_index": 134,
+      "decode_budget": 216,
+      "feasible_h_start_count": 45,
+      "feasible_v_start_count": 14,
+      "h_active_starts": "18,27,48",
+      "initialization_mode": "feasible_start_adaptive_spacing",
+      "initialization_spacing_mode": "feasible_start_adaptive_spacing",
+      "restart_index": 134,
+      "rho": 0.6203703703703703,
+      "sorting_rule": "PF",
+      "sorting_rule_mode": "sampled_pool",
+      "terminal": true,
+      "uses_scalar_score": false,
+      "v_active_starts": "17,29,30",
+      "within_batch_index": 2
+    },
+    "depth": 9,
+    "feature_keys": {
+      "aisle_mask": "final_rank_02_layout_009__aisle_mask",
+      "pick_face_mask": "final_rank_02_layout_009__pick_face_mask",
+      "storage_mask": "final_rank_02_layout_009__storage_mask"
+    },
+    "generation": 11,
+    "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+    "layout_key": "final_rank_02_layout_009",
+    "layout_signature": "d2639598346d928e888eed00783b6a7bbed4ddb8",
+    "method": "random_restart_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 1,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 368,
+      "pick_faces": 248,
+      "retrieval_penalty": 413.0,
+      "single_aisle_component": true,
+      "storage_total": 616,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 2,
+    "seed": 102,
+    "selected": false,
+    "storage_mask_count": 616,
+    "stored_pick_face_count": 248,
+    "trace": "root > V:17 > BH:27 > BH:47 > BH:39 > BH:29 > BH:17 > BH:9 > BV:27 > BV:25"
+  }
+]

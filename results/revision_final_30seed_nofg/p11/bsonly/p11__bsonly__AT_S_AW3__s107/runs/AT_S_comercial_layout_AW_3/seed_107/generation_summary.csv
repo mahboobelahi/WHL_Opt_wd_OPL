@@ -1,0 +1,2 @@
+run_id,method,instance,seed,generation,chromosome_count,decoded_candidate_count,feasible_candidate_count,non_dominated_count,selected_survivor_count,best_pick_faces,best_storage_total,best_interior_storage,best_retrieval_penalty,mean_pick_faces,mean_storage_total,mean_interior_storage,mean_retrieval_penalty,runtime_seconds
+bs_only_AT_S_comercial_layout_AW_3_seed_107,bs_only,AT_S_comercial_layout_AW_3,107,0,0,1155,7,4,4,115,261,103,149,105.28571428571429,222.42857142857142,117.14285714285714,263.0,15.352460899997823

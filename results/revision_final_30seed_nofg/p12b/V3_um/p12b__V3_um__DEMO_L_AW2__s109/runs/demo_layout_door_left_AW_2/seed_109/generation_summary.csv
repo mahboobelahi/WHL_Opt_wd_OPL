@@ -1,0 +1,16 @@
+run_id,method,instance,seed,generation,chromosome_count,decoded_candidate_count,feasible_candidate_count,non_dominated_count,selected_survivor_count,best_pick_faces,best_storage_total,best_interior_storage,best_retrieval_penalty,mean_pick_faces,mean_storage_total,mean_interior_storage,mean_retrieval_penalty,runtime_seconds
+proposed_nsga2_bs_demo_layout_door_left_AW_2_seed_109,proposed_nsga2_bs,demo_layout_door_left_AW_2,109,0,10,20,20,1,10,221,292,21,19,200.5,266.5,66.0,67.45,50.38862849999714
+proposed_nsga2_bs_demo_layout_door_left_AW_2_seed_109,proposed_nsga2_bs,demo_layout_door_left_AW_2,109,1,10,23,15,4,10,216,268,36,34,205.4,256.6666666666667,51.266666666666666,47.0,60.850223800000094
+proposed_nsga2_bs_demo_layout_door_left_AW_2_seed_109,proposed_nsga2_bs,demo_layout_door_left_AW_2,109,2,10,22,15,1,10,224,266,24,22,205.46666666666667,258.53333333333336,53.06666666666667,42.13333333333333,58.04555260000052
+proposed_nsga2_bs_demo_layout_door_left_AW_2_seed_109,proposed_nsga2_bs,demo_layout_door_left_AW_2,109,3,10,23,15,2,10,217,266,33,32,207.33333333333334,255.2,47.86666666666667,45.2,57.454683800002385
+proposed_nsga2_bs_demo_layout_door_left_AW_2_seed_109,proposed_nsga2_bs,demo_layout_door_left_AW_2,109,4,10,22,16,3,10,216,268,36,34,203.8125,256.0,52.1875,51.3125,61.74860120000085
+proposed_nsga2_bs_demo_layout_door_left_AW_2_seed_109,proposed_nsga2_bs,demo_layout_door_left_AW_2,109,5,10,27,17,4,10,216,266,36,34,204.23529411764707,254.7058823529412,50.470588235294116,46.705882352941174,73.71109940000315
+proposed_nsga2_bs_demo_layout_door_left_AW_2_seed_109,proposed_nsga2_bs,demo_layout_door_left_AW_2,109,6,10,24,16,4,10,216,294,36,34,194.75,263.75,69.0,53.3125,68.67490689999977
+proposed_nsga2_bs_demo_layout_door_left_AW_2_seed_109,proposed_nsga2_bs,demo_layout_door_left_AW_2,109,7,10,24,10,4,10,216,266,36,34,205.9,255.8,49.9,40.8,76.89875719999691
+proposed_nsga2_bs_demo_layout_door_left_AW_2_seed_109,proposed_nsga2_bs,demo_layout_door_left_AW_2,109,8,10,29,12,3,10,214,272,36,36,199.16666666666666,257.0,57.833333333333336,48.25,75.16290970000409
+proposed_nsga2_bs_demo_layout_door_left_AW_2_seed_109,proposed_nsga2_bs,demo_layout_door_left_AW_2,109,9,10,26,17,4,10,216,270,36,34,202.7058823529412,255.88235294117646,53.1764705882353,48.470588235294116,70.89012279999588
+proposed_nsga2_bs_demo_layout_door_left_AW_2_seed_109,proposed_nsga2_bs,demo_layout_door_left_AW_2,109,10,10,25,10,3,10,214,270,36,34,202.9,256.4,53.5,44.6,74.25640959999873
+proposed_nsga2_bs_demo_layout_door_left_AW_2_seed_109,proposed_nsga2_bs,demo_layout_door_left_AW_2,109,11,10,21,10,3,10,214,270,36,34,202.9,256.4,53.5,44.6,74.11241480000172
+proposed_nsga2_bs_demo_layout_door_left_AW_2_seed_109,proposed_nsga2_bs,demo_layout_door_left_AW_2,109,12,10,21,8,2,8,214,260,36,34,200.5,255.25,54.75,46.125,73.92143829999986
+proposed_nsga2_bs_demo_layout_door_left_AW_2_seed_109,proposed_nsga2_bs,demo_layout_door_left_AW_2,109,13,10,22,13,4,10,216,266,36,34,204.23076923076923,254.92307692307693,50.69230769230769,47.23076923076923,62.222503900004085
+proposed_nsga2_bs_demo_layout_door_left_AW_2_seed_109,proposed_nsga2_bs,demo_layout_door_left_AW_2,109,14,10,27,12,3,10,214,260,36,34,205.16666666666666,253.33333333333334,48.166666666666664,44.0,78.8349309999976

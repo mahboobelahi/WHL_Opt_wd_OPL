@@ -1,0 +1,6111 @@
+[
+  {
+    "action": "BV:3",
+    "aisle_mask_count": 230,
+    "archive_key": "final_rank_01_layout_001",
+    "block_count": 10,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          9,
+          1,
+          2
+        ],
+        "height": 9,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 17,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          9,
+          5,
+          6
+        ],
+        "height": 9,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 18,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          9,
+          9,
+          11
+        ],
+        "height": 9,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 18,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          9,
+          14,
+          15
+        ],
+        "height": 9,
+        "id": 4,
+        "orientation": "V",
+        "pick_face_count": 18,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          9,
+          18,
+          19
+        ],
+        "height": 9,
+        "id": 5,
+        "orientation": "V",
+        "pick_face_count": 9,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          12,
+          26,
+          1,
+          2
+        ],
+        "height": 15,
+        "id": 6,
+        "orientation": "V",
+        "pick_face_count": 29,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          12,
+          26,
+          5,
+          6
+        ],
+        "height": 15,
+        "id": 7,
+        "orientation": "V",
+        "pick_face_count": 30,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          12,
+          26,
+          9,
+          10
+        ],
+        "height": 15,
+        "id": 8,
+        "orientation": "V",
+        "pick_face_count": 29,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          12,
+          26,
+          13,
+          14
+        ],
+        "height": 15,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 30,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          12,
+          26,
+          17,
+          19
+        ],
+        "height": 15,
+        "id": 10,
+        "orientation": "V",
+        "pick_face_count": 15,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 3
+      }
+    ],
+    "candidate_id": 1,
+    "chromosome_h_active_count": 2,
+    "chromosome_signature": "H[4,10]|V[3,7,11,12,15,16,18]",
+    "chromosome_v_active_count": 7,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "active_h_count": 2,
+      "active_v_count": 2,
+      "adaptive_spacing_used": false,
+      "adaptive_weight_mode": "adaptive",
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.9333333333333333,
+      "chromosome_index": 1,
+      "feasible_h_start_count": 21,
+      "feasible_v_start_count": 16,
+      "h_active_starts": "4,10",
+      "initialization_mode": "random_feasible_start_no_adaptive_spacing",
+      "initialization_spacing_mode": "random_feasible_start_no_adaptive_spacing",
+      "mutation_operator": "",
+      "rho": 0.06666666666666667,
+      "sorting_rule": "RP",
+      "sorting_rule_mode": "sampled_pool",
+      "uses_scalar_score": false,
+      "v_active_starts": "16,18"
+    },
+    "depth": 9,
+    "feature_keys": {
+      "aisle_mask": "final_rank_01_layout_001__aisle_mask",
+      "pick_face_mask": "final_rank_01_layout_001__pick_face_mask",
+      "storage_mask": "final_rank_01_layout_001__storage_mask"
+    },
+    "generation": 0,
+    "instance": "demo_layout_door_left_AW_2",
+    "layout_key": "final_rank_01_layout_001",
+    "layout_signature": "af9fb771f8ef0fcd0f77fe55efb46bb7ab97fc36",
+    "method": "proposed_nsga2_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 3,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 49,
+      "pick_faces": 213,
+      "retrieval_penalty": 78.0,
+      "single_aisle_component": true,
+      "storage_total": 262,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 1,
+    "seed": 129,
+    "selected": true,
+    "storage_mask_count": 262,
+    "stored_pick_face_count": 213,
+    "trace": "root > H:10 > BV:15 > BV:7 > BV:16 > BV:7 > BV:12 > BV:11 > BV:3 > BV:3"
+  },
+  {
+    "action": "BV:3",
+    "aisle_mask_count": 230,
+    "archive_key": "final_rank_02_layout_001",
+    "block_count": 10,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          9,
+          1,
+          2
+        ],
+        "height": 9,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 17,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          9,
+          5,
+          6
+        ],
+        "height": 9,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 18,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          9,
+          9,
+          10
+        ],
+        "height": 9,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 17,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          9,
+          13,
+          14
+        ],
+        "height": 9,
+        "id": 4,
+        "orientation": "V",
+        "pick_face_count": 18,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          9,
+          17,
+          19
+        ],
+        "height": 9,
+        "id": 5,
+        "orientation": "V",
+        "pick_face_count": 9,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          12,
+          26,
+          1,
+          2
+        ],
+        "height": 15,
+        "id": 6,
+        "orientation": "V",
+        "pick_face_count": 29,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          12,
+          26,
+          5,
+          6
+        ],
+        "height": 15,
+        "id": 7,
+        "orientation": "V",
+        "pick_face_count": 30,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          12,
+          26,
+          9,
+          10
+        ],
+        "height": 15,
+        "id": 8,
+        "orientation": "V",
+        "pick_face_count": 29,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          12,
+          26,
+          13,
+          14
+        ],
+        "height": 15,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 30,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          12,
+          26,
+          17,
+          19
+        ],
+        "height": 15,
+        "id": 10,
+        "orientation": "V",
+        "pick_face_count": 15,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 3
+      }
+    ],
+    "candidate_id": 2,
+    "chromosome_h_active_count": 2,
+    "chromosome_signature": "H[4,10]|V[3,7,11,15,16,18]",
+    "chromosome_v_active_count": 6,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "active_h_count": 2,
+      "active_v_count": 2,
+      "adaptive_spacing_used": false,
+      "adaptive_weight_mode": "adaptive",
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.9333333333333333,
+      "chromosome_index": 1,
+      "feasible_h_start_count": 21,
+      "feasible_v_start_count": 16,
+      "h_active_starts": "4,10",
+      "initialization_mode": "random_feasible_start_no_adaptive_spacing",
+      "initialization_spacing_mode": "random_feasible_start_no_adaptive_spacing",
+      "mutation_operator": "",
+      "rho": 0.06666666666666667,
+      "sorting_rule": "RP",
+      "sorting_rule_mode": "sampled_pool",
+      "uses_scalar_score": false,
+      "v_active_starts": "16,18"
+    },
+    "depth": 9,
+    "feature_keys": {
+      "aisle_mask": "final_rank_02_layout_001__aisle_mask",
+      "pick_face_mask": "final_rank_02_layout_001__pick_face_mask",
+      "storage_mask": "final_rank_02_layout_001__storage_mask"
+    },
+    "generation": 0,
+    "instance": "demo_layout_door_left_AW_2",
+    "layout_key": "final_rank_02_layout_001",
+    "layout_signature": "c1af55306da2a9a3ddf4634f22d4a61d6493ee93",
+    "method": "proposed_nsga2_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 3,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 50,
+      "pick_faces": 212,
+      "retrieval_penalty": 96.0,
+      "single_aisle_component": true,
+      "storage_total": 262,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 2,
+    "seed": 129,
+    "selected": true,
+    "storage_mask_count": 262,
+    "stored_pick_face_count": 212,
+    "trace": "root > H:10 > BV:15 > BV:7 > BV:15 > BV:7 > BV:11 > BV:3 > BV:11 > BV:3"
+  },
+  {
+    "action": "BH:3",
+    "aisle_mask_count": 232,
+    "archive_key": "final_rank_00_layout_001",
+    "block_count": 13,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          9,
+          12
+        ],
+        "height": 12,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "bottom"
+        ],
+        "bbox": [
+          1,
+          2,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 5,
+        "pick_face_side_names": [
+          "bottom"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          5,
+          6,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          9,
+          10,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 6,
+        "orientation": "H",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          14,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 8,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          9,
+          12
+        ],
+        "height": 12,
+        "id": 10,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          17,
+          18,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 11,
+        "orientation": "H",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          22,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 12,
+        "orientation": "H",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "top"
+        ],
+        "bbox": [
+          25,
+          26,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 13,
+        "orientation": "H",
+        "pick_face_count": 5,
+        "pick_face_side_names": [
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 5
+      }
+    ],
+    "candidate_id": 7,
+    "chromosome_h_active_count": 9,
+    "chromosome_signature": "H[1,3,7,11,13,15,19,23,25]|V[3,6,7,13,14]",
+    "chromosome_v_active_count": 5,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "active_h_count": 3,
+      "active_v_count": 3,
+      "adaptive_spacing_used": false,
+      "adaptive_weight_mode": "adaptive",
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.9333333333333333,
+      "chromosome_index": 4,
+      "feasible_h_start_count": 21,
+      "feasible_v_start_count": 16,
+      "h_active_starts": "1,15,25",
+      "initialization_mode": "random_feasible_start_no_adaptive_spacing",
+      "initialization_spacing_mode": "random_feasible_start_no_adaptive_spacing",
+      "mutation_operator": "",
+      "rho": 0.06666666666666667,
+      "sorting_rule": "SS",
+      "sorting_rule_mode": "sampled_pool",
+      "uses_scalar_score": true,
+      "v_active_starts": "6,13,14"
+    },
+    "depth": 12,
+    "feature_keys": {
+      "aisle_mask": "final_rank_00_layout_001__aisle_mask",
+      "pick_face_mask": "final_rank_00_layout_001__pick_face_mask",
+      "storage_mask": "final_rank_00_layout_001__storage_mask"
+    },
+    "generation": 0,
+    "instance": "demo_layout_door_left_AW_2",
+    "layout_key": "final_rank_00_layout_001",
+    "layout_signature": "146759e3ef785e80ae78bd95708e7576b0df1241",
+    "method": "proposed_nsga2_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 3,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 58,
+      "pick_faces": 202,
+      "retrieval_penalty": 34.0,
+      "single_aisle_component": true,
+      "storage_total": 260,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 0,
+    "seed": 129,
+    "selected": true,
+    "storage_mask_count": 260,
+    "stored_pick_face_count": 202,
+    "trace": "root > V:13 > BH:13 > BV:7 > BV:7 > BV:3 > BV:3 > BH:23 > BH:19 > BH:15 > BH:11 > BH:7 > BH:3"
+  },
+  {
+    "action": "BH:25",
+    "aisle_mask_count": 232,
+    "archive_key": "final_rank_01_layout_002",
+    "block_count": 12,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          9,
+          12
+        ],
+        "height": 12,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "bottom"
+        ],
+        "bbox": [
+          1,
+          2,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 5,
+        "pick_face_side_names": [
+          "bottom"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          5,
+          6,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          9,
+          10,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 6,
+        "orientation": "H",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          14,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 8,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          9,
+          12
+        ],
+        "height": 12,
+        "id": 10,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          17,
+          18,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 11,
+        "orientation": "H",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          24,
+          15,
+          19
+        ],
+        "height": 4,
+        "id": 12,
+        "orientation": "H",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 5
+      }
+    ],
+    "candidate_id": 8,
+    "chromosome_h_active_count": 8,
+    "chromosome_signature": "H[1,3,7,11,13,15,19,25]|V[3,6,7,13,14]",
+    "chromosome_v_active_count": 5,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "active_h_count": 3,
+      "active_v_count": 3,
+      "adaptive_spacing_used": false,
+      "adaptive_weight_mode": "adaptive",
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.9333333333333333,
+      "chromosome_index": 4,
+      "feasible_h_start_count": 21,
+      "feasible_v_start_count": 16,
+      "h_active_starts": "1,15,25",
+      "initialization_mode": "random_feasible_start_no_adaptive_spacing",
+      "initialization_spacing_mode": "random_feasible_start_no_adaptive_spacing",
+      "mutation_operator": "",
+      "rho": 0.06666666666666667,
+      "sorting_rule": "SS",
+      "sorting_rule_mode": "sampled_pool",
+      "uses_scalar_score": true,
+      "v_active_starts": "6,13,14"
+    },
+    "depth": 12,
+    "feature_keys": {
+      "aisle_mask": "final_rank_01_layout_002__aisle_mask",
+      "pick_face_mask": "final_rank_01_layout_002__pick_face_mask",
+      "storage_mask": "final_rank_01_layout_002__storage_mask"
+    },
+    "generation": 0,
+    "instance": "demo_layout_door_left_AW_2",
+    "layout_key": "final_rank_01_layout_002",
+    "layout_signature": "4317ed1efabe31038ca0b969ea3e4e750cdf03f2",
+    "method": "proposed_nsga2_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 3,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 63,
+      "pick_faces": 197,
+      "retrieval_penalty": 34.0,
+      "single_aisle_component": true,
+      "storage_total": 260,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 1,
+    "seed": 129,
+    "selected": true,
+    "storage_mask_count": 260,
+    "stored_pick_face_count": 197,
+    "trace": "root > V:13 > BH:13 > BV:7 > BV:7 > BV:3 > BV:3 > BH:3 > BH:7 > BH:11 > BH:15 > BH:19 > BH:25"
+  },
+  {
+    "action": "BH:10",
+    "aisle_mask_count": 240,
+    "archive_key": "final_rank_02_layout_002",
+    "block_count": 13,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          5,
+          14,
+          15
+        ],
+        "height": 5,
+        "id": 4,
+        "orientation": "V",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          5,
+          18,
+          19
+        ],
+        "height": 5,
+        "id": 5,
+        "orientation": "V",
+        "pick_face_count": 5,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          8,
+          9,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 6,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          12,
+          13,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 8,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 10,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          16,
+          17,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 11,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          20,
+          21,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 12,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "top"
+        ],
+        "bbox": [
+          24,
+          26,
+          14,
+          19
+        ],
+        "height": 3,
+        "id": 13,
+        "orientation": "H",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 6
+      }
+    ],
+    "candidate_id": 18,
+    "chromosome_h_active_count": 8,
+    "chromosome_signature": "H[2,6,10,13,14,18,20,22]|V[3,5,7,8,12,16]",
+    "chromosome_v_active_count": 6,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "active_h_count": 3,
+      "active_v_count": 3,
+      "adaptive_spacing_used": false,
+      "adaptive_weight_mode": "adaptive",
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.9333333333333333,
+      "chromosome_index": 8,
+      "feasible_h_start_count": 21,
+      "feasible_v_start_count": 16,
+      "h_active_starts": "2,13,20",
+      "initialization_mode": "random_feasible_start_no_adaptive_spacing",
+      "initialization_spacing_mode": "random_feasible_start_no_adaptive_spacing",
+      "mutation_operator": "",
+      "rho": 0.06666666666666667,
+      "sorting_rule": "RP_LS",
+      "sorting_rule_mode": "sampled_pool",
+      "uses_scalar_score": false,
+      "v_active_starts": "5,8,12"
+    },
+    "depth": 12,
+    "feature_keys": {
+      "aisle_mask": "final_rank_02_layout_002__aisle_mask",
+      "pick_face_mask": "final_rank_02_layout_002__pick_face_mask",
+      "storage_mask": "final_rank_02_layout_002__storage_mask"
+    },
+    "generation": 0,
+    "instance": "demo_layout_door_left_AW_2",
+    "layout_key": "final_rank_02_layout_002",
+    "layout_signature": "cde7e02f65ba0f4bfa087937e60f3ffbcdd2593f",
+    "method": "proposed_nsga2_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 3,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 41,
+      "pick_faces": 211,
+      "retrieval_penalty": 53.0,
+      "single_aisle_component": true,
+      "storage_total": 252,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 2,
+    "seed": 129,
+    "selected": true,
+    "storage_mask_count": 252,
+    "stored_pick_face_count": 211,
+    "trace": "root > V:12 > BH:13 > BV:7 > BV:7 > BH:22 > BH:14 > BH:6 > BV:16 > BV:3 > BV:3 > BH:18 > BH:10"
+  },
+  {
+    "action": "BH:7",
+    "aisle_mask_count": 242,
+    "archive_key": "final_rank_00_layout_002",
+    "block_count": 13,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom"
+        ],
+        "bbox": [
+          1,
+          2,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "bottom"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          5,
+          6,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          9,
+          10,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 6,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          14,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 8,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 10,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          17,
+          18,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 11,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          22,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 12,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "top"
+        ],
+        "bbox": [
+          25,
+          26,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 13,
+        "orientation": "H",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 6
+      }
+    ],
+    "candidate_id": 1,
+    "chromosome_h_active_count": 12,
+    "chromosome_signature": "H[3,4,7,11,13,14,15,18,19,20,22,23]|V[3,5,7,8,12,16]",
+    "chromosome_v_active_count": 6,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "active_h_count": 7,
+      "active_v_count": 6,
+      "adaptive_spacing_used": null,
+      "adaptive_weight_mode": "adaptive",
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.8666666666666667,
+      "chromosome_index": 1,
+      "feasible_h_start_count": null,
+      "feasible_v_start_count": null,
+      "h_active_starts": "4,7,13,14,18,20,22",
+      "initialization_mode": "offspring",
+      "initialization_spacing_mode": "offspring",
+      "mutation_operator": "break_symmetry",
+      "rho": 0.13333333333333333,
+      "sorting_rule": "LS_SS",
+      "sorting_rule_mode": "sampled_pool",
+      "uses_scalar_score": true,
+      "v_active_starts": "3,5,7,8,12,16"
+    },
+    "depth": 12,
+    "feature_keys": {
+      "aisle_mask": "final_rank_00_layout_002__aisle_mask",
+      "pick_face_mask": "final_rank_00_layout_002__pick_face_mask",
+      "storage_mask": "final_rank_00_layout_002__storage_mask"
+    },
+    "generation": 1,
+    "instance": "demo_layout_door_left_AW_2",
+    "layout_key": "final_rank_00_layout_002",
+    "layout_signature": "eb03952090a874660b7fb214554a0aa56a73029e",
+    "method": "proposed_nsga2_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 3,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 36,
+      "pick_faces": 214,
+      "retrieval_penalty": 36.0,
+      "single_aisle_component": true,
+      "storage_total": 250,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 0,
+    "seed": 129,
+    "selected": true,
+    "storage_mask_count": 250,
+    "stored_pick_face_count": 214,
+    "trace": "root > V:12 > BH:13 > BV:7 > BV:7 > BV:3 > BV:3 > BH:23 > BH:19 > BH:15 > BH:11 > BH:3 > BH:7"
+  },
+  {
+    "action": "BV:16",
+    "aisle_mask_count": 242,
+    "archive_key": "final_rank_02_layout_003",
+    "block_count": 13,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom"
+        ],
+        "bbox": [
+          1,
+          2,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "bottom"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          5,
+          6,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          9,
+          10,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 6,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          14,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 8,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 10,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          17,
+          22,
+          14,
+          15
+        ],
+        "height": 6,
+        "id": 11,
+        "orientation": "V",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          17,
+          22,
+          18,
+          19
+        ],
+        "height": 6,
+        "id": 12,
+        "orientation": "V",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "top"
+        ],
+        "bbox": [
+          25,
+          26,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 13,
+        "orientation": "H",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 6
+      }
+    ],
+    "candidate_id": 2,
+    "chromosome_h_active_count": 11,
+    "chromosome_signature": "H[3,4,7,11,13,14,15,18,20,22,23]|V[3,5,7,8,12,16]",
+    "chromosome_v_active_count": 6,
+    "crowding_distance": 0.2980861244019139,
+    "decode_metadata": {
+      "active_h_count": 7,
+      "active_v_count": 6,
+      "adaptive_spacing_used": null,
+      "adaptive_weight_mode": "adaptive",
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.8666666666666667,
+      "chromosome_index": 1,
+      "feasible_h_start_count": null,
+      "feasible_v_start_count": null,
+      "h_active_starts": "4,7,13,14,18,20,22",
+      "initialization_mode": "offspring",
+      "initialization_spacing_mode": "offspring",
+      "mutation_operator": "break_symmetry",
+      "rho": 0.13333333333333333,
+      "sorting_rule": "LS_SS",
+      "sorting_rule_mode": "sampled_pool",
+      "uses_scalar_score": true,
+      "v_active_starts": "3,5,7,8,12,16"
+    },
+    "depth": 12,
+    "feature_keys": {
+      "aisle_mask": "final_rank_02_layout_003__aisle_mask",
+      "pick_face_mask": "final_rank_02_layout_003__pick_face_mask",
+      "storage_mask": "final_rank_02_layout_003__storage_mask"
+    },
+    "generation": 1,
+    "instance": "demo_layout_door_left_AW_2",
+    "layout_key": "final_rank_02_layout_003",
+    "layout_signature": "00a9d8d47000946aa25bf8cbdb36931d5b5d4b7d",
+    "method": "proposed_nsga2_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 3,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 42,
+      "pick_faces": 208,
+      "retrieval_penalty": 42.0,
+      "single_aisle_component": true,
+      "storage_total": 250,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 2,
+    "seed": 129,
+    "selected": true,
+    "storage_mask_count": 250,
+    "stored_pick_face_count": 208,
+    "trace": "root > V:12 > BH:13 > BV:7 > BV:7 > BV:3 > BV:3 > BH:3 > BH:7 > BH:11 > BH:15 > BH:23 > BV:16"
+  },
+  {
+    "action": "BV:16",
+    "aisle_mask_count": 242,
+    "archive_key": "final_rank_02_layout_004",
+    "block_count": 13,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom"
+        ],
+        "bbox": [
+          1,
+          2,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "bottom"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          5,
+          10,
+          14,
+          15
+        ],
+        "height": 6,
+        "id": 5,
+        "orientation": "V",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          5,
+          10,
+          18,
+          19
+        ],
+        "height": 6,
+        "id": 6,
+        "orientation": "V",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          14,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 8,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 10,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          17,
+          18,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 11,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          22,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 12,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "top"
+        ],
+        "bbox": [
+          25,
+          26,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 13,
+        "orientation": "H",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 6
+      }
+    ],
+    "candidate_id": 3,
+    "chromosome_h_active_count": 12,
+    "chromosome_signature": "H[3,4,7,11,13,14,15,18,19,20,22,23]|V[3,5,7,8,12,16]",
+    "chromosome_v_active_count": 6,
+    "crowding_distance": 0.0,
+    "decode_metadata": {
+      "active_h_count": 7,
+      "active_v_count": 6,
+      "adaptive_spacing_used": null,
+      "adaptive_weight_mode": "adaptive",
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.8666666666666667,
+      "chromosome_index": 1,
+      "feasible_h_start_count": null,
+      "feasible_v_start_count": null,
+      "h_active_starts": "4,7,13,14,18,20,22",
+      "initialization_mode": "offspring",
+      "initialization_spacing_mode": "offspring",
+      "mutation_operator": "break_symmetry",
+      "rho": 0.13333333333333333,
+      "sorting_rule": "LS_SS",
+      "sorting_rule_mode": "sampled_pool",
+      "uses_scalar_score": true,
+      "v_active_starts": "3,5,7,8,12,16"
+    },
+    "depth": 12,
+    "feature_keys": {
+      "aisle_mask": "final_rank_02_layout_004__aisle_mask",
+      "pick_face_mask": "final_rank_02_layout_004__pick_face_mask",
+      "storage_mask": "final_rank_02_layout_004__storage_mask"
+    },
+    "generation": 1,
+    "instance": "demo_layout_door_left_AW_2",
+    "layout_key": "final_rank_02_layout_004",
+    "layout_signature": "d0525a507710a5664c0df826d850c16891cba894",
+    "method": "proposed_nsga2_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 3,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 42,
+      "pick_faces": 208,
+      "retrieval_penalty": 42.0,
+      "single_aisle_component": true,
+      "storage_total": 250,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 2,
+    "seed": 129,
+    "selected": true,
+    "storage_mask_count": 250,
+    "stored_pick_face_count": 208,
+    "trace": "root > V:12 > BH:13 > BV:7 > BV:7 > BV:3 > BV:3 > BH:23 > BH:19 > BH:15 > BH:11 > BH:3 > BV:16"
+  },
+  {
+    "action": "BV:3",
+    "aisle_mask_count": 226,
+    "archive_key": "final_rank_00_layout_003",
+    "block_count": 9,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          14,
+          15
+        ],
+        "height": 12,
+        "id": 4,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          26,
+          18,
+          19
+        ],
+        "height": 26,
+        "id": 5,
+        "orientation": "V",
+        "pick_face_count": 26,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 6,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 7,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 8,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          14,
+          15
+        ],
+        "height": 12,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      }
+    ],
+    "candidate_id": 4,
+    "chromosome_h_active_count": 3,
+    "chromosome_signature": "H[2,10,13]|V[3,7,10,12,15,16,18]",
+    "chromosome_v_active_count": 7,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "active_h_count": 2,
+      "active_v_count": 6,
+      "adaptive_spacing_used": null,
+      "adaptive_weight_mode": "adaptive",
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1903086382169739,
+      "beam_w2": 0.8666666666666667,
+      "chromosome_index": 2,
+      "feasible_h_start_count": null,
+      "feasible_v_start_count": null,
+      "h_active_starts": "2,10",
+      "initialization_mode": "offspring",
+      "initialization_spacing_mode": "offspring",
+      "mutation_operator": "break_symmetry",
+      "rho": 0.13333333333333333,
+      "sorting_rule": "PF_LS_RP",
+      "sorting_rule_mode": "sampled_pool",
+      "uses_scalar_score": false,
+      "v_active_starts": "3,7,10,15,16,18"
+    },
+    "depth": 8,
+    "feature_keys": {
+      "aisle_mask": "final_rank_00_layout_003__aisle_mask",
+      "pick_face_mask": "final_rank_00_layout_003__pick_face_mask",
+      "storage_mask": "final_rank_00_layout_003__storage_mask"
+    },
+    "generation": 1,
+    "instance": "demo_layout_door_left_AW_2",
+    "layout_key": "final_rank_00_layout_003",
+    "layout_signature": "63c9c1384eb0d63f6756e5f6c6567bc893aa1bf9",
+    "method": "proposed_nsga2_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 3,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 50,
+      "pick_faces": 216,
+      "retrieval_penalty": 50.0,
+      "single_aisle_component": true,
+      "storage_total": 266,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 0,
+    "seed": 129,
+    "selected": true,
+    "storage_mask_count": 266,
+    "stored_pick_face_count": 216,
+    "trace": "root > V:16 > BH:13 > BV:7 > BV:7 > BV:12 > BV:12 > BV:3 > BV:3"
+  },
+  {
+    "action": "BV:16",
+    "aisle_mask_count": 242,
+    "archive_key": "final_rank_00_layout_004",
+    "block_count": 13,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          6,
+          14,
+          15
+        ],
+        "height": 6,
+        "id": 4,
+        "orientation": "V",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          6,
+          18,
+          19
+        ],
+        "height": 6,
+        "id": 5,
+        "orientation": "V",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          9,
+          10,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 6,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          14,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 8,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 10,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          17,
+          18,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 11,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          22,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 12,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "top"
+        ],
+        "bbox": [
+          25,
+          26,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 13,
+        "orientation": "H",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 6
+      }
+    ],
+    "candidate_id": 5,
+    "chromosome_h_active_count": 9,
+    "chromosome_signature": "H[2,6,7,10,11,13,15,19,23]|V[3,7,11,12,15,16]",
+    "chromosome_v_active_count": 6,
+    "crowding_distance": 0.0,
+    "decode_metadata": {
+      "active_h_count": 5,
+      "active_v_count": 6,
+      "adaptive_spacing_used": null,
+      "adaptive_weight_mode": "adaptive",
+      "beam_lambda": 0.1,
+      "beam_w1": 0.13551436974032297,
+      "beam_w2": 0.8666666666666667,
+      "chromosome_index": 4,
+      "feasible_h_start_count": null,
+      "feasible_v_start_count": null,
+      "h_active_starts": "2,6,10,13,23",
+      "initialization_mode": "offspring",
+      "initialization_spacing_mode": "offspring",
+      "mutation_operator": "spacing_aware_flip",
+      "rho": 0.13333333333333333,
+      "sorting_rule": "LS_PF",
+      "sorting_rule_mode": "sampled_pool",
+      "uses_scalar_score": false,
+      "v_active_starts": "3,7,11,12,15,16"
+    },
+    "depth": 12,
+    "feature_keys": {
+      "aisle_mask": "final_rank_00_layout_004__aisle_mask",
+      "pick_face_mask": "final_rank_00_layout_004__pick_face_mask",
+      "storage_mask": "final_rank_00_layout_004__storage_mask"
+    },
+    "generation": 1,
+    "instance": "demo_layout_door_left_AW_2",
+    "layout_key": "final_rank_00_layout_004",
+    "layout_signature": "0fdb9192f0d4acf2b6dd22b4a8e053ab5a7ed4a9",
+    "method": "proposed_nsga2_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 3,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 36,
+      "pick_faces": 214,
+      "retrieval_penalty": 36.0,
+      "single_aisle_component": true,
+      "storage_total": 250,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 0,
+    "seed": 129,
+    "selected": true,
+    "storage_mask_count": 250,
+    "stored_pick_face_count": 214,
+    "trace": "root > V:12 > BH:13 > BV:7 > BV:3 > BV:7 > BV:3 > BH:23 > BH:19 > BH:15 > BH:11 > BH:7 > BV:16"
+  },
+  {
+    "action": "BV:16",
+    "aisle_mask_count": 240,
+    "archive_key": "final_rank_01_layout_003",
+    "block_count": 13,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          5,
+          14,
+          15
+        ],
+        "height": 5,
+        "id": 4,
+        "orientation": "V",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          1,
+          5,
+          18,
+          19
+        ],
+        "height": 5,
+        "id": 5,
+        "orientation": "V",
+        "pick_face_count": 5,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          8,
+          10,
+          14,
+          19
+        ],
+        "height": 3,
+        "id": 6,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          14,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 8,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 10,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          17,
+          18,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 11,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          22,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 12,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "top"
+        ],
+        "bbox": [
+          25,
+          26,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 13,
+        "orientation": "H",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 6
+      }
+    ],
+    "candidate_id": 6,
+    "chromosome_h_active_count": 8,
+    "chromosome_signature": "H[2,6,10,11,13,15,19,23]|V[3,7,11,12,15,16]",
+    "chromosome_v_active_count": 6,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "active_h_count": 5,
+      "active_v_count": 6,
+      "adaptive_spacing_used": null,
+      "adaptive_weight_mode": "adaptive",
+      "beam_lambda": 0.1,
+      "beam_w1": 0.13551436974032297,
+      "beam_w2": 0.8666666666666667,
+      "chromosome_index": 4,
+      "feasible_h_start_count": null,
+      "feasible_v_start_count": null,
+      "h_active_starts": "2,6,10,13,23",
+      "initialization_mode": "offspring",
+      "initialization_spacing_mode": "offspring",
+      "mutation_operator": "spacing_aware_flip",
+      "rho": 0.13333333333333333,
+      "sorting_rule": "LS_PF",
+      "sorting_rule_mode": "sampled_pool",
+      "uses_scalar_score": false,
+      "v_active_starts": "3,7,11,12,15,16"
+    },
+    "depth": 12,
+    "feature_keys": {
+      "aisle_mask": "final_rank_01_layout_003__aisle_mask",
+      "pick_face_mask": "final_rank_01_layout_003__pick_face_mask",
+      "storage_mask": "final_rank_01_layout_003__storage_mask"
+    },
+    "generation": 1,
+    "instance": "demo_layout_door_left_AW_2",
+    "layout_key": "final_rank_01_layout_003",
+    "layout_signature": "1e51df56ad9655663d1175b2036f4a44cf7e7571",
+    "method": "proposed_nsga2_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 3,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 41,
+      "pick_faces": 211,
+      "retrieval_penalty": 41.0,
+      "single_aisle_component": true,
+      "storage_total": 252,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 1,
+    "seed": 129,
+    "selected": true,
+    "storage_mask_count": 252,
+    "stored_pick_face_count": 211,
+    "trace": "root > V:12 > BH:13 > BV:7 > BV:3 > BV:7 > BV:3 > BH:23 > BH:19 > BH:15 > BH:11 > BH:6 > BV:16"
+  },
+  {
+    "action": "BV:18",
+    "aisle_mask_count": 232,
+    "archive_key": "final_rank_02_layout_005",
+    "block_count": 12,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          9,
+          12
+        ],
+        "height": 12,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          5,
+          15,
+          17
+        ],
+        "height": 5,
+        "id": 4,
+        "orientation": "V",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          8,
+          10,
+          15,
+          19
+        ],
+        "height": 3,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          14,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 6,
+        "orientation": "H",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 7,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 8,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          9,
+          12
+        ],
+        "height": 12,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          17,
+          18,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 10,
+        "orientation": "H",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          22,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 11,
+        "orientation": "H",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "top"
+        ],
+        "bbox": [
+          25,
+          26,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 12,
+        "orientation": "H",
+        "pick_face_count": 5,
+        "pick_face_side_names": [
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 5
+      }
+    ],
+    "candidate_id": 11,
+    "chromosome_h_active_count": 11,
+    "chromosome_signature": "H[1,3,6,7,10,11,12,13,15,19,23]|V[3,7,13,14,18]",
+    "chromosome_v_active_count": 5,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "active_h_count": 5,
+      "active_v_count": 4,
+      "adaptive_spacing_used": null,
+      "adaptive_weight_mode": "adaptive",
+      "beam_lambda": 0.1,
+      "beam_w1": 0.1,
+      "beam_w2": 0.8666666666666667,
+      "chromosome_index": 10,
+      "feasible_h_start_count": null,
+      "feasible_v_start_count": null,
+      "h_active_starts": "1,3,7,10,12",
+      "initialization_mode": "offspring",
+      "initialization_spacing_mode": "offspring",
+      "mutation_operator": "bit_flip",
+      "rho": 0.13333333333333333,
+      "sorting_rule": "PF",
+      "sorting_rule_mode": "sampled_pool",
+      "uses_scalar_score": false,
+      "v_active_starts": "3,7,13,14"
+    },
+    "depth": 12,
+    "feature_keys": {
+      "aisle_mask": "final_rank_02_layout_005__aisle_mask",
+      "pick_face_mask": "final_rank_02_layout_005__pick_face_mask",
+      "storage_mask": "final_rank_02_layout_005__storage_mask"
+    },
+    "generation": 1,
+    "instance": "demo_layout_door_left_AW_2",
+    "layout_key": "final_rank_02_layout_005",
+    "layout_signature": "51e48cbb0b318e90e4cecb895faf9196760f014b",
+    "method": "proposed_nsga2_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 3,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 63,
+      "pick_faces": 197,
+      "retrieval_penalty": 39.0,
+      "single_aisle_component": true,
+      "storage_total": 260,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 2,
+    "seed": 129,
+    "selected": true,
+    "storage_mask_count": 260,
+    "stored_pick_face_count": 197,
+    "trace": "root > V:13 > BH:13 > BV:7 > BV:3 > BV:7 > BV:3 > BH:23 > BH:19 > BH:15 > BH:11 > BH:6 > BV:18"
+  },
+  {
+    "action": "BV:18",
+    "aisle_mask_count": 232,
+    "archive_key": "final_rank_03_layout_001",
+    "block_count": 12,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          9,
+          12
+        ],
+        "height": 12,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "bottom"
+        ],
+        "bbox": [
+          1,
+          2,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 5,
+        "pick_face_side_names": [
+          "bottom"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          5,
+          9,
+          15,
+          17
+        ],
+        "height": 5,
+        "id": 5,
+        "orientation": "V",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          12,
+          14,
+          15,
+          19
+        ],
+        "height": 3,
+        "id": 6,
+        "orientation": "H",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 7,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 8,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          9,
+          12
+        ],
+        "height": 12,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          17,
+          18,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 10,
+        "orientation": "H",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          22,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 11,
+        "orientation": "H",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 5
+      },
+      {
+        "access_side_names": [
+          "top"
+        ],
+        "bbox": [
+          25,
+          26,
+          15,
+          19
+        ],
+        "height": 2,
+        "id": 12,
+        "orientation": "H",
+        "pick_face_count": 5,
+        "pick_face_side_names": [
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 5
+      }
+    ],
+    "candidate_id": 7,
+    "chromosome_h_active_count": 12,
+    "chromosome_signature": "H[2,3,7,9,10,11,13,15,19,20,22,23]|V[3,7,8,12,13,16,18,20]",
+    "chromosome_v_active_count": 8,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "active_h_count": 12,
+      "active_v_count": 6,
+      "adaptive_spacing_used": null,
+      "adaptive_weight_mode": "adaptive",
+      "beam_lambda": 0.1,
+      "beam_w1": 0.38640448042854875,
+      "beam_w2": 0.6,
+      "chromosome_index": 6,
+      "feasible_h_start_count": null,
+      "feasible_v_start_count": null,
+      "h_active_starts": "2,3,7,9,10,11,13,15,19,20,22,23",
+      "initialization_mode": "offspring",
+      "initialization_spacing_mode": "offspring",
+      "mutation_operator": "swap_segments",
+      "rho": 0.4,
+      "sorting_rule": "SS_LS_PF",
+      "sorting_rule_mode": "sampled_pool",
+      "uses_scalar_score": true,
+      "v_active_starts": "7,8,12,13,16,20"
+    },
+    "depth": 12,
+    "feature_keys": {
+      "aisle_mask": "final_rank_03_layout_001__aisle_mask",
+      "pick_face_mask": "final_rank_03_layout_001__pick_face_mask",
+      "storage_mask": "final_rank_03_layout_001__storage_mask"
+    },
+    "generation": 5,
+    "instance": "demo_layout_door_left_AW_2",
+    "layout_key": "final_rank_03_layout_001",
+    "layout_signature": "cb72675f37f3d41c60684d4f9a816bc359f151ad",
+    "method": "proposed_nsga2_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 3,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 68,
+      "pick_faces": 192,
+      "retrieval_penalty": 44.0,
+      "single_aisle_component": true,
+      "storage_total": 260,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 3,
+    "seed": 129,
+    "selected": true,
+    "storage_mask_count": 260,
+    "stored_pick_face_count": 192,
+    "trace": "root > V:13 > BH:13 > BV:7 > BV:7 > BV:3 > BV:3 > BH:23 > BH:19 > BH:15 > BH:10 > BH:3 > BV:18"
+  },
+  {
+    "action": "BH:7",
+    "aisle_mask_count": 242,
+    "archive_key": "final_rank_00_layout_005",
+    "block_count": 13,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom"
+        ],
+        "bbox": [
+          1,
+          2,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "bottom"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          5,
+          6,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          9,
+          10,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 6,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          13,
+          14,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 7,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 8,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 10,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          17,
+          18,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 11,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          21,
+          26,
+          14,
+          15
+        ],
+        "height": 6,
+        "id": 12,
+        "orientation": "V",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          21,
+          26,
+          18,
+          19
+        ],
+        "height": 6,
+        "id": 13,
+        "orientation": "V",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 2
+      }
+    ],
+    "candidate_id": 9,
+    "chromosome_h_active_count": 17,
+    "chromosome_signature": "H[1,2,3,6,7,10,11,12,13,14,15,16,18,19,20,21,23]|V[3,7,8,12,16,18,20]",
+    "chromosome_v_active_count": 7,
+    "crowding_distance": 2.3685064935064934,
+    "decode_metadata": {
+      "active_h_count": 16,
+      "active_v_count": 7,
+      "adaptive_spacing_used": null,
+      "adaptive_weight_mode": "adaptive",
+      "beam_lambda": 0.1,
+      "beam_w1": 0.5245244468340794,
+      "beam_w2": 0.4666666666666667,
+      "chromosome_index": 6,
+      "feasible_h_start_count": null,
+      "feasible_v_start_count": null,
+      "h_active_starts": "1,2,3,6,7,10,11,12,13,14,16,18,19,20,21,23",
+      "initialization_mode": "offspring",
+      "initialization_spacing_mode": "offspring",
+      "mutation_operator": "swap_segments",
+      "rho": 0.5333333333333333,
+      "sorting_rule": "SS_LS_PF",
+      "sorting_rule_mode": "sampled_pool",
+      "uses_scalar_score": true,
+      "v_active_starts": "3,7,8,12,16,18,20"
+    },
+    "depth": 12,
+    "feature_keys": {
+      "aisle_mask": "final_rank_00_layout_005__aisle_mask",
+      "pick_face_mask": "final_rank_00_layout_005__pick_face_mask",
+      "storage_mask": "final_rank_00_layout_005__storage_mask"
+    },
+    "generation": 7,
+    "instance": "demo_layout_door_left_AW_2",
+    "layout_key": "final_rank_00_layout_005",
+    "layout_signature": "4a41b107b91f9199ee0941107f3223a236184f76",
+    "method": "proposed_nsga2_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 3,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 36,
+      "pick_faces": 214,
+      "retrieval_penalty": 36.0,
+      "single_aisle_component": true,
+      "storage_total": 250,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 0,
+    "seed": 129,
+    "selected": true,
+    "storage_mask_count": 250,
+    "stored_pick_face_count": 214,
+    "trace": "root > V:12 > BH:13 > BV:7 > BV:7 > BV:3 > BV:3 > BH:3 > BH:11 > BH:19 > BV:16 > BH:15 > BH:7"
+  },
+  {
+    "action": "BV:16",
+    "aisle_mask_count": 242,
+    "archive_key": "final_rank_02_layout_006",
+    "block_count": 13,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom"
+        ],
+        "bbox": [
+          1,
+          2,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 4,
+        "orientation": "H",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "bottom"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          5,
+          6,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          9,
+          14,
+          14,
+          15
+        ],
+        "height": 6,
+        "id": 6,
+        "orientation": "V",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left"
+        ],
+        "bbox": [
+          9,
+          14,
+          18,
+          19
+        ],
+        "height": 6,
+        "id": 7,
+        "orientation": "V",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "left"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 8,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 10,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          17,
+          18,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 11,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          21,
+          22,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 12,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "top"
+        ],
+        "bbox": [
+          25,
+          26,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 13,
+        "orientation": "H",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 6
+      }
+    ],
+    "candidate_id": 8,
+    "chromosome_h_active_count": 15,
+    "chromosome_signature": "H[1,2,3,6,7,10,11,12,13,15,18,19,20,21,23]|V[3,7,12,16,18,20]",
+    "chromosome_v_active_count": 6,
+    "crowding_distance": 1.2899521531100477,
+    "decode_metadata": {
+      "active_h_count": 15,
+      "active_v_count": 6,
+      "adaptive_spacing_used": null,
+      "adaptive_weight_mode": "adaptive",
+      "beam_lambda": 0.1,
+      "beam_w1": 0.6656136681175282,
+      "beam_w2": 0.4,
+      "chromosome_index": 6,
+      "feasible_h_start_count": null,
+      "feasible_v_start_count": null,
+      "h_active_starts": "1,2,3,6,7,10,11,12,13,15,18,19,20,21,23",
+      "initialization_mode": "offspring",
+      "initialization_spacing_mode": "offspring",
+      "mutation_operator": "remove_random_aisle",
+      "rho": 0.6,
+      "sorting_rule": "SS_PF_LS",
+      "sorting_rule_mode": "sampled_pool",
+      "uses_scalar_score": true,
+      "v_active_starts": "3,7,12,16,18,20"
+    },
+    "depth": 12,
+    "feature_keys": {
+      "aisle_mask": "final_rank_02_layout_006__aisle_mask",
+      "pick_face_mask": "final_rank_02_layout_006__pick_face_mask",
+      "storage_mask": "final_rank_02_layout_006__storage_mask"
+    },
+    "generation": 8,
+    "instance": "demo_layout_door_left_AW_2",
+    "layout_key": "final_rank_02_layout_006",
+    "layout_signature": "16d3671d30a9c7f180e3b14f100c73fd3f11beba",
+    "method": "proposed_nsga2_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 3,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 42,
+      "pick_faces": 208,
+      "retrieval_penalty": 42.0,
+      "single_aisle_component": true,
+      "storage_total": 250,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 2,
+    "seed": 129,
+    "selected": true,
+    "storage_mask_count": 250,
+    "stored_pick_face_count": 208,
+    "trace": "root > V:12 > BH:13 > BV:7 > BV:7 > BH:23 > BH:15 > BH:7 > BH:3 > BV:3 > BV:3 > BH:19 > BV:16"
+  },
+  {
+    "action": "BH:10",
+    "aisle_mask_count": 240,
+    "archive_key": "final_rank_03_layout_002",
+    "block_count": 12,
+    "blocks": [
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 1,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 2,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          12,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 3,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          1,
+          5,
+          14,
+          17
+        ],
+        "height": 5,
+        "id": 4,
+        "orientation": "V",
+        "pick_face_count": 10,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "right"
+        ],
+        "width": 4
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          8,
+          9,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 5,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          12,
+          13,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 6,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          1,
+          2
+        ],
+        "height": 12,
+        "id": 7,
+        "orientation": "V",
+        "pick_face_count": 23,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          5,
+          6
+        ],
+        "height": 12,
+        "id": 8,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 2
+      },
+      {
+        "access_side_names": [
+          "left",
+          "right"
+        ],
+        "bbox": [
+          15,
+          26,
+          9,
+          11
+        ],
+        "height": 12,
+        "id": 9,
+        "orientation": "V",
+        "pick_face_count": 24,
+        "pick_face_side_names": [
+          "left",
+          "right"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "right",
+          "top"
+        ],
+        "width": 3
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          16,
+          17,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 10,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "bottom",
+          "top"
+        ],
+        "bbox": [
+          20,
+          21,
+          14,
+          19
+        ],
+        "height": 2,
+        "id": 11,
+        "orientation": "H",
+        "pick_face_count": 12,
+        "pick_face_side_names": [
+          "bottom",
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "bottom",
+          "left",
+          "top"
+        ],
+        "width": 6
+      },
+      {
+        "access_side_names": [
+          "top"
+        ],
+        "bbox": [
+          24,
+          26,
+          14,
+          19
+        ],
+        "height": 3,
+        "id": 12,
+        "orientation": "H",
+        "pick_face_count": 6,
+        "pick_face_side_names": [
+          "top"
+        ],
+        "raw_adjacent_access_side_names": [
+          "left",
+          "top"
+        ],
+        "width": 6
+      }
+    ],
+    "candidate_id": 9,
+    "chromosome_h_active_count": 16,
+    "chromosome_signature": "H[1,2,4,6,7,10,11,12,13,14,15,18,19,20,22,23]|V[3,7,8,12,16,18,20]",
+    "chromosome_v_active_count": 7,
+    "crowding_distance": "inf",
+    "decode_metadata": {
+      "active_h_count": 14,
+      "active_v_count": 7,
+      "adaptive_spacing_used": null,
+      "adaptive_weight_mode": "adaptive",
+      "beam_lambda": 0.1,
+      "beam_w1": 0.6692645901229712,
+      "beam_w2": 0.4,
+      "chromosome_index": 8,
+      "feasible_h_start_count": null,
+      "feasible_v_start_count": null,
+      "h_active_starts": "1,2,4,6,7,10,11,12,13,15,19,20,22,23",
+      "initialization_mode": "offspring",
+      "initialization_spacing_mode": "offspring",
+      "mutation_operator": "break_symmetry",
+      "rho": 0.6,
+      "sorting_rule": "RP",
+      "sorting_rule_mode": "sampled_pool",
+      "uses_scalar_score": false,
+      "v_active_starts": "3,7,8,12,16,18,20"
+    },
+    "depth": 12,
+    "feature_keys": {
+      "aisle_mask": "final_rank_03_layout_002__aisle_mask",
+      "pick_face_mask": "final_rank_03_layout_002__pick_face_mask",
+      "storage_mask": "final_rank_03_layout_002__storage_mask"
+    },
+    "generation": 8,
+    "instance": "demo_layout_door_left_AW_2",
+    "layout_key": "final_rank_03_layout_002",
+    "layout_signature": "f5c2b475e28cd126ea8ff99f9b6aa52888a523c1",
+    "method": "proposed_nsga2_bs",
+    "metrics": {
+      "access_anchor_connectivity_index": 1.0,
+      "access_network_components": 3,
+      "aisle_access_network_components": 1,
+      "aisle_components": 1,
+      "anchor_connected_components": 1,
+      "door_connectivity_index": 1.0,
+      "exact_width_ok": true,
+      "exact_width_violation_count": 0,
+      "has_access_anchor_connected_aisle": true,
+      "has_access_anchor_reachable_aisle_network": true,
+      "has_door_connected_aisle": true,
+      "interior_storage": 46,
+      "pick_faces": 206,
+      "retrieval_penalty": 53.0,
+      "single_aisle_component": true,
+      "storage_total": 252,
+      "unanchored_aisle_components": 0,
+      "unreachable_aisle_cells": 0,
+      "unreachable_aisle_components": 0
+    },
+    "rank": 3,
+    "seed": 129,
+    "selected": true,
+    "storage_mask_count": 252,
+    "stored_pick_face_count": 206,
+    "trace": "root > V:12 > BH:13 > BV:7 > BV:7 > BH:22 > BH:14 > BH:6 > BV:18 > BV:3 > BV:3 > BH:18 > BH:10"
+  }
+]

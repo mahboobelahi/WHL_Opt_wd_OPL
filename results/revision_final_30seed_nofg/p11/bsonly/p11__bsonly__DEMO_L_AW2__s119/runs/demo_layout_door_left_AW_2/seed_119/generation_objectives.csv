@@ -1,0 +1,3 @@
+run_id,method,method_or_variant,instance,seed,generation,candidate_id,rank,layout_signature,interior_storage,retrieval_penalty,pick_faces,door_connectivity_index,source
+bs_only_demo_layout_door_left_AW_2_seed_119,bs_only,bs_only,demo_layout_door_left_AW_2,119,0,4,0,63c9c1384eb0d63f6756e5f6c6567bc893aa1bf9,50,50.0,216,1.0,rank0
+bs_only_demo_layout_door_left_AW_2_seed_119,bs_only,bs_only,demo_layout_door_left_AW_2,119,0,6,0,146759e3ef785e80ae78bd95708e7576b0df1241,58,34.0,202,1.0,rank0

@@ -1,0 +1,2 @@
+run_id,method,method_or_variant,instance,seed,generation,generation_runtime_seconds,population_size,candidate_count,decoded_count,feasible_count,infeasible_count,selected_count,rank0_count,unique_layout_signature_count,nsga_operator_time_seconds,beam_decode_time_seconds,beam_expansion_time_seconds,feasibility_filter_time_seconds,objective_evaluation_time_seconds,ranking_archive_time_seconds,io_time_seconds
+bs_only_AT_S_comercial_layout_AW_3_seed_114,bs_only,bs_only,AT_S_comercial_layout_AW_3,114,0,14.818968100000347,0,7,1155,7,0,4,4,7,0.0,0.0,0.0,0.0,0.0,0.0,0.0

@@ -1,0 +1,7 @@
+run_id,method,method_or_variant,instance,seed,generation,candidate_id,rank,layout_signature,interior_storage,retrieval_penalty,pick_faces,door_connectivity_index,source
+random_restart_bs_Gyorgy-KOVACS_WH_Wide_AW_5_seed_110,random_restart_bs,random_restart_bs,Gyorgy-KOVACS_WH_Wide_AW_5,110,0,5,0,416c9c0e4f9e06143d78fee04cbc7a8d1c4800ad,250,385.0,247,1.0,rank0
+random_restart_bs_Gyorgy-KOVACS_WH_Wide_AW_5_seed_110,random_restart_bs,random_restart_bs,Gyorgy-KOVACS_WH_Wide_AW_5,110,0,6,0,4f5b467192e7c6ce4bc3fd69bf3ce13c31bd8ba0,250,385.0,247,1.0,rank0
+random_restart_bs_Gyorgy-KOVACS_WH_Wide_AW_5_seed_110,random_restart_bs,random_restart_bs,Gyorgy-KOVACS_WH_Wide_AW_5,110,0,7,0,559a078c3ea143504613077c561cb3124d66b767,279,368.0,238,1.0,rank0
+random_restart_bs_Gyorgy-KOVACS_WH_Wide_AW_5_seed_110,random_restart_bs,random_restart_bs,Gyorgy-KOVACS_WH_Wide_AW_5,110,0,8,0,6fcfc694894a367ef71d338faec4ce589ca685b5,279,368.0,238,1.0,rank0
+random_restart_bs_Gyorgy-KOVACS_WH_Wide_AW_5_seed_110,random_restart_bs,random_restart_bs,Gyorgy-KOVACS_WH_Wide_AW_5,110,3,43,0,a8708aef2b1e3127a45cd25328e7b01fe876ac67,311,311.0,256,1.0,rank0
+random_restart_bs_Gyorgy-KOVACS_WH_Wide_AW_5_seed_110,random_restart_bs,random_restart_bs,Gyorgy-KOVACS_WH_Wide_AW_5,110,8,77,0,9367037dc0304e9a893380cb68f03b46b0c6f55b,250,385.0,247,1.0,rank0

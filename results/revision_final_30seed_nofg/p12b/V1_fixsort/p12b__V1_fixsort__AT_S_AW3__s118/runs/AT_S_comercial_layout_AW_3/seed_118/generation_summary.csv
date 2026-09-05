@@ -1,0 +1,16 @@
+run_id,method,instance,seed,generation,chromosome_count,decoded_candidate_count,feasible_candidate_count,non_dominated_count,selected_survivor_count,best_pick_faces,best_storage_total,best_interior_storage,best_retrieval_penalty,mean_pick_faces,mean_storage_total,mean_interior_storage,mean_retrieval_penalty,runtime_seconds
+proposed_nsga2_bs_AT_S_comercial_layout_AW_3_seed_118,proposed_nsga2_bs,AT_S_comercial_layout_AW_3,118,0,10,24,19,2,10,127,234,96,89,107.94736842105263,221.52631578947367,113.57894736842105,168.89473684210526,7.933160999997199
+proposed_nsga2_bs_AT_S_comercial_layout_AW_3_seed_118,proposed_nsga2_bs,AT_S_comercial_layout_AW_3,118,1,10,25,8,2,8,120,225,96,74,114.75,222.375,107.625,137.125,5.205129999998462
+proposed_nsga2_bs_AT_S_comercial_layout_AW_3_seed_118,proposed_nsga2_bs,AT_S_comercial_layout_AW_3,118,2,10,30,9,2,9,120,234,102,118,111.55555555555556,227.0,115.44444444444444,169.66666666666666,8.403491199998825
+proposed_nsga2_bs_AT_S_comercial_layout_AW_3_seed_118,proposed_nsga2_bs,AT_S_comercial_layout_AW_3,118,3,10,30,10,2,10,120,234,102,118,111.1,227.7,116.6,171.1,7.240902800000185
+proposed_nsga2_bs_AT_S_comercial_layout_AW_3_seed_118,proposed_nsga2_bs,AT_S_comercial_layout_AW_3,118,4,10,28,10,2,10,124,264,96,112,113.9,234.9,121.0,174.7,6.460865499997453
+proposed_nsga2_bs_AT_S_comercial_layout_AW_3_seed_118,proposed_nsga2_bs,AT_S_comercial_layout_AW_3,118,5,10,29,17,3,10,124,264,102,118,106.47058823529412,232.23529411764707,125.76470588235294,199.11764705882354,8.881442199999583
+proposed_nsga2_bs_AT_S_comercial_layout_AW_3_seed_118,proposed_nsga2_bs,AT_S_comercial_layout_AW_3,118,6,10,28,10,2,10,124,264,96,112,113.9,234.9,121.0,174.7,6.023321599997871
+proposed_nsga2_bs_AT_S_comercial_layout_AW_3_seed_118,proposed_nsga2_bs,AT_S_comercial_layout_AW_3,118,7,10,29,14,3,10,124,264,102,118,109.71428571428571,235.07142857142858,125.35714285714286,184.5,7.140263400000549
+proposed_nsga2_bs_AT_S_comercial_layout_AW_3_seed_118,proposed_nsga2_bs,AT_S_comercial_layout_AW_3,118,8,10,30,12,3,10,124,264,102,118,111.66666666666667,236.25,124.58333333333333,185.58333333333334,6.923572600000625
+proposed_nsga2_bs_AT_S_comercial_layout_AW_3_seed_118,proposed_nsga2_bs,AT_S_comercial_layout_AW_3,118,9,10,28,10,2,10,124,264,96,112,113.9,234.9,121.0,174.7,5.341356699998869
+proposed_nsga2_bs_AT_S_comercial_layout_AW_3_seed_118,proposed_nsga2_bs,AT_S_comercial_layout_AW_3,118,10,10,29,14,3,10,124,264,102,118,109.07142857142857,229.28571428571428,120.21428571428571,173.21428571428572,6.380233300002146
+proposed_nsga2_bs_AT_S_comercial_layout_AW_3_seed_118,proposed_nsga2_bs,AT_S_comercial_layout_AW_3,118,11,10,30,9,3,9,124,264,102,118,112.0,231.0,119.0,174.33333333333334,6.179882700002054
+proposed_nsga2_bs_AT_S_comercial_layout_AW_3_seed_118,proposed_nsga2_bs,AT_S_comercial_layout_AW_3,118,12,10,27,15,1,10,120,234,96,112,108.8,222.4,113.6,160.33333333333334,9.568230100001529
+proposed_nsga2_bs_AT_S_comercial_layout_AW_3_seed_118,proposed_nsga2_bs,AT_S_comercial_layout_AW_3,118,13,10,27,13,3,10,120,234,94,69,109.6923076923077,220.6153846153846,110.92307692307692,156.15384615384616,7.384438799999771
+proposed_nsga2_bs_AT_S_comercial_layout_AW_3_seed_118,proposed_nsga2_bs,AT_S_comercial_layout_AW_3,118,14,10,27,10,3,10,120,234,94,69,111.4,224.7,113.3,157.2,7.445518299999094

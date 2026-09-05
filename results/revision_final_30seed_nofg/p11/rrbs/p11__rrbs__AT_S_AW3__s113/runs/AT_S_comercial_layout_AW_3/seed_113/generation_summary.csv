@@ -1,0 +1,16 @@
+run_id,method,instance,seed,generation,chromosome_count,decoded_candidate_count,feasible_candidate_count,non_dominated_count,selected_survivor_count,best_pick_faces,best_storage_total,best_interior_storage,best_retrieval_penalty,mean_pick_faces,mean_storage_total,mean_interior_storage,mean_retrieval_penalty,runtime_seconds
+random_restart_bs_AT_S_comercial_layout_AW_3_seed_113,random_restart_bs,AT_S_comercial_layout_AW_3,113,0,10,27,20,1,1,120,261,96,112,105.35,225.0,119.65,210.85,7.748587900003258
+random_restart_bs_AT_S_comercial_layout_AW_3_seed_113,random_restart_bs,AT_S_comercial_layout_AW_3,113,1,10,29,10,3,3,124,264,107,74,108.9,241.5,132.6,244.4,6.142619000000195
+random_restart_bs_AT_S_comercial_layout_AW_3_seed_113,random_restart_bs,AT_S_comercial_layout_AW_3,113,2,10,27,3,1,1,110,213,94,69,101.33333333333333,210.0,108.66666666666667,181.0,5.682068700003583
+random_restart_bs_AT_S_comercial_layout_AW_3_seed_113,random_restart_bs,AT_S_comercial_layout_AW_3,113,3,10,28,14,3,3,125,270,100,195,100.14285714285714,233.78571428571428,133.64285714285714,254.78571428571428,6.733093499999086
+random_restart_bs_AT_S_comercial_layout_AW_3_seed_113,random_restart_bs,AT_S_comercial_layout_AW_3,113,4,10,28,3,1,1,120,222,102,74,116.66666666666667,222.0,105.33333333333333,99.66666666666667,5.626272800000152
+random_restart_bs_AT_S_comercial_layout_AW_3_seed_113,random_restart_bs,AT_S_comercial_layout_AW_3,113,5,10,25,0,0,0,,,,,,,,,7.062039499998718
+random_restart_bs_AT_S_comercial_layout_AW_3_seed_113,random_restart_bs,AT_S_comercial_layout_AW_3,113,6,10,29,4,0,0,97,270,116,294,89.0,239.25,150.25,354.0,5.5060807000027125
+random_restart_bs_AT_S_comercial_layout_AW_3_seed_113,random_restart_bs,AT_S_comercial_layout_AW_3,113,7,10,29,0,0,0,,,,,,,,,5.415478599999915
+random_restart_bs_AT_S_comercial_layout_AW_3_seed_113,random_restart_bs,AT_S_comercial_layout_AW_3,113,8,10,29,2,0,0,90,207,117,253,90.0,207.0,117.0,267.0,4.600739500006966
+random_restart_bs_AT_S_comercial_layout_AW_3_seed_113,random_restart_bs,AT_S_comercial_layout_AW_3,113,9,10,29,8,0,0,104,219,103,209,95.25,214.5,119.25,244.125,7.220567399999709
+random_restart_bs_AT_S_comercial_layout_AW_3_seed_113,random_restart_bs,AT_S_comercial_layout_AW_3,113,10,10,28,2,0,0,124,270,140,204,107.2,266.4,159.2,269.2,5.27557639999759
+random_restart_bs_AT_S_comercial_layout_AW_3_seed_113,random_restart_bs,AT_S_comercial_layout_AW_3,113,11,10,30,0,0,0,,,,,,,,,5.91361020000295
+random_restart_bs_AT_S_comercial_layout_AW_3_seed_113,random_restart_bs,AT_S_comercial_layout_AW_3,113,12,10,22,0,0,0,,,,,,,,,5.604049499999746
+random_restart_bs_AT_S_comercial_layout_AW_3_seed_113,random_restart_bs,AT_S_comercial_layout_AW_3,113,13,10,24,0,0,0,,,,,,,,,5.121942999998282
+random_restart_bs_AT_S_comercial_layout_AW_3_seed_113,random_restart_bs,AT_S_comercial_layout_AW_3,113,14,10,29,3,0,0,105,228,123,119,105.0,228.0,123.0,143.0,5.746817999997802

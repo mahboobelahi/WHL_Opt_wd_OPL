@@ -1,0 +1,2 @@
+run_id,method,method_or_variant,instance,seed,generation,candidate_id,rank,layout_signature,interior_storage,retrieval_penalty,pick_faces,door_connectivity_index,source
+bs_only_Gyorgy-KOVACS_WH_Wide_AW_5_seed_124,bs_only,bs_only,Gyorgy-KOVACS_WH_Wide_AW_5,124,0,6,0,a8708aef2b1e3127a45cd25328e7b01fe876ac67,311,311.0,256,1.0,rank0

@@ -1,0 +1,2 @@
+run_id,method,method_or_variant,instance,seed,generation,candidate_id,rank,layout_signature,interior_storage,retrieval_penalty,pick_faces,door_connectivity_index,source
+random_restart_bs_Gyorgy-KOVACS_WH_Narrow_AW_4_seed_120,random_restart_bs,random_restart_bs,Gyorgy-KOVACS_WH_Narrow_AW_4,120,2,54,0,1fa9344c00a95c630e382533991ef575b2f5e6b5,290,341.0,270,1.0,rank0
