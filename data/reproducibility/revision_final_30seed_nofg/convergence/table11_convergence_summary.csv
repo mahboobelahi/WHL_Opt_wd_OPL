@@ -1,0 +1,13 @@
+section,comparison_group,instance,instance_internal,method_or_variant,method_label,initial_hv_mean,initial_hv_std,final_hv_mean,final_hv_std,hv_gain_mean,final_index,n_final,shaded_band
+Baseline comparison,phase11,Atefeh,AT_S_comercial_layout_AW_3,bs_only_direct,BS-only,0.6028795534665103,1.1292025708167404e-16,0.6028795534665103,1.1292025708167404e-16,0.0,0,30,mean ± 1 SD across seeds
+Baseline comparison,phase11,Kov-1-O-w4,Gyorgy-KOVACS_WH_Narrow_AW_4,bs_only_direct,BS-only,0.08211876978742659,0.0,0.08211876978742659,0.0,0.0,0,30,mean ± 1 SD across seeds
+Baseline comparison,phase11,Atefeh,AT_S_comercial_layout_AW_3,proposed_nsga2_bs,Prop. (Reference),0.950087403708056,0.13942770284627506,1.0779053956130047,0.0927707274336795,0.1278179919049487,14,30,mean ± 1 SD across seeds
+Baseline comparison,phase11,Kov-1-O-w4,Gyorgy-KOVACS_WH_Narrow_AW_4,proposed_nsga2_bs,Prop. (Reference),0.7590873024487952,0.5225807495820246,1.0797980943766021,0.3910320715275572,0.32071079192780694,17,30,mean ± 1 SD across seeds
+Baseline comparison,phase11,Atefeh,AT_S_comercial_layout_AW_3,random_restart_bs,RRBS,0.862407964202388,0.19926855340926428,1.1769374885755324,0.059794770482504006,0.3145295243731444,14,30,mean ± 1 SD across seeds
+Baseline comparison,phase11,Kov-1-O-w4,Gyorgy-KOVACS_WH_Narrow_AW_4,random_restart_bs,RRBS,1.3310000000000004,0.0,1.3310000000000008,4.516810283266961e-16,4.440892098500626e-16,8,30,mean ± 1 SD across seeds
+Sensitivity,phase12c,Atefeh,AT_S_comercial_layout_AW_3,V0_full_proposed,Prop. (Reference),0.880818080808081,0.15486314784590519,1.0250694556677893,0.10324884646730012,0.1442513748597083,14,30,mean ± 1 SD across seeds
+Sensitivity,phase12c,Kov-1-O-w4,Gyorgy-KOVACS_WH_Narrow_AW_4,V0_full_proposed,Prop. (Reference),0.7590873024487952,0.5225807495820246,1.0797980943766021,0.3910320715275572,0.32071079192780694,17,30,mean ± 1 SD across seeds
+Sensitivity,phase12c,Atefeh,AT_S_comercial_layout_AW_3,V6_depth15_beam_default,Depth 15,0.880818080808081,0.15486314784590519,1.0250694556677893,0.10324884646730012,0.1442513748597083,14,30,mean ± 1 SD across seeds
+Sensitivity,phase12c,Kov-1-O-w4,Gyorgy-KOVACS_WH_Narrow_AW_4,V6_depth15_beam_default,Depth 15,0.7590873024487952,0.5225807495820246,1.0797980943766021,0.3910320715275572,0.32071079192780694,17,30,mean ± 1 SD across seeds
+Sensitivity,phase12c,Atefeh,AT_S_comercial_layout_AW_3,V7_beam_plus1_depth_default,Beam +1,1.0281331313131317,0.1096412175355155,1.11092196969697,0.07006109924858185,0.08278883838383844,14,30,mean ± 1 SD across seeds
+Sensitivity,phase12c,Kov-1-O-w4,Gyorgy-KOVACS_WH_Narrow_AW_4,V7_beam_plus1_depth_default,Beam +1,0.8137644448751915,0.506372336193542,1.252136709956711,0.24099792632367423,0.4383722650815194,17,30,mean ± 1 SD across seeds

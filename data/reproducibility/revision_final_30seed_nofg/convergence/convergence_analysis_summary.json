@@ -1,0 +1,40 @@
+{
+  "aligned_trajectory_rows": 10578,
+  "comparison_groups": {
+    "phase11": [
+      "proposed_nsga2_bs",
+      "bs_only_direct",
+      "random_restart_bs"
+    ],
+    "phase12b": [
+      "V0_full_proposed",
+      "V1_fixed_sorting",
+      "V2_fixed_weights",
+      "V3_uniform_mutation",
+      "V4_no_symmetry_breaking",
+      "V5_random_feasible_start_spacing"
+    ],
+    "phase12c": [
+      "V0_full_proposed",
+      "V6_depth15_beam_default",
+      "V7_beam_plus1_depth_default"
+    ]
+  },
+  "figure7_band": "mean \u00b1 1 SD across 30 seeds",
+  "final_hv_validation_failures": 0,
+  "final_hv_validation_rows": 720,
+  "normalization_rule": "Fixed per-instance, per-comparison-group bounds from structural/indicator_reference_metadata.csv; no cross-campaign HV comparison.",
+  "output_dir": "C:\\Users\\elahi\\Desktop\\WHL_Opt_wd_OPL\\data\\reproducibility\\revision_final_30seed_nofg\\convergence",
+  "post_processing_only": true,
+  "raw_trajectory_rows": 10117,
+  "representative_instances": [
+    "AT_S_comercial_layout_AW_3",
+    "Gyorgy-KOVACS_WH_Narrow_AW_4"
+  ],
+  "results_root": "C:\\Users\\elahi\\Desktop\\WHL_Opt_wd_OPL\\results\\revision_final_30seed_nofg",
+  "seeds": "101-130",
+  "structural_dir": "C:\\Users\\elahi\\Desktop\\WHL_Opt_wd_OPL\\data\\reproducibility\\revision_final_30seed_nofg\\structural",
+  "summary_rows": 356,
+  "table11_rows": 12,
+  "validation_tolerance": 1e-08
+}
