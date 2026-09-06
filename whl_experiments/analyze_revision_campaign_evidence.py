@@ -389,10 +389,13 @@ def discover_indexes_for(
     instances: Sequence[str],
     seeds: Sequence[int],
 ) -> dict[tuple[str, int], Path]:
+    requested_instances = set(instances)
     mapping: dict[tuple[str, int], Path] = {}
     for path in sorted(source_root.rglob("final_ranked_layouts_index.json")):
         seed_dir = path.parent
         instance_dir = seed_dir.parent
+        if instance_dir.name not in requested_instances:
+            continue
         if not seed_dir.name.startswith("seed_"):
             continue
         try:
