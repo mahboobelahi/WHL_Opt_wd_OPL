@@ -1,0 +1,180 @@
+# Python / test caches
+__pycache__/
+*.pyc
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Local environments and editor settings
+.venv/
+.agents/
+.vscode/
+.idea/
+*.code-workspace
+
+# Generated experiment outputs
+# Keep full campaign trees, logs, rendered figures, and temporary outputs out of Git.
+results/
+logs/
+figures/
+tables/
+outputs/
+*.log
+*.bak
+*.tmp
+
+# Manuscript / review working material not intended for the public code release
+manuscript*/
+review*/
+response*/
+reports*/
+IJPR*/
+
+# Archives and private/raw data
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+private_data/
+raw_data/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Internal audit / cleanup artifacts
+Ref_fig.md
+manual_repo_audit.md
+manual_repo_file_classification.csv
+manual_repo_runner_classification.csv
+opl_include_report.md
+cleanup_pass1_report.md
+cleanup_pass2_report.md
+cleanup_pass3_report.md
+cli_docs_update_report.md
+docs_final_core_update_report.md
+final_ai_style_code_audit.md
+readme_update_report.md
+final_mustfix_report.md
+
+# Internal / superseded helper artifacts
+whl_experiments/prepare_operational_manuscript_outputs.py
+data/operational_layer/layout_panel/selected_layouts_panel_final_L1_L4.png
+data/operational_layer/layout_panel/selected_layouts_panel.png
+ignored/
+
+# ---------------------------------------------------------------------------
+# PUBLIC REPRODUCIBILITY EVIDENCE — INTENTIONALLY TRACKED
+# ---------------------------------------------------------------------------
+# Curated CSV/JSON/README files used to:
+#   - reproduce and verify manuscript Tables 5–13,
+#   - support appendix results,
+#   - compare rerun results against manuscript values,
+#   - support statistical/post-processing checks.
+#
+# Keep these files compact and reviewer-facing. Do not copy complete raw
+# campaign folders here.
+
+!data/reproducibility/
+!data/reproducibility/**
+
+# Processed manuscript-facing CSV summaries are intentionally tracked.
+!data/processed_results/
+!data/processed_results/**
+
+# Keep this file tracked.
+!.gitignore
+
+
+# ---------------------------------------------------------------------------
+# SELECTIVE REVISION CAMPAIGN EVIDENCE — INTENTIONALLY TRACKED
+# ---------------------------------------------------------------------------
+# Results remain ignored by default. Only compact reproducibility evidence
+# from the final revision campaign is exposed below.
+
+!results/
+results/**
+
+# Allow Git to traverse the final campaign tree.
+!results/revision_final_30seed_nofg/
+!results/revision_final_30seed_nofg/**/
+
+
+# ---------------------------------------------------------------------------
+# CAMPAIGN MANIFESTS
+# ---------------------------------------------------------------------------
+
+!results/revision_final_30seed_nofg/manifests/**
+# Includes:
+#   batch_manifest.csv
+#   dry_run_phase11.csv
+#   dry_run_phase12b.csv
+#   dry_run_phase12c.csv
+#   and any other compact campaign-manifest files.
+
+
+# ---------------------------------------------------------------------------
+# PHASE 11 — METHOD COMPARISON
+# ---------------------------------------------------------------------------
+
+# Experiment-level summaries / metadata
+!results/revision_final_30seed_nofg/p11/**/experiment_summary.csv
+!results/revision_final_30seed_nofg/p11/**/experiment_metadata.json
+
+# Seed-level scientific evidence
+!results/revision_final_30seed_nofg/p11/**/runs/**/seed_*/candidates.csv
+!results/revision_final_30seed_nofg/p11/**/runs/**/seed_*/run_metadata.json
+!results/revision_final_30seed_nofg/p11/**/runs/**/seed_*/generation_summary.csv
+!results/revision_final_30seed_nofg/p11/**/runs/**/seed_*/generation_objectives.csv
+!results/revision_final_30seed_nofg/p11/**/runs/**/seed_*/runtime_profile_summary.csv
+!results/revision_final_30seed_nofg/p11/**/runs/**/seed_*/generation_profile.csv
+!results/revision_final_30seed_nofg/p11/**/runs/**/seed_*/bs_depth_summary.csv
+
+# Compact saved-layout archive indexes only; .npz layouts remain ignored.
+!results/revision_final_30seed_nofg/p11/**/runs/**/seed_*/final_ranked_layouts_index.json
+!results/revision_final_30seed_nofg/p11/**/runs/**/seed_*/generation_elites_index.json
+
+
+# ---------------------------------------------------------------------------
+# PHASE 12B — COMPONENT ABLATIONS
+# ---------------------------------------------------------------------------
+
+# Experiment-level summaries / metadata
+!results/revision_final_30seed_nofg/p12b/**/experiment_summary.csv
+!results/revision_final_30seed_nofg/p12b/**/experiment_metadata.json
+
+# Seed-level scientific evidence
+!results/revision_final_30seed_nofg/p12b/**/runs/**/seed_*/candidates.csv
+!results/revision_final_30seed_nofg/p12b/**/runs/**/seed_*/run_metadata.json
+!results/revision_final_30seed_nofg/p12b/**/runs/**/seed_*/generation_summary.csv
+!results/revision_final_30seed_nofg/p12b/**/runs/**/seed_*/generation_objectives.csv
+!results/revision_final_30seed_nofg/p12b/**/runs/**/seed_*/runtime_profile_summary.csv
+!results/revision_final_30seed_nofg/p12b/**/runs/**/seed_*/generation_profile.csv
+!results/revision_final_30seed_nofg/p12b/**/runs/**/seed_*/bs_depth_summary.csv
+
+# Compact saved-layout archive indexes only; .npz layouts remain ignored.
+!results/revision_final_30seed_nofg/p12b/**/runs/**/seed_*/final_ranked_layouts_index.json
+!results/revision_final_30seed_nofg/p12b/**/runs/**/seed_*/generation_elites_index.json
+
+
+# ---------------------------------------------------------------------------
+# PHASE 12C — BEAM-DEPTH / BEAM-WIDTH SENSITIVITY
+# ---------------------------------------------------------------------------
+
+# Experiment-level summaries / metadata
+!results/revision_final_30seed_nofg/p12c/**/experiment_summary.csv
+!results/revision_final_30seed_nofg/p12c/**/experiment_metadata.json
+
+# Seed-level scientific evidence
+!results/revision_final_30seed_nofg/p12c/**/runs/**/seed_*/candidates.csv
+!results/revision_final_30seed_nofg/p12c/**/runs/**/seed_*/run_metadata.json
+!results/revision_final_30seed_nofg/p12c/**/runs/**/seed_*/generation_summary.csv
+!results/revision_final_30seed_nofg/p12c/**/runs/**/seed_*/generation_objectives.csv
+!results/revision_final_30seed_nofg/p12c/**/runs/**/seed_*/runtime_profile_summary.csv
+!results/revision_final_30seed_nofg/p12c/**/runs/**/seed_*/generation_profile.csv
+!results/revision_final_30seed_nofg/p12c/**/runs/**/seed_*/bs_depth_summary.csv
+
+# Compact saved-layout archive indexes only; .npz layouts remain ignored.
+!results/revision_final_30seed_nofg/p12c/**/runs/**/seed_*/final_ranked_layouts_index.json
+!results/revision_final_30seed_nofg/p12c/**/runs/**/seed_*/generation_elites_index.json
