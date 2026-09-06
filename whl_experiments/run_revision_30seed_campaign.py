@@ -1,12 +1,4 @@
-"""Reviewer-facing orchestration for the paper's structural campaigns.
-
-Each task delegates to ``whl_experiments.run_experiment_manager``. Campaign
-runs use automatic instance budgets, save both layout archives, and disable
-optimization-time figure rendering.
-
-Phase 12B runs V1--V5 only. The V0/full-proposed baseline is the matching
-Phase 11 ``proposed_nsga2_bs`` result and is intentionally not rerun.
-"""
+"""Run the replicated structural revision campaigns."""
 
 from __future__ import annotations
 
@@ -24,6 +16,8 @@ from typing import Any
 from whl_experiments import run_experiment_manager as experiment_manager
 
 DEFAULT_CAMPAIGN_ROOT = Path("results/revision_30seed_campaign")
+DEFAULT_TASK_TIMEOUT_SECONDS = 10_800
+TIMEOUT_RETURN_CODE = 124
 
 CORE_INSTANCES = (
     "AT_S_comercial_layout_AW_3",
@@ -302,6 +296,29 @@ def build_tasks(args: argparse.Namespace) -> list[CampaignTask]:
     return tasks
 
 
+def validate_task_command(task: CampaignTask) -> None:
+    command = task.command
+    for flag in ("--seeds", "--method", "--experiment-id"):
+        if command.count(flag) != 1:
+            raise ValueError(f"Expected one {flag} argument.")
+        index = command.index(flag)
+        if index + 1 >= len(command) or command[index + 1].startswith("--"):
+            raise ValueError(f"Missing value for {flag}.")
+
+    if command[command.index("--seeds") + 1] != str(task.seed):
+        raise ValueError("Seed argument does not match the task seed.")
+    if command[command.index("--method") + 1] != method_for_task(
+        task.phase, task.method_or_variant
+    ):
+        raise ValueError("Method argument does not match the task method.")
+
+    expected_id = task_identifier(
+        task.phase, task.method_or_variant, task.instance, task.seed
+    )
+    if command[command.index("--experiment-id") + 1] != expected_id:
+        raise ValueError("Experiment ID does not match the task.")
+
+
 def completed_successfully(task: CampaignTask) -> bool:
     path = task.output_dir / "experiment_summary.csv"
     if not path.exists():
@@ -322,7 +339,7 @@ def completed_successfully(task: CampaignTask) -> bool:
 
 
 def manifest_row(task: CampaignTask, **values: Any) -> dict[str, Any]:
-    row = {
+    return {
         "phase": task.phase,
         "method_or_variant": task.method_or_variant,
         "instance": task.instance,
@@ -337,27 +354,64 @@ def manifest_row(task: CampaignTask, **values: Any) -> dict[str, Any]:
         "log_path": str(task.log_path),
         "error_message": values.get("error_message", ""),
     }
-    return row
 
 
-def run_task(task: CampaignTask, resume: bool) -> dict[str, Any]:
+def run_task(
+    task: CampaignTask,
+    resume: bool,
+    task_timeout_seconds: int,
+) -> dict[str, Any]:
     started = utc_now()
     if resume and completed_successfully(task):
         return manifest_row(
-            task, status="skipped_resume", started_at=started, finished_at=utc_now(),
-            runtime_seconds=0.0, return_code=0,
+            task,
+            status="skipped_resume",
+            started_at=started,
+            finished_at=utc_now(),
+            runtime_seconds=0.0,
+            return_code=0,
             error_message="existing completed experiment_summary.csv",
+        )
+
+    try:
+        validate_task_command(task)
+    except ValueError as exc:
+        return manifest_row(
+            task,
+            status="failed",
+            started_at=started,
+            finished_at=utc_now(),
+            runtime_seconds=0.0,
+            return_code=2,
+            error_message=str(exc),
         )
 
     task.log_path.parent.mkdir(parents=True, exist_ok=True)
     start = time.perf_counter()
-    with task.log_path.open("w", encoding="utf-8") as log_file:
-        log_file.write(f"command: {subprocess.list2cmdline(task.command)}\n\n")
-        log_file.flush()
-        result = subprocess.run(
-            list(task.command), cwd=Path.cwd(), stdout=log_file,
-            stderr=subprocess.STDOUT, text=True, check=False,
+    try:
+        with task.log_path.open("w", encoding="utf-8") as log_file:
+            log_file.write(f"command: {subprocess.list2cmdline(task.command)}\n\n")
+            log_file.flush()
+            result = subprocess.run(
+                list(task.command),
+                cwd=Path.cwd(),
+                stdout=log_file,
+                stderr=subprocess.STDOUT,
+                text=True,
+                check=False,
+                timeout=task_timeout_seconds,
+            )
+    except subprocess.TimeoutExpired:
+        return manifest_row(
+            task,
+            status="timed_out",
+            started_at=started,
+            finished_at=utc_now(),
+            runtime_seconds=time.perf_counter() - start,
+            return_code=TIMEOUT_RETURN_CODE,
+            error_message=f"task exceeded {task_timeout_seconds} seconds",
         )
+
     return manifest_row(
         task,
         status="completed" if result.returncode == 0 else "failed",
@@ -387,10 +441,20 @@ def append_row(path: Path, row: dict[str, Any]) -> None:
         writer.writerow(row)
 
 
-def execute(tasks: list[CampaignTask], *, max_workers: int, resume: bool, manifest_path: Path) -> None:
+def execute(
+    tasks: list[CampaignTask],
+    *,
+    max_workers: int,
+    resume: bool,
+    manifest_path: Path,
+    task_timeout_seconds: int,
+) -> None:
     failed = False
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = [executor.submit(run_task, task, resume) for task in tasks]
+        futures = [
+            executor.submit(run_task, task, resume, task_timeout_seconds)
+            for task in tasks
+        ]
         for future in as_completed(futures):
             row = future.result()
             append_row(manifest_path, row)
@@ -398,7 +462,7 @@ def execute(tasks: list[CampaignTask], *, max_workers: int, resume: bool, manife
                 f"{row['phase']} {row['method_or_variant']} {row['instance']} "
                 f"seed={row['seed']} status={row['status']}"
             )
-            failed = failed or row["status"] == "failed"
+            failed = failed or row["status"] not in {"completed", "skipped_resume"}
     if failed:
         raise SystemExit(1)
 
@@ -410,6 +474,8 @@ def validate_args(args: argparse.Namespace, parser: argparse.ArgumentParser) -> 
         parser.error("--archive-rank-max must be non-negative.")
     if args.max_workers <= 0:
         parser.error("--max-workers must be positive.")
+    if args.task_timeout_seconds <= 0:
+        parser.error("--task-timeout-seconds must be positive.")
     if args.instance_list and not parse_instance_list(args.instance_list):
         parser.error("--instance-list must contain at least one instance name.")
     if args.instance_list and args.only_instance:
@@ -454,6 +520,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--archive-rank-max", type=int, default=3)
     parser.add_argument("--profile-light", action="store_true")
     parser.add_argument("--save-generation-objectives", action="store_true")
+    parser.add_argument(
+        "--task-timeout-seconds",
+        type=int,
+        default=DEFAULT_TASK_TIMEOUT_SECONDS,
+        help="Maximum wall-clock seconds allowed for one campaign task.",
+    )
     return parser
 
 
@@ -465,6 +537,12 @@ def main() -> None:
     tasks = build_tasks(args)
     if not tasks:
         parser.error("No tasks selected. Check --phase, --only-variant, and instance options.")
+
+    for task in tasks:
+        try:
+            validate_task_command(task)
+        except ValueError as exc:
+            parser.error(f"Invalid command for seed {task.seed}: {exc}")
 
     manifest_dir = Path(args.campaign_root) / "manifests"
     if args.dry_run:
@@ -480,6 +558,7 @@ def main() -> None:
         max_workers=args.max_workers,
         resume=args.resume,
         manifest_path=manifest_dir / "batch_manifest.csv",
+        task_timeout_seconds=args.task_timeout_seconds,
     )
 
 
