@@ -1,5 +1,0 @@
-run_id,method,method_or_variant,instance,seed,generation,candidate_id,rank,layout_signature,interior_storage,retrieval_penalty,pick_faces,door_connectivity_index,source
-bs_only_AT_S_comercial_layout_AW_3_seed_123,bs_only,bs_only,AT_S_comercial_layout_AW_3,123,0,2,0,d2594743c127de8784a3f78c820ad2d01666feb8,103,267.0,104,1.0,rank0
-bs_only_AT_S_comercial_layout_AW_3_seed_123,bs_only,bs_only,AT_S_comercial_layout_AW_3,123,0,3,0,dfba6e6310ef2f9b0ce287fae7ed9faac7db102b,103,267.0,104,1.0,rank0
-bs_only_AT_S_comercial_layout_AW_3_seed_123,bs_only,bs_only,AT_S_comercial_layout_AW_3,123,0,5,0,ae825089721f98e0d9805014401719023ff6a664,110,149.0,115,1.0,rank0
-bs_only_AT_S_comercial_layout_AW_3_seed_123,bs_only,bs_only,AT_S_comercial_layout_AW_3,123,0,6,0,0a75f2b327085dc5778e0a33aad21dbd318e0a85,110,149.0,115,1.0,rank0

@@ -1,2 +1,0 @@
-run_id,method,instance,seed,generation,chromosome_count,decoded_candidate_count,feasible_candidate_count,non_dominated_count,selected_survivor_count,best_pick_faces,best_storage_total,best_interior_storage,best_retrieval_penalty,mean_pick_faces,mean_storage_total,mean_interior_storage,mean_retrieval_penalty,runtime_seconds
-bs_only_Gyorgy-KOVACS_WH_Wide_AW_5_seed_120,bs_only,Gyorgy-KOVACS_WH_Wide_AW_5,120,0,0,3117,12,1,1,256,892,311,311,196.53846153846155,627.3846153846154,430.84615384615387,845.6153846153846,90.60685680000097

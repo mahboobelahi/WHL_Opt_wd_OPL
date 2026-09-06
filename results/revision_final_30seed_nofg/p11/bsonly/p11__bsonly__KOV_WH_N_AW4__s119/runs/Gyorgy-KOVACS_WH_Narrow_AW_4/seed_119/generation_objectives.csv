@@ -1,2 +1,0 @@
-run_id,method,method_or_variant,instance,seed,generation,candidate_id,rank,layout_signature,interior_storage,retrieval_penalty,pick_faces,door_connectivity_index,source
-bs_only_Gyorgy-KOVACS_WH_Narrow_AW_4_seed_119,bs_only,bs_only,Gyorgy-KOVACS_WH_Narrow_AW_4,119,0,6,0,fc4825140fa5e2560776b4b932f5ef46c1588f36,418,472.0,262,1.0,rank0

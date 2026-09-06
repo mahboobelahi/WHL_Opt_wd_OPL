@@ -1,3 +1,0 @@
-run_id,method,method_or_variant,instance,seed,generation,candidate_id,rank,layout_signature,interior_storage,retrieval_penalty,pick_faces,door_connectivity_index,source
-random_restart_bs_demo_layout_door_left_AW_2_seed_121,random_restart_bs,random_restart_bs,demo_layout_door_left_AW_2,121,0,5,0,627f5f011286a51e53ea2a3f058907c3bf137492,21,19.0,221,1.0,rank0
-random_restart_bs_demo_layout_door_left_AW_2_seed_121,random_restart_bs,random_restart_bs,demo_layout_door_left_AW_2,121,4,47,0,a397126b79bf1eeaea415f8469233209dd4ca5ce,24,22.0,224,1.0,rank0
