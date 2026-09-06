@@ -1,0 +1,35 @@
+{
+  "conditions": {
+    "V0_full_proposed": {
+      "candidate_rows_above_configured_cap": 0,
+      "candidate_rows_at_configured_cap": 0,
+      "configured_max_depth": 28,
+      "max_observed_max_structural_depth": 12,
+      "mean_observed_max_structural_depth": 12.0,
+      "median_observed_max_structural_depth": 12.0,
+      "min_observed_max_structural_depth": 12,
+      "n_runs": 30,
+      "runs_reaching_configured_cap": 0
+    },
+    "V6b_binding_depth10": {
+      "candidate_rows_above_configured_cap": 0,
+      "candidate_rows_at_configured_cap": 5166,
+      "configured_max_depth": 10,
+      "max_observed_max_structural_depth": 10,
+      "mean_observed_max_structural_depth": 9.933333333333334,
+      "median_observed_max_structural_depth": 10.0,
+      "min_observed_max_structural_depth": 8,
+      "n_runs": 30,
+      "runs_reaching_configured_cap": 29
+    }
+  },
+  "instance": "demo_layout_door_left_AW_2",
+  "paired_binding_evidence": {
+    "binding_demonstrated": true,
+    "paired_seeds_v0_above_10_and_v6b_reaches_10": 29,
+    "v0_runs_with_retained_depth_above_10": 30,
+    "v6b_runs_with_retained_depth_reaching_10": 29
+  },
+  "scope_note": "Demo-1-w2 matched diagnostic only. Binding is established from observed retained/candidate depth evidence, not from the configured Dmax value alone.",
+  "seeds": "101-130"
+}

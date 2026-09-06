@@ -1,0 +1,15 @@
+comparison_group,instance,method_or_variant,metric,n,mean,std,median,iqr,min,max,sampling_unit
+v6b_demo_matched,demo_layout_door_left_AW_2,V0_full_proposed,hypervolume,30,1.156777047576289,0.1556561562560801,1.2673157894736846,0.293988322166292,0.9639064175294016,1.3288752182994898,matched seed
+v6b_demo_matched,demo_layout_door_left_AW_2,V0_full_proposed,igd_plus,30,0.09400010932572464,0.09130283639805124,0.02631578947368421,0.1851005824449665,0.0,0.20313222194261715,matched seed
+v6b_demo_matched,demo_layout_door_left_AW_2,V0_full_proposed,osd,30,0.09107396893522327,0.09767839708069295,0.06037711643194536,0.18691268380710635,0.0,0.23732816943430726,matched seed
+v6b_demo_matched,demo_layout_door_left_AW_2,V0_full_proposed,nondominated_solution_count,30,2.1666666666666665,1.2617266038997932,2.0,2.0,1.0,5.0,matched seed
+v6b_demo_matched,demo_layout_door_left_AW_2,V0_full_proposed,archive_size_rank_0_3,30,18.566666666666666,4.868500677885822,18.0,6.75,10.0,27.0,matched seed
+v6b_demo_matched,demo_layout_door_left_AW_2,V0_full_proposed,unique_layout_signature_count_rank_0_3,30,18.566666666666666,4.868500677885822,18.0,6.75,10.0,27.0,matched seed
+v6b_demo_matched,demo_layout_door_left_AW_2,V0_full_proposed,runtime_seconds,30,1128.5987141266667,80.86342115701183,1140.59379,94.35186499999986,964.4566384,1285.034639,matched seed
+v6b_demo_matched,demo_layout_door_left_AW_2,V6b_binding_depth10,hypervolume,30,1.0534676146286346,0.2012397899711587,0.9652205566779672,0.38096086018559716,0.8017284639705968,1.2865920624593365,matched seed
+v6b_demo_matched,demo_layout_door_left_AW_2,V6b_binding_depth10,igd_plus,30,0.15119401868403423,0.11811759529119546,0.20940108001302954,0.21421048579165347,0.014792845281956516,0.2973132496926126,matched seed
+v6b_demo_matched,demo_layout_door_left_AW_2,V6b_binding_depth10,osd,30,0.05253928793429414,0.09536680778188153,0.0,0.08928446558888789,0.0,0.39468518317402285,matched seed
+v6b_demo_matched,demo_layout_door_left_AW_2,V6b_binding_depth10,nondominated_solution_count,30,1.5666666666666667,0.8172001541568767,1.0,1.0,1.0,4.0,matched seed
+v6b_demo_matched,demo_layout_door_left_AW_2,V6b_binding_depth10,archive_size_rank_0_3,30,15.2,7.255913165278989,14.5,8.0,5.0,33.0,matched seed
+v6b_demo_matched,demo_layout_door_left_AW_2,V6b_binding_depth10,unique_layout_signature_count_rank_0_3,30,15.2,7.255913165278989,14.5,8.0,5.0,33.0,matched seed
+v6b_demo_matched,demo_layout_door_left_AW_2,V6b_binding_depth10,runtime_seconds,30,798.38423553667,76.37576808599208,783.6645934499975,83.89699737499905,663.6404363000183,1023.0292860000045,matched seed

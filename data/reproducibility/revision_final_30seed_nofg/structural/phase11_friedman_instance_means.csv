@@ -1,0 +1,5 @@
+metric,instance_blocks,method_count,methods,friedman_chi_square,p_value,interpretation_scope
+hypervolume,4,3,proposed_nsga2_bs;bs_only_direct;random_restart_bs,8.0,0.018315638888734186,descriptive corroboration; only four warehouse-instance blocks
+igd_plus,4,3,proposed_nsga2_bs;bs_only_direct;random_restart_bs,8.0,0.018315638888734186,descriptive corroboration; only four warehouse-instance blocks
+unique_layout_signature_count_rank_0_3,4,3,proposed_nsga2_bs;bs_only_direct;random_restart_bs,6.5,0.03877420783172202,descriptive corroboration; only four warehouse-instance blocks
+runtime_seconds,4,3,proposed_nsga2_bs;bs_only_direct;random_restart_bs,8.0,0.018315638888734186,descriptive corroboration; only four warehouse-instance blocks

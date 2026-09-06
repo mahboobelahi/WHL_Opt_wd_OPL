@@ -1,0 +1,38 @@
+{
+  "output_dir": "C:\\Users\\elahi\\Desktop\\WHL_Opt_wd_OPL\\data\\reproducibility\\revision_final_30seed_nofg\\structural",
+  "phase11": {
+    "archive_records": 6248,
+    "logical_runs": 360,
+    "methods_or_variants": 3,
+    "primary_statistical_rows": 84
+  },
+  "phase12b": {
+    "archive_records": 14833,
+    "logical_runs": 720,
+    "methods_or_variants": 6,
+    "v0_source": "phase11/proposed_nsga2_bs"
+  },
+  "phase12c": {
+    "archive_records": 8043,
+    "depth_diagnostic_rows": 360,
+    "logical_runs": 360,
+    "methods_or_variants": 3,
+    "v0_source": "phase11/proposed_nsga2_bs"
+  },
+  "phases": [
+    "phase11",
+    "phase12b",
+    "phase12c"
+  ],
+  "post_processing_only": true,
+  "results_root": "C:\\Users\\elahi\\Desktop\\WHL_Opt_wd_OPL\\results\\revision_final_30seed_nofg",
+  "v6b_demo_matched": {
+    "archive_records": 1013,
+    "binding_demonstrated": true,
+    "comparison_specific_reference_front_size": 2,
+    "configuration_match_rows": 30,
+    "instance": "demo_layout_door_left_AW_2",
+    "matched_runs": 30
+  },
+  "v6b_results_root": "C:\\Users\\elahi\\Desktop\\WHL_Opt_wd_OPL\\results\\revision_final_30seed_nofg_v6b"
+}

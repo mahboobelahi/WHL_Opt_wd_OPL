@@ -1,0 +1,36 @@
+{
+  "archive_scope": "final feasible rank 0-3",
+  "comparability_note": "V6b indicators are comparable only within this V0-versus-V6b Demo comparison.",
+  "comparison_group": "v6b_demo_matched",
+  "conditions": [
+    "V0_full_proposed",
+    "V6b_binding_depth10"
+  ],
+  "hv_reference_point": [
+    1.1,
+    1.1,
+    1.1
+  ],
+  "instance": "demo_layout_door_left_AW_2",
+  "maxima": [
+    127.0,
+    -167.0,
+    367.0
+  ],
+  "minima": [
+    21.0,
+    -224.0,
+    19.0
+  ],
+  "normalization_scope": "Demo-1-w2 V0+V6b union only",
+  "objective_vector": "(N_locked, -N_pf, R_p); minimization",
+  "ranges": [
+    106.0,
+    57.0,
+    348.0
+  ],
+  "reference_front_sha256": "e6a81183284c330305b8b3217cc491c58bb1a8bb733d8953940ffc0489219574",
+  "reference_front_size": 2,
+  "union_objectives_sha256": "6cdbaedab097818506104a9981e11ac5610885340da96d1ada8a1bfda0a770fb",
+  "zero_range_replacement": 1
+}

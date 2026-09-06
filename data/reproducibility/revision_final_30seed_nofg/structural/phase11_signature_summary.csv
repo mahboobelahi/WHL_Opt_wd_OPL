@@ -1,0 +1,16 @@
+comparison_group,method_or_variant,scope,instance,total_archive_entries_rank_0_3,unique_signatures_cross_seed_rank_0_3,repeated_signatures_cross_seed_rank_0_3,cross_seed_rediscovery_ratio_rank_0_3,mean_seeds_per_repeated_signature,max_seed_overlap,inference_scope
+phase11,proposed_nsga2_bs,per_instance,AT_S_comercial_layout_AW_3,709,62,58,0.9125528913963329,12.155172413793103,30,descriptive aggregate; not a Wilcoxon observation
+phase11,proposed_nsga2_bs,per_instance,demo_layout_door_left_AW_2,557,69,43,0.8761220825852782,12.348837209302326,30,descriptive aggregate; not a Wilcoxon observation
+phase11,proposed_nsga2_bs,per_instance,Gyorgy-KOVACS_WH_Narrow_AW_4,655,39,33,0.9404580152671755,19.666666666666668,30,descriptive aggregate; not a Wilcoxon observation
+phase11,proposed_nsga2_bs,per_instance,Gyorgy-KOVACS_WH_Wide_AW_5,621,38,30,0.9388083735909822,20.433333333333334,30,descriptive aggregate; not a Wilcoxon observation
+phase11,proposed_nsga2_bs,aggregate_sum_of_per_instance_counts,ALL_FIXED_BLOCKS,2542,208,164,0.918174665617624,15.231707317073171,30,descriptive aggregate; not a Wilcoxon observation
+phase11,bs_only_direct,per_instance,AT_S_comercial_layout_AW_3,210,7,7,0.9666666666666667,30,30,descriptive aggregate; not a Wilcoxon observation
+phase11,bs_only_direct,per_instance,demo_layout_door_left_AW_2,150,5,5,0.9666666666666667,30,30,descriptive aggregate; not a Wilcoxon observation
+phase11,bs_only_direct,per_instance,Gyorgy-KOVACS_WH_Narrow_AW_4,300,10,10,0.9666666666666667,30,30,descriptive aggregate; not a Wilcoxon observation
+phase11,bs_only_direct,per_instance,Gyorgy-KOVACS_WH_Wide_AW_5,240,8,8,0.9666666666666667,30,30,descriptive aggregate; not a Wilcoxon observation
+phase11,bs_only_direct,aggregate_sum_of_per_instance_counts,ALL_FIXED_BLOCKS,900,30,30,0.9666666666666667,30.0,30,descriptive aggregate; not a Wilcoxon observation
+phase11,random_restart_bs,per_instance,AT_S_comercial_layout_AW_3,938,60,52,0.9360341151385927,17.884615384615383,30,descriptive aggregate; not a Wilcoxon observation
+phase11,random_restart_bs,per_instance,demo_layout_door_left_AW_2,462,44,30,0.9047619047619048,14.933333333333334,30,descriptive aggregate; not a Wilcoxon observation
+phase11,random_restart_bs,per_instance,Gyorgy-KOVACS_WH_Narrow_AW_4,714,41,37,0.9425770308123249,19.18918918918919,30,descriptive aggregate; not a Wilcoxon observation
+phase11,random_restart_bs,per_instance,Gyorgy-KOVACS_WH_Wide_AW_5,692,44,35,0.9364161849710982,19.514285714285716,30,descriptive aggregate; not a Wilcoxon observation
+phase11,random_restart_bs,aggregate_sum_of_per_instance_counts,ALL_FIXED_BLOCKS,2806,189,154,0.9326443335709195,17.993506493506494,30,descriptive aggregate; not a Wilcoxon observation

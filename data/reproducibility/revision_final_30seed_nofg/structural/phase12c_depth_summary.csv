@@ -1,0 +1,13 @@
+comparison_group,method_or_variant,instance,configured_max_depth,n_runs,mean_seed_max_retained_depth,median_seed_max_retained_depth,min_seed_max_retained_depth,max_seed_max_retained_depth,runs_reaching_configured_cap,scope_note
+phase12c,V0_full_proposed,AT_S_comercial_layout_AW_3,28,30,6.266666666666667,6.0,6,7,0,final feasible rank 0-3 archive only; exact Beam Search stop reasons are not logged here
+phase12c,V0_full_proposed,demo_layout_door_left_AW_2,28,30,12.0,12.0,12,12,0,final feasible rank 0-3 archive only; exact Beam Search stop reasons are not logged here
+phase12c,V0_full_proposed,Gyorgy-KOVACS_WH_Narrow_AW_4,30,30,9.7,10.0,9,10,0,final feasible rank 0-3 archive only; exact Beam Search stop reasons are not logged here
+phase12c,V0_full_proposed,Gyorgy-KOVACS_WH_Wide_AW_5,30,30,8.0,8.0,8,8,0,final feasible rank 0-3 archive only; exact Beam Search stop reasons are not logged here
+phase12c,V6_depth15_beam_default,AT_S_comercial_layout_AW_3,15,30,6.266666666666667,6.0,6,7,0,final feasible rank 0-3 archive only; exact Beam Search stop reasons are not logged here
+phase12c,V6_depth15_beam_default,demo_layout_door_left_AW_2,15,30,12.0,12.0,12,12,0,final feasible rank 0-3 archive only; exact Beam Search stop reasons are not logged here
+phase12c,V6_depth15_beam_default,Gyorgy-KOVACS_WH_Narrow_AW_4,15,30,9.7,10.0,9,10,0,final feasible rank 0-3 archive only; exact Beam Search stop reasons are not logged here
+phase12c,V6_depth15_beam_default,Gyorgy-KOVACS_WH_Wide_AW_5,15,30,8.0,8.0,8,8,0,final feasible rank 0-3 archive only; exact Beam Search stop reasons are not logged here
+phase12c,V7_beam_plus1_depth_default,AT_S_comercial_layout_AW_3,28,30,6.233333333333333,6.0,5,7,0,final feasible rank 0-3 archive only; exact Beam Search stop reasons are not logged here
+phase12c,V7_beam_plus1_depth_default,demo_layout_door_left_AW_2,28,30,12.0,12.0,12,12,0,final feasible rank 0-3 archive only; exact Beam Search stop reasons are not logged here
+phase12c,V7_beam_plus1_depth_default,Gyorgy-KOVACS_WH_Narrow_AW_4,30,30,9.9,10.0,9,10,0,final feasible rank 0-3 archive only; exact Beam Search stop reasons are not logged here
+phase12c,V7_beam_plus1_depth_default,Gyorgy-KOVACS_WH_Wide_AW_5,30,30,8.0,8.0,8,8,0,final feasible rank 0-3 archive only; exact Beam Search stop reasons are not logged here
