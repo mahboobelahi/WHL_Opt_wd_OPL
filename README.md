@@ -17,17 +17,17 @@
 
 ## 1. Overview
 
-This repository contains code and data for warehouse layout optimization. The main method is NSGA-II + Beam Search, with BS-only and random-restart Beam Search baselines. The repository also includes the public 30-seed paper campaign wrapper, layout editing, layout/archive rendering, paper-style Pareto plotting, and optional operational-layer diagnostics for the paper L1-L4 layouts.
+This repository contains code and data for warehouse layout optimization. The main method is NSGA-II + Beam Search, with BS-only and random-restart Beam Search baselines. The repository also includes the public 30-seed paper campaign wrapper, a unified final-clean revision-evidence analyzer, layout editing, layout/archive rendering, paper-style Pareto plotting, and optional operational-layer diagnostics for the paper L1-L4 layouts.
 
 ## 2. Repository contents
 
 - `whl_core/`: shared loading, grid, feasibility, and objective logic
 - `whl_algorithms/`: structural optimization logic
-- `whl_experiments/`: experiment runners, paper campaign orchestration, and optional OPL helper scripts
+- `whl_experiments/`: experiment runners, paper campaign orchestration, revision-evidence post-processing, and optional OPL helper scripts
 - `whl_visualization/`: rendering and paper-style Pareto plotting
 - `apps/`: Tkinter layout editor
 - `configs/`: layout/configuration files
-- `data/`: layout masks, paper plotting inputs, and OPL paper data
+- `data/`: layout masks, paper plotting inputs, reproducibility evidence, and OPL paper data
 - `docs/`: detailed documentation
 
 See `docs/architecture.md` for the architecture overview.
@@ -96,6 +96,7 @@ The operational layer is post-optimization only. It does not feed back into NSGA
 - Architecture: `docs/architecture.md`
 - Inputs and outputs: `docs/input_output.md`
 - CLI commands and paper campaign examples: `docs/cli_commands.md`
+- Revision evidence and unified analyzer protocol: `docs/revision_evidence.md`
 - Layout data: `docs/layout_data.md`
 - Benchmark sources: `docs/benchmark_sources.md`
 - Operational-layer diagnostics: `docs/operational_layer.md`
@@ -110,9 +111,22 @@ The paper campaign wrapper uses `auto_from_instance`, saves both scientific layo
 - Phase 12B: ablations V1-V5 only;
 - Phase 12C: V6 and V7.
 
-Phase 12B V0 is not rerun: the Phase 11 `proposed_nsga2_bs` results for the same instances and seeds are reused as the full-proposed baseline. The V6b binding-depth check is a separate Phase 12C diagnostic.
+Phase 12B V0 is not rerun: the Phase 11 `proposed_nsga2_bs` results for the same instances and seeds are reused as the full-proposed baseline. Phase 12C likewise reuses those raw Phase-11 Proposed archives as V0, but recomputes the indicators inside the separate V0/V6/V7 comparison union. The V6b binding-depth check is a separate matched Demo-only Phase-12C diagnostic stored under `results/revision_final_30seed_nofg_v6b/`.
 
-Raw generated experiment output remains ignored by default. Compact files required to verify the final revision campaigns are selectively tracked under `results/revision_final_30seed_nofg/` and `results/revision_final_30seed_nofg_v6b/`. Post-processed manuscript evidence is stored under `data/reproducibility/`.
+After the final-clean Phase 11, Phase 12B, Phase 12C, and V6b campaigns are complete, rebuild the structural reviewer/manuscript evidence with the single post-processing command:
+
+```powershell
+python -m whl_experiments.analyze_revision_campaign_evidence `
+  --results-root results\revision_final_30seed_nofg `
+  --v6b-results-root results\revision_final_30seed_nofg_v6b `
+  --output-dir data\reproducibility\revision_final_30seed_nofg\structural
+```
+
+The analyzer does not invoke optimization and requires a fresh/empty output directory. It keeps four indicator/reference families separate: Phase 11 (Proposed/BS-only/RRBS), Phase 12B (V0-V5), Phase 12C (V0/V6/V7), and the Demo V0/V6b diagnostic. Therefore reused V0 raw archives can have different HV/IGD+/OSD values across comparison families.
+
+Raw generated experiment output remains ignored by default. Compact files required to verify the final revision campaigns are selectively tracked under `results/revision_final_30seed_nofg/` and `results/revision_final_30seed_nofg_v6b/`. Post-processed manuscript evidence is stored under `data/reproducibility/revision_final_30seed_nofg/structural/`.
+
+See `docs/revision_evidence.md` for the output inventory, statistical protocol, V6b safeguards, manuscript mapping, and the rule that this post-processing should be run only after the timed campaigns are complete.
 
 ## 10. Citation
 
