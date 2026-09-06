@@ -1,6 +1,6 @@
 # CLI Commands
 
-This document lists the public command-line entry points for structural optimization, paper campaign reproduction, archive rendering, Pareto plotting, and the optional operational-layer diagnostics.
+This document lists the public command-line entry points for structural optimization, paper campaign reproduction, unified revision-evidence post-processing, archive rendering, Pareto plotting, and the optional operational-layer diagnostics.
 
 ## 1. Setup
 
@@ -23,6 +23,7 @@ For the authoritative option list:
 ```powershell
 python -m whl_experiments.run_experiment_manager --help
 python -m whl_experiments.run_revision_30seed_campaign --help
+python -m whl_experiments.analyze_revision_campaign_evidence --help
 ```
 
 ---
@@ -32,12 +33,13 @@ python -m whl_experiments.run_revision_30seed_campaign --help
 | Runner | Recommended use | Purpose |
 |---|---|---|
 | `whl_experiments.run_experiment_manager` | Individual/custom experiment | Runs Proposed NSGA-II + Beam Search, BS-only, or random-restart Beam Search. |
-| `whl_experiments.run_revision_30seed_campaign` | Paper campaign reproduction | Orchestrates Phase 11, Phase 12B, and Phase 12C tasks by calling `run_experiment_manager`. |
+| `whl_experiments.run_revision_30seed_campaign` | Paper campaign reproduction | Orchestrates Phase 11, Phase 12B, Phase 12C, and the targeted V6b task family by calling `run_experiment_manager`. |
+| `whl_experiments.analyze_revision_campaign_evidence` | Final-clean structural evidence post-processing | Rebuilds the unified Phase11, Phase12B, Phase12C, and separate matched V6b reviewer/manuscript evidence without rerunning optimization. |
 | `whl_experiments.render_saved_layouts` | Render one saved archive | Renders layouts from one `.npz` archive and JSON index. |
 | `whl_experiments.render_experiment_archives` | Batch-render a completed experiment | Discovers and renders saved archives under a completed experiment directory. |
 | `whl_visualization.paper_pareto_plots` | Paper-style Pareto plotting | Regenerates manuscript-style plots from prepared CSV inputs. |
 
-`run_revision_30seed_campaign` is an orchestration layer only. It does not implement a separate optimization algorithm.
+`run_revision_30seed_campaign` is an orchestration layer only. It does not implement a separate optimization algorithm. `analyze_revision_campaign_evidence` is post-processing only and never invokes an optimizer.
 
 ---
 
@@ -167,9 +169,11 @@ The campaign runner also supports `--dry-run`, `--resume`, worker control, prede
 | Phase 12B | V1 fixed sorting, V2 fixed weights, V3 uniform mutation, V4 no symmetry breaking, V5 random feasible-start spacing | 600 |
 | Phase 12C | V6 depth 15, V7 beam width +1 | 240 |
 
-**Phase 12B does not execute V0.** The V0/full-proposed baseline is the Phase 11 `proposed_nsga2_bs` result for the same core instances and seeds. Post-processing should label/reuse that Phase 11 result as V0 when constructing the Phase 12B comparison.
+**Phase 12B does not execute V0.** The V0/full-proposed baseline is the Phase 11 `proposed_nsga2_bs` result for the same core instances and seeds. Post-processing labels/reuses that Phase 11 result as V0 when constructing the Phase 12B comparison.
 
-`V6b_binding_depth10` is a separate Phase 12C diagnostic restricted to `demo_layout_door_left_AW_2`; it is not part of the default Phase 12C task set.
+**Phase 12C also does not execute V0.** The same Phase 11 Proposed raw archives are reused as V0, but Phase-12C indicators are recomputed inside the separate V0/V6/V7 normalization/reference union.
+
+`V6b_binding_depth10` is a separate Phase 12C diagnostic restricted to `demo_layout_door_left_AW_2`; it is not part of the default 240-task Phase 12C set and is stored in the separate final-clean campaign root `results/revision_final_30seed_nofg_v6b`.
 
 ### 4.2 Instance scopes
 
@@ -259,13 +263,25 @@ Only tasks with an existing completed `experiment_summary.csv` are skipped.
 | `--instances {core,stress,all}` | Predefined instance scope. Default: `core`. |
 | `--instance-list LIST` | Explicit comma-separated mask names; overrides `--instances`. Optional `.npz` suffixes are accepted. |
 | `--only-instance NAME` | Restrict execution to one predefined instance. Do not combine with `--instance-list`. |
-| `--only-variant NAME` | Restrict execution to one Phase 11 method or runnable Phase 12 variant. Phase 12B V0 is not runnable because it is reused from Phase 11 Proposed. |
+| `--only-variant NAME` | Restrict execution to one Phase 11 method or runnable Phase 12 variant. Phase 12B/12C V0 is not runnable because it is reused from Phase 11 Proposed. |
 | `--max-workers N` | Maximum concurrent manager tasks. Default: `3`. |
 | `--dry-run` | Write the task manifest without executing optimization. |
 | `--resume` | Skip tasks with an existing completed `experiment_summary.csv`. |
 | `--archive-rank-max N` | Maximum archived rank forwarded to the manager. Default: `3`. |
 | `--profile-light` | Enable lightweight runtime profiling for each task. |
 | `--save-generation-objectives` | Save generation-level objective evidence for each task. |
+
+### 5.3 `analyze_revision_campaign_evidence`
+
+| Option | Meaning |
+|---|---|
+| `--results-root PATH` | Main final-clean campaign root. Default: `results/revision_final_30seed_nofg`. |
+| `--v6b-results-root PATH` | Separate completed V6b campaign root. Default: `results/revision_final_30seed_nofg_v6b`. |
+| `--output-dir PATH` | Fresh/empty evidence-package directory. Default: `data/reproducibility/revision_final_30seed_nofg/structural`. |
+| `--phases ...` | Main completed comparison groups to analyze: `phase11`, `phase12b`, and/or `phase12c`. Default: all three. |
+| `--skip-v6b` | Intentionally omit the separate matched V0-vs-V6b Demo diagnostic. |
+
+The analyzer requires complete expected archive/manifest coverage for each selected family and refuses a non-empty output directory. V0 is reused from Phase 11 Proposed for both Phase 12B and Phase 12C. The V6b comparison uses its own Demo V0+V6b normalization/reference union.
 
 ---
 
@@ -454,6 +470,8 @@ python -m whl_experiments.run_revision_30seed_campaign `
 
 ### 11.3 Phase 12C — V6 and V7 sensitivity
 
+V0 is not rerun; the Phase 11 Proposed raw archives are reused and re-evaluated inside the V0/V6/V7 comparison-specific indicator union.
+
 Dry-run:
 
 ```powershell
@@ -489,21 +507,25 @@ python -m whl_experiments.run_revision_30seed_campaign `
 
 ### 11.4 Phase 12C V6b — binding-depth diagnostic
 
+Use a separate final-clean root so the V6b diagnostic cannot be confused with the four-instance V6/V7 Phase-12C campaign:
+
 ```powershell
 python -m whl_experiments.run_revision_30seed_campaign `
-  --campaign-root results/revision_final_30seed_nofg `
+  --campaign-root results/revision_final_30seed_nofg_v6b `
   --phase phase12c `
   --seed-start 101 `
   --seed-end 130 `
   --only-variant V6b_binding_depth10 `
   --only-instance demo_layout_door_left_AW_2 `
-  --max-workers 5 `
+  --max-workers 3 `
   --profile-light `
   --save-generation-objectives `
   --archive-rank-max 3
 ```
 
 Expected: `30` tasks.
+
+V6b is a matched Demo-only binding-depth diagnostic. It is not part of the V0/V6/V7 four-instance Table-8 comparison.
 
 ### 11.5 Supplementary one-seed structural check
 
@@ -521,3 +543,29 @@ python -m whl_experiments.run_revision_30seed_campaign `
 ```
 
 Expected: `33` tasks.
+
+### 11.6 Unified final-clean evidence analysis
+
+Run this only after Phase 11, Phase 12B, Phase 12C, and V6b are complete. Do not run post-processing concurrently with timed optimization campaigns when runtime evidence is still being collected.
+
+```powershell
+python -m whl_experiments.analyze_revision_campaign_evidence `
+  --results-root results\revision_final_30seed_nofg `
+  --v6b-results-root results\revision_final_30seed_nofg_v6b `
+  --output-dir data\reproducibility\revision_final_30seed_nofg\structural
+```
+
+The defaults select `phase11 phase12b phase12c` and include V6b. The output directory must be absent or empty.
+
+The comparison-specific reference unions are intentionally separate:
+
+- Phase 11 / Table 5: Proposed + BS-only + RRBS;
+- Phase 12B / Table 7: V0--V5;
+- Phase 12C / Table 8: V0 + V6 + V7;
+- V6b: Demo V0 + V6b.
+
+Therefore the same Phase-11 Proposed raw archive reused as V0 can receive different HV/IGD+/OSD values in different comparison families.
+
+To omit V6b intentionally, add `--skip-v6b`. To analyze only selected completed main families, specify them with `--phases` and use a fresh output directory.
+
+The unified analyzer produces the compact manuscript/reviewer evidence under `data/reproducibility/revision_final_30seed_nofg/structural/`. See `docs/revision_evidence.md` for the complete output inventory, statistical protocol, V6b safeguards, and manuscript mapping.
