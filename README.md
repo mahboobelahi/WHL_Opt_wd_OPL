@@ -23,7 +23,7 @@ This repository contains code and data for warehouse layout optimization. The ma
 
 - `whl_core/`: shared loading, grid, feasibility, and objective logic
 - `whl_algorithms/`: structural optimization logic
-- `whl_experiments/`: public experiment runners, paper campaign orchestration, and optional OPL helper scripts
+- `whl_experiments/`: experiment runners, paper campaign orchestration, and optional OPL helper scripts
 - `whl_visualization/`: rendering and paper-style Pareto plotting
 - `apps/`: Tkinter layout editor
 - `configs/`: layout/configuration files
@@ -112,7 +112,7 @@ The paper campaign wrapper uses `auto_from_instance`, saves both scientific layo
 
 Phase 12B V0 is not rerun: the Phase 11 `proposed_nsga2_bs` results for the same instances and seeds are reused as the full-proposed baseline. The V6b binding-depth check is a separate Phase 12C diagnostic.
 
-Generated experiment results are written under `results/` and ignored by Git. Curated reviewer-facing evidence is checked in under `data/` where documented.
+Raw generated experiment output remains ignored by default. Compact files required to verify the final revision campaigns are selectively tracked under `results/revision_final_30seed_nofg/` and `results/revision_final_30seed_nofg_v6b/`. Post-processed manuscript evidence is stored under `data/reproducibility/`.
 
 ## 10. Citation
 
