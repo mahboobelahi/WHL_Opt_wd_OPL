@@ -1,0 +1,167 @@
+{
+  "archive_scope": "final feasible Pareto ranks 0-3",
+  "atefeh_published_dominance": {
+    "generated_rank0_dominated_by_published_count": 20,
+    "generated_rank0_dominated_by_published_fraction": 0.8695652173913043,
+    "generated_rank0_signature_count": 23,
+    "pooled_nondominated_design_count": 5,
+    "pooled_nondominated_generated_count": 3,
+    "pooled_nondominated_published_count": 2,
+    "pooled_nondominated_unique_objective_tuple_count": 4,
+    "pooled_union_design_count": 36,
+    "published_dominated_by_generated_rank0_count": 6,
+    "published_dominated_by_generated_rank0_fraction": 0.46153846153846156,
+    "published_layout_count": 13
+  },
+  "deduplication_rule": "exact-grid layout_signature pooled across seeds; lowest/best observed final within-seed Pareto rank retained",
+  "dominance_detail_csv": "C:\\Users\\elahi\\Desktop\\WHL_Opt_wd_OPL\\data\\reproducibility\\revision_final_30seed_nofg\\pareto_figures\\atefeh_published_dominance_detail.csv",
+  "figure_output_dir": "C:\\Users\\elahi\\Desktop\\WHL_Opt_wd_OPL\\data\\reproducibility\\revision_final_30seed_nofg\\pareto_figures",
+  "instances": {
+    "Atefeh": {
+      "archive_entry_count": 709,
+      "instance": "AT_S_comercial_layout_AW_3",
+      "manifest_path": "C:\\Users\\elahi\\Desktop\\WHL_Opt_wd_OPL\\data\\reproducibility\\revision_final_30seed_nofg\\pareto_figures\\atefeh_unique_rank03_manifest.csv",
+      "manifest_sha256": "7cb739478b91fa0f98b59e2eb3503a0a0f80f89813dfc077c9fc521b8d0a1584",
+      "ranges": {
+        "Nlocked": {
+          "max": 144.0,
+          "min": 90.0
+        },
+        "Npf": {
+          "max": 127.0,
+          "min": 87.0
+        },
+        "Rp": {
+          "max": 344.0,
+          "min": 69.0
+        },
+        "SC": {
+          "max": 264.0,
+          "min": 195.0
+        }
+      },
+      "rank_counts": {
+        "0": 23,
+        "1": 11,
+        "2": 12,
+        "3": 16
+      },
+      "sc_npf_envelope_point_count": 3,
+      "seed_count": 30,
+      "seed_coverage": [
+        101,
+        130
+      ],
+      "source_index_count": 30,
+      "timing": {
+        "all_generations_have_30_seeds": true,
+        "generation_count": 15,
+        "generation_max": 14,
+        "generation_min": 0,
+        "seed_count": 30,
+        "source_file_count": 30,
+        "summary_csv": "C:\\Users\\elahi\\Desktop\\WHL_Opt_wd_OPL\\data\\reproducibility\\revision_final_30seed_nofg\\pareto_figures\\Atefeh_generation_timing_summary.csv"
+      },
+      "unique_signature_count": 62
+    },
+    "Kov-1-O-w4": {
+      "archive_entry_count": 655,
+      "instance": "Gyorgy-KOVACS_WH_Narrow_AW_4",
+      "manifest_path": "C:\\Users\\elahi\\Desktop\\WHL_Opt_wd_OPL\\data\\reproducibility\\revision_final_30seed_nofg\\pareto_figures\\kov1ow4_unique_rank03_manifest.csv",
+      "manifest_sha256": "d44177d6d60c236b36ceb86e097fe1188ba9be12a663c2977f319354669026ec",
+      "ranges": {
+        "Nlocked": {
+          "max": 424.0,
+          "min": 290.0
+        },
+        "Npf": {
+          "max": 270.0,
+          "min": 232.0
+        },
+        "Rp": {
+          "max": 616.0,
+          "min": 341.0
+        },
+        "SC": {
+          "max": 684.0,
+          "min": 560.0
+        }
+      },
+      "rank_counts": {
+        "0": 7,
+        "1": 14,
+        "2": 9,
+        "3": 9
+      },
+      "sc_npf_envelope_point_count": 3,
+      "seed_count": 30,
+      "seed_coverage": [
+        101,
+        130
+      ],
+      "source_index_count": 30,
+      "timing": {
+        "all_generations_have_30_seeds": true,
+        "generation_count": 18,
+        "generation_max": 17,
+        "generation_min": 0,
+        "seed_count": 30,
+        "source_file_count": 30,
+        "summary_csv": "C:\\Users\\elahi\\Desktop\\WHL_Opt_wd_OPL\\data\\reproducibility\\revision_final_30seed_nofg\\pareto_figures\\Kov1Ow4_generation_timing_summary.csv"
+      },
+      "unique_signature_count": 39
+    }
+  },
+  "old_logged_rank_point_csvs_used": false,
+  "old_prescored_published_reference_csv_used": false,
+  "p11_nsga2_root": "C:\\Users\\elahi\\Desktop\\WHL_Opt_wd_OPL\\results\\revision_final_30seed_nofg\\p11\\nsga2",
+  "pooled_union_csv": "C:\\Users\\elahi\\Desktop\\WHL_Opt_wd_OPL\\data\\reproducibility\\revision_final_30seed_nofg\\pareto_figures\\atefeh_generated_published_pooled_union.csv",
+  "post_processing_only": true,
+  "published_reference": {
+    "derived_metrics_csv": "C:\\Users\\elahi\\Desktop\\WHL_Opt_wd_OPL\\data\\reproducibility\\revision_final_30seed_nofg\\pareto_figures\\atefeh_published_reference_metrics.csv",
+    "derived_metrics_csv_sha256": "58b7f04cabc87cc4d8a7b137d6d647a107236262ebc31cf68bf1de379e0ffabd",
+    "mask_dir": "C:\\Users\\elahi\\Desktop\\WHL_Opt_wd_OPL\\data\\instances\\masks",
+    "mask_sha256": {
+      "AT_1": "b02720aad758183a859d385b7db307170ee3260f3ba94a11064f8d38586f262a",
+      "AT_10": "a92c821ff8954306218270b6cfbdfe33fc256f2acd5265caa8de87d754753f47",
+      "AT_11": "543bca30c97a7c84c3d4d52219a344512c7749c8b50cb707f8e5b6663acab02d",
+      "AT_12": "a7affe4aca5fe5c23208ee7f9899a2e1415f66549d3b027891a83fd8e522c748",
+      "AT_13": "2f85d6b508f0c6358283d70cf63d86793911bf789e1d7d586625e418bbcb9405",
+      "AT_2": "162e9146db139158ce6a47637b3bc455cf88eaced8429645e29014d693b57beb",
+      "AT_3": "13d164532590effa271cd98d9d928a77cb6d20189aa2782eb207ab1fad710af7",
+      "AT_4": "8c25f48bbde289534fde0aedd3465e29e7c649e5dec51313356fe729d8cb6e47",
+      "AT_5": "a701f764e5434ebe68a066924348deccf8f23b7a0b045a250a298de834b19e27",
+      "AT_6": "6687a7801cd8f1cd60af68d5587083bc2cfbabb09bb6c5b646ea9eb945aae001",
+      "AT_7": "778a6f6e62b049ca3dbf96ff5df97950d373671201ce0867eea0780ce9232297",
+      "AT_8": "1a4566f6553d30f348212f001154dc64be7fcc67cd66b82e8ed9545abd45cffb",
+      "AT_9": "d196a1c26aca0a481f067ade3fb9984475ef42d2bdfc4a3fb7dcb7f771fa8a9b"
+    },
+    "ranges": {
+      "Nlocked": {
+        "max": 265.0,
+        "min": 28.0
+      },
+      "Npf": {
+        "max": 155.0,
+        "min": 83.0
+      },
+      "Rp": {
+        "max": 4324.0,
+        "min": 85.0
+      },
+      "SC": {
+        "max": 348.0,
+        "min": 153.0
+      }
+    },
+    "row_count": 13,
+    "scoring_status": "recomputed from published-reference masks via load_mask -> mask_to_grid -> score_layout",
+    "source": "AT_1--AT_13 .npz masks re-scored with current repository code"
+  },
+  "results_root": "C:\\Users\\elahi\\Desktop\\WHL_Opt_wd_OPL\\results\\revision_final_30seed_nofg",
+  "seed_count": 30,
+  "seed_range": [
+    101,
+    130
+  ]
+}

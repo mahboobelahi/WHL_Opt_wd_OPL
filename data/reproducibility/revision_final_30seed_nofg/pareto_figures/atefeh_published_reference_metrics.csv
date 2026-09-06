@@ -1,0 +1,14 @@
+layout_id,storage_capacity,pick_faces,interior_storage,retrieval_penalty,mask_path,mask_sha256
+AT_1,348,83,265,4324.0,C:\Users\elahi\Desktop\WHL_Opt_wd_OPL\data\instances\masks\AT_1.npz,b02720aad758183a859d385b7db307170ee3260f3ba94a11064f8d38586f262a
+AT_2,282,112,170,888.0,C:\Users\elahi\Desktop\WHL_Opt_wd_OPL\data\instances\masks\AT_2.npz,162e9146db139158ce6a47637b3bc455cf88eaced8429645e29014d693b57beb
+AT_3,300,110,190,1011.0,C:\Users\elahi\Desktop\WHL_Opt_wd_OPL\data\instances\masks\AT_3.npz,13d164532590effa271cd98d9d928a77cb6d20189aa2782eb207ab1fad710af7
+AT_4,303,108,195,1394.0,C:\Users\elahi\Desktop\WHL_Opt_wd_OPL\data\instances\masks\AT_4.npz,8c25f48bbde289534fde0aedd3465e29e7c649e5dec51313356fe729d8cb6e47
+AT_5,279,119,160,765.0,C:\Users\elahi\Desktop\WHL_Opt_wd_OPL\data\instances\masks\AT_5.npz,a701f764e5434ebe68a066924348deccf8f23b7a0b045a250a298de834b19e27
+AT_6,240,130,110,441.0,C:\Users\elahi\Desktop\WHL_Opt_wd_OPL\data\instances\masks\AT_6.npz,6687a7801cd8f1cd60af68d5587083bc2cfbabb09bb6c5b646ea9eb945aae001
+AT_7,258,128,130,585.0,C:\Users\elahi\Desktop\WHL_Opt_wd_OPL\data\instances\masks\AT_7.npz,778a6f6e62b049ca3dbf96ff5df97950d373671201ce0867eea0780ce9232297
+AT_8,153,109,44,111.0,C:\Users\elahi\Desktop\WHL_Opt_wd_OPL\data\instances\masks\AT_8.npz,1a4566f6553d30f348212f001154dc64be7fcc67cd66b82e8ed9545abd45cffb
+AT_9,312,102,210,2356.0,C:\Users\elahi\Desktop\WHL_Opt_wd_OPL\data\instances\masks\AT_9.npz,d196a1c26aca0a481f067ade3fb9984475ef42d2bdfc4a3fb7dcb7f771fa8a9b
+AT_10,264,131,133,1762.0,C:\Users\elahi\Desktop\WHL_Opt_wd_OPL\data\instances\masks\AT_10.npz,a92c821ff8954306218270b6cfbdfe33fc256f2acd5265caa8de87d754753f47
+AT_11,246,146,100,837.0,C:\Users\elahi\Desktop\WHL_Opt_wd_OPL\data\instances\masks\AT_11.npz,543bca30c97a7c84c3d4d52219a344512c7749c8b50cb707f8e5b6663acab02d
+AT_12,183,155,28,129.0,C:\Users\elahi\Desktop\WHL_Opt_wd_OPL\data\instances\masks\AT_12.npz,a7affe4aca5fe5c23208ee7f9899a2e1415f66549d3b027891a83fd8e522c748
+AT_13,186,152,34,85.0,C:\Users\elahi\Desktop\WHL_Opt_wd_OPL\data\instances\masks\AT_13.npz,2f85d6b508f0c6358283d70cf63d86793911bf789e1d7d586625e418bbcb9405
